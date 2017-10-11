@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/oscar/My_Files/Git/210CT/Week-1/advanced1.h
+
+/Users/oscar/My_Files/Git/210CT/Week-1/helpers.h
+
+/Users/oscar/My_Files/Git/210CT/Week-1/main.cpp
+iostream
+-
+array
+-
+vector
+-
+map
+-
+helpers.h
+/Users/oscar/My_Files/Git/210CT/Week-1/helpers.h
+advanced1.h
+/Users/oscar/My_Files/Git/210CT/Week-1/advanced1.h
+

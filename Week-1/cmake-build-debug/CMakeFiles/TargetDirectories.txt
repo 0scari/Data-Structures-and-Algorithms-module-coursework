@@ -1,0 +1,3 @@
+/Users/oscar/My_Files/Git/210CT/Week-1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/oscar/My_Files/Git/210CT/Week-1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/oscar/My_Files/Git/210CT/Week-1/cmake-build-debug/CMakeFiles/Week_1.dir
