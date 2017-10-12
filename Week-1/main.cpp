@@ -5,6 +5,7 @@
 
 #include "helpers.h"
 #include "advanced1.h"
+#include "advanced2.h"
 
 
 int main() {
@@ -21,6 +22,17 @@ int main() {
         cin >> lines;
 
         string result = advanced1(lines);
+
+        cout << result;
+
+    } else if (taskNumber == "2") {
+
+        int maxWeight;
+
+        cout << "How many kg can be carried?\n-> ";
+        cin >> maxWeight;
+
+        string result = advanced2(maxWeight);
 
         cout << result;
 
