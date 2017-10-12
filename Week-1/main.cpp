@@ -3,12 +3,14 @@
 #include <vector>
 #include <map>
 
-#include "helpers.h"
+using namespace std;
+
 #include "advanced1.h"
+#include "Lorry.h"
 #include "advanced2.h"
 
-
 int main() {
+
     string taskNumber;
 
     cout << "Task 1 or 2?\n-> ";
@@ -29,12 +31,15 @@ int main() {
 
         int maxWeight;
 
-        cout << "How many kg can be carried?\n-> ";
+        cout << "How many kg can a lorry carry?\n-> ";
+
         cin >> maxWeight;
 
-        string result = advanced2(maxWeight);
+        Lorry lorry(maxWeight);
 
-        cout << result;
+        string invoice = advanced2(lorry);
+
+        cout << invoice;
 
     }
 
