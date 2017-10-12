@@ -5,8 +5,19 @@
 #ifndef WEEK_1_ADVANCED1_H
 #define WEEK_1_ADVANCED1_H
 
-unsigned int calcFactorial(unsigned int number) {
-    unsigned int tmp;
+/**
+ * 1. When the advanced1(i) function is called, it will call the function prompt for input,
+ * which will deliver values for n and m variables, i times.
+ *
+ * 2. The delivered values will be appended to a vector which thereafter is passed to the function's
+ * checkIfDivides(vector) parameter. Afterwards we calculate the factorial for an n value
+ * and check weather or not divided by zero it has a reminder. Based on the output, a corresponding
+ * string, that describes the outcome, will be prepared for each n and m pair and returned.
+ *
+ */
+
+long unsigned int calcFactorial(long unsigned int number) {
+    long unsigned int tmp;
 
     if(number <= 1) return 1;
 
@@ -15,9 +26,9 @@ unsigned int calcFactorial(unsigned int number) {
     return tmp;
 }
 
-map <char, unsigned int> promptToInputLine () {
+map <char, long unsigned int> promptToInputLine () {
 
-    unsigned int n, m;
+    long unsigned int n, m;
 
     cout << endl << "n: ";
     cin >> n;
@@ -25,26 +36,24 @@ map <char, unsigned int> promptToInputLine () {
     cout << "m: ";
     cin >> m;
 
-    map<char, unsigned int> output = {{'n', n}, {'m', m}};
+    map<char, long unsigned int> output = {{'n', n}, {'m', m}};
 
     return output;
 
 };
 
-string checkIfDivides(vector<map<char, unsigned int>> input) {
+string checkIfDivides(vector<map<char, long unsigned int>> input) {
 
     string output = "";
 
-    for (map<char, unsigned int> entry : input ) {
+    for (map<char, long unsigned int> entry : input ) {
 
         string n = to_string(entry['n']);
         string m = to_string(entry['m']);
 
-        cout << "\n" << calcFactorial(entry['n']) % 9;
-        cout << "\n" << calcFactorial(entry['n']) % 27;
-//        (calcFactorial(entry['n']) %  entry['m'] == 0) ?
-//            output += m + " divides " + n + "!\n" :
-//                output += m + " does not divide " + n + "!\n";
+        (calcFactorial(entry['n']) %  entry['m'] == 0) ?
+            output += m + " divides " + n + "!\n" :
+                output += m + " does not divide " + n + "!\n";
     }
 
     return output;
@@ -52,12 +61,10 @@ string checkIfDivides(vector<map<char, unsigned int>> input) {
 
 string advanced1 (int lines) {
 
-    vector<map<char, unsigned int>> input = {{}};
+    vector<map<char, long unsigned int>> input = {};
 
     for (int i = 0; i < lines; i++)
         input.push_back(promptToInputLine());
-
-//    cout << "dbg";
 
     return checkIfDivides(input);
 }
