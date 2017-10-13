@@ -7,7 +7,6 @@
 
 class Warehouse {
 
-    // THE VECTOR MUST BE ORDERED BY THE MOST EXPENSIVE MATERIAL
     map <string, map <string, int>> stock = {
             {"gold",    {{"amount", 7},    {"price", 10}}},
             {"silver",  {{"amount", 5},    {"price", 7}}},
@@ -24,14 +23,18 @@ public:
 
         map <string, map <string, int>> mostExpensiveMaterial;
 
+        // will store highest encountered price during the search
         int highestMaterialPrice = 0;
 
+        // will store name of the most expensive material
         string highestPricedMaterialsName;
 
+        // searching the most expensive material
         for (auto material : stock) {
 
             if (material.second["price"] > highestMaterialPrice) {
 
+                // reset the map because only 1 material needed
                 mostExpensiveMaterial.clear();
 
                 mostExpensiveMaterial[material.first] = material.second;
