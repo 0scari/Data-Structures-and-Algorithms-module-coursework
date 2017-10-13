@@ -83,16 +83,19 @@
 		<Unit filename="/Users/oscar/My_Files/Git/210CT/Week-1/Lorry.h">
 			<Option target="Week_1"/>
 		</Unit>
+		<Unit filename="/Users/oscar/My_Files/Git/210CT/Week-1/Warehouse.h">
+			<Option target="Week_1"/>
+		</Unit>
 		<Unit filename="/Users/oscar/My_Files/Git/210CT/Week-1/advanced1.h">
 			<Option target="Week_1"/>
 		</Unit>
 		<Unit filename="/Users/oscar/My_Files/Git/210CT/Week-1/advanced2.h">
 			<Option target="Week_1"/>
 		</Unit>
-		<Unit filename="/Users/oscar/My_Files/Git/210CT/Week-1/helpers.h">
+		<Unit filename="/Users/oscar/My_Files/Git/210CT/Week-1/main.cpp">
 			<Option target="Week_1"/>
 		</Unit>
-		<Unit filename="/Users/oscar/My_Files/Git/210CT/Week-1/main.cpp">
+		<Unit filename="/Users/oscar/My_Files/Git/210CT/Week-1/unit_tests.h">
 			<Option target="Week_1"/>
 		</Unit>
 		<Unit filename="/Users/oscar/My_Files/Git/210CT/Week-1/CMakeLists.txt">

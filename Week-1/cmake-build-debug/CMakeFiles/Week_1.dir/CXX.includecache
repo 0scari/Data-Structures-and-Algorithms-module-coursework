@@ -8,11 +8,11 @@
 
 /Users/oscar/My_Files/Git/210CT/Week-1/Lorry.h
 
+/Users/oscar/My_Files/Git/210CT/Week-1/Warehouse.h
+
 /Users/oscar/My_Files/Git/210CT/Week-1/advanced1.h
 
 /Users/oscar/My_Files/Git/210CT/Week-1/advanced2.h
-
-/Users/oscar/My_Files/Git/210CT/Week-1/helpers.h
 
 /Users/oscar/My_Files/Git/210CT/Week-1/main.cpp
 iostream
@@ -23,12 +23,12 @@ vector
 -
 map
 -
-helpers.h
-/Users/oscar/My_Files/Git/210CT/Week-1/helpers.h
 advanced1.h
 /Users/oscar/My_Files/Git/210CT/Week-1/advanced1.h
 Lorry.h
 /Users/oscar/My_Files/Git/210CT/Week-1/Lorry.h
+Warehouse.h
+/Users/oscar/My_Files/Git/210CT/Week-1/Warehouse.h
 advanced2.h
 /Users/oscar/My_Files/Git/210CT/Week-1/advanced2.h
 

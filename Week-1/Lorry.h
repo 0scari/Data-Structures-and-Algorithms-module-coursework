@@ -25,7 +25,7 @@ public:
 
     bool isFull () {
 
-        return this->maxWeight == actualWeight;
+        return maxWeight == actualWeight;
 
     }
 
@@ -41,17 +41,17 @@ public:
 
     }
 
-    void loadMaterial(string name, map<string, int> materialAttribs) {
+    void loadMaterial(string name, map <string, int> materialAttribs) {
 
-        loadedMaterials[name] = materialAttribs["weight"];
+        loadedMaterials[name] = materialAttribs["amount"];
 
-        actualWeight          += materialAttribs["weight"];
+        actualWeight          += materialAttribs["amount"];
 
-        totalValue            += materialAttribs["price"] * materialAttribs["weight"];
+        totalValue            += materialAttribs["price"] * materialAttribs["amount"];
 
     }
 
-    void addPayload (string materialName, map<string, int> materialAttribs) {
+    void addPayload (string materialName, map <string, int> materialAttribs) {
 
         int loadableWeight = maxWeight - actualWeight;
 
@@ -59,7 +59,7 @@ public:
             loadMaterial(materialName, materialAttribs);
 
         else {
-            materialAttribs["weight"] = loadableWeight;
+            materialAttribs["amount"] = loadableWeight;
             loadMaterial(materialName, materialAttribs);
         }
 

@@ -5,27 +5,20 @@
 #ifndef WEEK_1_ADVANCED2_H
 #define WEEK_1_ADVANCED2_H
 
-// MUST BE SORTED BY THE PRICE DESCENDING
-const map <string, map<string, int>> MATERIALS = {
-        {"gold",    {{"amount", 7},    {"price", 10}}},
-        {"silver",  {{"amount", 5},    {"price", 7}}},
-        {"copper",  {{"amount", 9},    {"price", 6}}},
-        {"iron",    {{"amount", 3},    {"price", 5}}},
-        {"plastic", {{"amount", 3},    {"price", 3}}}
-};
+string advanced2 (Lorry &lorry, Warehouse warehouse) {
 
-string advanced2 (Lorry lorry) {
+    while (warehouse.hasStock()) {
 
-    for (auto material : MATERIALS) {
-
-        lorry.addPayload(material.first, material.second);
+        // getMostExpensiveMaterial returns a map with 1 element
+        // 'for' is used in order to refer to that element by key(first)/value(second)
+        for (auto payload : warehouse.getMostExpensiveMaterial())
+            lorry.addPayload(payload.first, payload.second);
 
         if (lorry.isFull())
             break;
     }
 
     return lorry.prepareInvoice();
-
 
 }
 
