@@ -19,9 +19,21 @@ public:
 
     Lorry(int maxWeight) {
 
-        this->maxWeight += maxWeight;
+        this->maxWeight = maxWeight;
 
     };
+
+    int getActualWeight() {
+        return actualWeight;
+    }
+
+    int getTotalValue() {
+        return totalValue;
+    }
+
+    const map<string, int> &getLoadedMaterials() {
+        return loadedMaterials;
+    }
 
     bool isFull () {
 

@@ -7,15 +7,13 @@
 
 string advanced2 (Lorry &lorry, Warehouse warehouse) {
 
-    while (warehouse.hasStock()) {
+    while (warehouse.hasStock() && !lorry.isFull()) {
 
         // getMostExpensiveMaterial returns a map with 1 element
         // 'for' is used in order to refer to that element by key(first)/value(second)
         for (auto payload : warehouse.getMostExpensiveMaterial())
             lorry.addPayload(payload.first, payload.second);
 
-        if (lorry.isFull())
-            break;
     }
 
     return lorry.prepareInvoice();

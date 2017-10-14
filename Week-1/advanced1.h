@@ -18,13 +18,13 @@
 
 long unsigned int calcFactorial(long unsigned int number) {
 
-    long unsigned int tmp;
+    long unsigned int sum;
 
     if(number <= 1) return 1;
 
-    tmp = number * calcFactorial(number - 1);
+    sum = number * calcFactorial(number - 1);
 
-    return tmp;
+    return sum;
 }
 
 map <char, long unsigned int> promptToInputLine () {

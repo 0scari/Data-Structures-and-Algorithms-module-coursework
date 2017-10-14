@@ -39,12 +39,15 @@ long unsigned int getIntInput () {
 #include "Lorry.h"
 #include "Warehouse.h"
 #include "advanced2.h"
+#include "unit_tests.h"
 
 int main() {
 
+    // MAIN MENU
+
     string userInput;
 
-    cout << "[1]: Task-1, [2]: Task-2, \"[ut]\": run unit tests\n-> ";
+    cout << "[1]: Task-1, [2]: Task-2, [\"ut\"]: run unit tests\n-> ";
 
     cin >> userInput;
 
@@ -73,6 +76,8 @@ int main() {
         cout << invoice;
 
     } else if (userInput == "ut")
+        runUnitTests();
+
 
 
 
