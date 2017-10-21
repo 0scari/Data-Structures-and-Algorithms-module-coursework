@@ -21,6 +21,9 @@ class ChessBoard:
         'h': [],
     }
 
+    a = 4 in [1,2,3]
+
+
     ### PUBLIC ###
 
     def __init__ (self):
@@ -40,7 +43,6 @@ class ChessBoard:
 
         ChessBoard.__moveQueenFurther(lastQueensPos)
 
-        ChessBoard.__rows[lastQueensPos]
 
     def __str__(self):
         return
@@ -51,12 +53,71 @@ class ChessBoard:
     #################
 
     @staticmethod
-    def __removeDiagonalCells(row):
-        return
+    def __removeThreatenedSquares():
+        ChessBoard.__resetAllRows()
+        ChessBoard.__removeDiagonalSquares()
+        ChessBoard.__removeVerticalSquares()
 
     @staticmethod
-    def __removeVerticalCells(row):
-        return
+    def __resetAllRows():
+        ChessBoard.__rows = {
+            'a': [1, 2, 3, 4, 5, 6, 7, 8],
+            'b': [1, 2, 3, 4, 5, 6, 7, 8],
+            'c': [1, 2, 3, 4, 5, 6, 7, 8],
+            'd': [1, 2, 3, 4, 5, 6, 7, 8],
+            'e': [1, 2, 3, 4, 5, 6, 7, 8],
+            'f': [1, 2, 3, 4, 5, 6, 7, 8],
+            'g': [1, 2, 3, 4, 5, 6, 7, 8],
+            'h': [1, 2, 3, 4, 5, 6, 7, 8]
+        }
+
+    @staticmethod
+    def __removeDiagonalSquares():
+
+        for qRow, qColumn in ChessBoard.__queens.items():
+
+            remove = False
+            depth  = 1
+
+            if qColumn["cPos"] != 0:
+
+                for bRow, bColumns in ChessBoard.__rows.items():
+
+                    if remove == True:
+                        secureColumns = [column for column in ChessBoard.__rows[bRow]
+                                            if column != qColumn["cPos"] + depth and column != qColumn["cPos"] - depth]
+                        depth += 1
+
+                        ChessBoard.__rows[bRow] = secureColumns
+
+                    if qRow == bRow:
+                        remove = True
+
+
+            else:
+                return
+
+    @staticmethod
+    def __removeVerticalSquares():
+
+        for qRow, qColumn in ChessBoard.__queens.items():
+
+            remove = False
+
+            if qColumn["cPos"] != 0:
+
+                for bRow, bColumns in ChessBoard.__rows.items():
+
+                    if remove == True:
+                        secureColumns = [column for column in ChessBoard.__rows[bRow] if column != qColumn["cPos"]]
+                        ChessBoard.__rows[bRow] = secureColumns
+
+                    if qRow == bRow:
+                        remove = True
+
+
+            else:
+                return
 
     @staticmethod
     def __findLastQueen ():
@@ -99,14 +160,14 @@ class ChessBoard:
 
 
     @staticmethod
-    def __registerQueensNewPosition(row, column):
+    def __registerQueensNewPosition(row, columnIndx):
 
         # if the queen on this row is moved for the first time
         if ChessBoard.__queens[row]['iPos'] == 0:
             # then save the position where it started
-            ChessBoard.__queens[row]['iPos'] = ChessBoard.__rows[row][column]
+            ChessBoard.__queens[row]['iPos'] = ChessBoard.__queens[row]['cPos']
 
-        ChessBoard.__queens[row]['cPos'] = ChessBoard.__rows[row][column]
+        ChessBoard.__queens[row]['cPos'] = ChessBoard.__rows[row][columnIndx]
 
         ChessBoard.__removeDiagonalCells(row)
 
@@ -140,6 +201,12 @@ class ChessBoard:
         for qRow, qColumn in ChessBoard.__queens.items():
             print(qRow + ': ' + str(qColumn))
 
+    @staticmethod
+    def test2():
+        ChessBoard.__resetAllRows()
+        ChessBoard.__removeDiagonalSquares()
+        ChessBoard.__removeVerticalSquares()
+        print(ChessBoard.__rows)
 
 
 print("Started")
