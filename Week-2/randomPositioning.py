@@ -1,12 +1,12 @@
 class ChessBoard:
 
-    __queens = { 'a': {'cPos': 1, 'iPos': 0},
-                 'b': {'cPos': 3, 'iPos': 0},
-                 'c': {'cPos': 5, 'iPos': 0},
-                 'd': {'cPos': 7, 'iPos': 0},
-                 'e': {'cPos': 2, 'iPos': 0},
-                 'f': {'cPos': 4, 'iPos': 0},
-                 'g': {'cPos': 6, 'iPos': 0},
+    __queens = { 'a': {'cPos': 1, 'iPos': 1},
+                 'b': {'cPos': 3, 'iPos': 3},
+                 'c': {'cPos': 5, 'iPos': 5},
+                 'd': {'cPos': 7, 'iPos': 7},
+                 'e': {'cPos': 2, 'iPos': 2},
+                 'f': {'cPos': 4, 'iPos': 4},
+                 'g': {'cPos': 6, 'iPos': 6},
                  'h': {'cPos': 0, 'iPos': 0}
     }
 
@@ -139,8 +139,6 @@ class ChessBoard:
                     ChessBoard.__queens[qRow]['cPos'] = 0
 
 
-
-
     @staticmethod
     def __findLastQueen ():
 
@@ -157,7 +155,6 @@ class ChessBoard:
 
     @staticmethod
     def __moveQueenFurther (queen):
-        print("moveQueenFurther")
 
         # # saving queen's position (cPos) before it is moved
         # queensPrevPos = list(queen.values())[0]
@@ -175,22 +172,23 @@ class ChessBoard:
 
                 if len(ChessBoard.__rows[qRow]) > 0 and ChessBoard.__queens[qRow]['cPos'] != 0:
 
-                    queensColIndx = (ChessBoard.__rows[qRow].index(qColumn['cPos']) + 1) \
+                    nextColumnIndx =  (ChessBoard.__rows[qRow].index(qColumn['cPos']) + 1) \
                                       % len(ChessBoard.__rows[qRow])
 
-                    repositioningSuccess = ChessBoard.__rows[qRow][queensColIndx]     != queen[qRow]['cPos'] \
-                                           and ChessBoard.__rows[qRow][queensColIndx] != queen[qRow]['iPos']
+                    repositioningSuccess = (ChessBoard.__rows[qRow][nextColumnIndx]     != queen[qRow]['cPos']) \
+                                           and ChessBoard.__rows[qRow][nextColumnIndx] != queen[qRow]['iPos']
 
                     print("row:", qRow, " | next index:",ChessBoard.__rows[qRow].index(qColumn['cPos']) + 1, " | len:", len(ChessBoard.__rows[qRow]))
 
-                    print("not same square:", ChessBoard.__rows[qRow][queensColIndx] != queen[qRow]['cPos'],
-                          " not initial pos:", ChessBoard.__rows[qRow][queensColIndx] != queen[qRow]['iPos'])
+                    print("not same square:", ChessBoard.__rows[qRow][nextColumnIndx] != queen[qRow]['cPos'],
+                          " not initial pos:", ChessBoard.__rows[qRow][nextColumnIndx] != queen[qRow]['iPos'])
+                    print(queen[qRow]['iPos'])
 
 
 
                 # if the new column number is not the same as before nor the initial
-                if repositioningSuccess:
-                    ChessBoard.__registerQueensNewPosition(qRow, queensColIndx)
+                if repositioningSuccess :
+                    ChessBoard.__registerQueensNewPosition(qRow, nextColumnIndx)
                     return
                 else:
 
@@ -199,7 +197,7 @@ class ChessBoard:
                     # Reposition previous queen
                     ChessBoard.__moveQueenFurther({prevRow: ChessBoard.__queens[prevRow]})
 
-            ChessBoard.__registerQueensNewPosition(qRow, queensColIndx)
+            ChessBoard.__registerQueensNewPosition(qRow, nextColumnIndx)
 
     @staticmethod
     def __registerQueensNewPosition(row, columnIndx):
@@ -239,7 +237,7 @@ class ChessBoard:
         # Position of the last randomly positioned queen
         lastQueensPos = ChessBoard.__findLastQueen()
 
-        ChessBoard.__moveQueenFurther(lastQueensPos)
+        ChessBoard.__moveQueenFurther(            {'h': {'cPos': 0, 'iPos': 0}})
 
         for qRow, qColumn in ChessBoard.__queens.items():
             print(qRow + ': ' + str(qColumn))
