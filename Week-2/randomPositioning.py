@@ -53,12 +53,6 @@ class ChessBoard:
     #################
 
     @staticmethod
-    def __removeThreatenedSquares():
-        ChessBoard.__resetAllRows()
-        ChessBoard.__removeDiagonalSquares()
-        ChessBoard.__removeVerticalSquares()
-
-    @staticmethod
     def __resetAllRows():
         ChessBoard.__rows = {
             'a': [1, 2, 3, 4, 5, 6, 7, 8],
@@ -72,27 +66,38 @@ class ChessBoard:
         }
 
     @staticmethod
+    def __removeThreatenedSquares():
+        ChessBoard.__resetAllRows()
+        ChessBoard.__removeDiagonalSquares()
+        ChessBoard.__removeVerticalSquares()
+        ChessBoard.__reposThreatenedQueens()
+
+    @staticmethod
     def __removeDiagonalSquares():
 
+        # queen's Row and Column
         for qRow, qColumn in ChessBoard.__queens.items():
 
             remove = False
-            depth  = 1
+            depth  = 1 # used to calculate threatened squares in diagonal
 
+            # do if and only if positioned queen encountered
             if qColumn["cPos"] != 0:
 
+                # board's rows and columns
                 for bRow, bColumns in ChessBoard.__rows.items():
 
                     if remove == True:
-                        secureColumns = [column for column in ChessBoard.__rows[bRow]
+
+                        # columns where a queen can be positioned so that it is safe
+                        safeColumns = [column for column in ChessBoard.__rows[bRow]
                                             if column != qColumn["cPos"] + depth and column != qColumn["cPos"] - depth]
                         depth += 1
 
-                        ChessBoard.__rows[bRow] = secureColumns
+                        ChessBoard.__rows[bRow] = safeColumns
 
                     if qRow == bRow:
                         remove = True
-
 
             else:
                 return
@@ -115,9 +120,26 @@ class ChessBoard:
                     if qRow == bRow:
                         remove = True
 
-
             else:
                 return
+
+    @staticmethod
+    def __reposThreatenedQueens():
+
+        for qRow in ChessBoard.__queens:
+
+            if ChessBoard.__queens[qRow]['cPos'] not in ChessBoard.__rows[qRow]:
+
+                if len(ChessBoard.__rows[qRow]) > 0:
+
+                    ChessBoard.__queens[qRow]['cPos'] = ChessBoard.__rows[qRow][0]
+
+                else:
+
+                    ChessBoard.__queens[qRow]['cPos'] = 0
+
+
+
 
     @staticmethod
     def __findLastQueen ():
@@ -135,6 +157,7 @@ class ChessBoard:
 
     @staticmethod
     def __moveQueenFurther (queen):
+        print("moveQueenFurther")
 
         # # saving queen's position (cPos) before it is moved
         # queensPrevPos = list(queen.values())[0]
@@ -143,35 +166,58 @@ class ChessBoard:
 
             ChessBoard.__resetFollowingQueens(qRow)
 
-            # compute next column number and store its index in the variable
-            queensColIndx = (ChessBoard.__rows[qRow].index(qColumn['cPos']) + 1) % len(ChessBoard.__rows[qRow])
+            repositioningSuccess = False
 
-            # if the new column number is not the same as before nor the initial
-            if  ChessBoard.__rows[qRow][queensColIndx] != queen[qRow]['cPos'] \
-            and ChessBoard.__rows[qRow][queensColIndx] != queen[qRow]['iPos']:
+            while (not repositioningSuccess):
+                # compute next column number and store its index in the variable
+                print(qRow, ChessBoard.__rows[qRow])
 
-                ChessBoard.__registerQueensNewPosition(qRow, queensColIndx)
 
-            else:
-                prevRow = chr(ord(qRow) - 1) # get previous alphabetic letter
-                # Reposition previous queen
-                ChessBoard.__moveQueenFurther({prevRow: ChessBoard.__queens[prevRow]})
-                ChessBoard.__registerQueensNewPosition(qRow, queensColIndx)
+                if len(ChessBoard.__rows[qRow]) > 0 and ChessBoard.__queens[qRow]['cPos'] != 0:
 
+                    queensColIndx = (ChessBoard.__rows[qRow].index(qColumn['cPos']) + 1) \
+                                      % len(ChessBoard.__rows[qRow])
+
+                    repositioningSuccess = ChessBoard.__rows[qRow][queensColIndx]     != queen[qRow]['cPos'] \
+                                           and ChessBoard.__rows[qRow][queensColIndx] != queen[qRow]['iPos']
+
+                    print("row:", qRow, " | next index:",ChessBoard.__rows[qRow].index(qColumn['cPos']) + 1, " | len:", len(ChessBoard.__rows[qRow]))
+
+                    print("not same square:", ChessBoard.__rows[qRow][queensColIndx] != queen[qRow]['cPos'],
+                          " not initial pos:", ChessBoard.__rows[qRow][queensColIndx] != queen[qRow]['iPos'])
+
+
+
+                # if the new column number is not the same as before nor the initial
+                if repositioningSuccess:
+                    ChessBoard.__registerQueensNewPosition(qRow, queensColIndx)
+                    return
+                else:
+
+                    prevRow = chr(ord(qRow) - 1) # get previous alphabetic letter
+
+                    # Reposition previous queen
+                    ChessBoard.__moveQueenFurther({prevRow: ChessBoard.__queens[prevRow]})
+
+            ChessBoard.__registerQueensNewPosition(qRow, queensColIndx)
 
     @staticmethod
     def __registerQueensNewPosition(row, columnIndx):
 
         # if the queen on this row is moved for the first time
         if ChessBoard.__queens[row]['iPos'] == 0:
-            # then save the position where it started
-            ChessBoard.__queens[row]['iPos'] = ChessBoard.__queens[row]['cPos']
+            # then save the position where it started the repositioning
+            print("ci: ", columnIndx, "row:", ChessBoard.__rows[row])
+
+
+            if ChessBoard.__queens[row]['cPos'] in ChessBoard.__rows[row]:
+                ChessBoard.__queens[row]['iPos'] = ChessBoard.__queens[row]['cPos']
+            else:
+                ChessBoard.__queens[row]['iPos'] = ChessBoard.__rows[row][columnIndx]
 
         ChessBoard.__queens[row]['cPos'] = ChessBoard.__rows[row][columnIndx]
 
-        ChessBoard.__removeDiagonalCells(row)
-
-        ChessBoard.__removeVerticalCells(row)
+        ChessBoard.__removeThreatenedSquares()
 
     @staticmethod
     def __resetFollowingQueens(row):
@@ -179,7 +225,7 @@ class ChessBoard:
 
         reset = False
 
-        for iRow in ChessBoard.__queens:
+        for iRow in ChessBoard.__queens.keys():
 
             if reset == True:
                 ChessBoard.__queens[iRow]["iPos"] = 0
@@ -187,9 +233,6 @@ class ChessBoard:
             if row == iRow:
                 reset = True
 
-            # stop if unset queen encountered
-            if ChessBoard.__queens[iRow]["iPos"] == 0:
-                break
 
     @staticmethod
     def test():
