@@ -1,47 +1,49 @@
 class ChessBoard:
 
-    __queens = { 'a': {'cPos': 1, 'iPos': 1},
-                 'b': {'cPos': 3, 'iPos': 3},
-                 'c': {'cPos': 5, 'iPos': 5},
-                 'd': {'cPos': 7, 'iPos': 7},
-                 'e': {'cPos': 2, 'iPos': 2},
-                 'f': {'cPos': 4, 'iPos': 4},
-                 'g': {'cPos': 6, 'iPos': 6},
+    __queens = { 'a': {'cPos': 1, 'iPos': 0},
+                 'b': {'cPos': 3, 'iPos': 0},
+                 'c': {'cPos': 5, 'iPos': 0},
+                 'd': {'cPos': 7, 'iPos': 0},
+                 'e': {'cPos': 2, 'iPos': 0},
+                 'f': {'cPos': 0, 'iPos': 0},
+                 'g': {'cPos': 0, 'iPos': 0},
                  'h': {'cPos': 0, 'iPos': 0}
     }
 
     __rows   = {
-        'a': [1, 2, 3, 4, 5, 6, 7, 8],
-        'b': [3, 4, 5, 6, 7, 8],
-        'c': [5, 6, 7, 8],
-        'd': [2, 7, 8],
-        'e': [2, 4],
-        'f': [4],
-        'g': [6],
+        'a': [],
+        'b': [],
+        'c': [],
+        'd': [],
+        'e': [],
+        'f': [],
+        'g': [],
         'h': [],
     }
 
-    a = 4 in [1,2,3]
-
-
     ### PUBLIC ###
 
-    def __init__ (self):
-        return
-
-
-    def randomlyPositionQueens():
-        return
+    
 
     def areQueensPositioned():
-        return
+        return ChessBoard.__queens['h']['cPos'] != 0
 
     def positionWithBruteForce():
 
-        # Position of the last randomly positioned queen
-        lastQueensPos = ChessBoard.__findLastQueen()
+        while ChessBoard.__queens['h']['cPos'] == 0:
 
-        ChessBoard.__moveQueenFurther(lastQueensPos)
+            # Position of the last randomly positioned queen
+            lastQueensPos = ChessBoard.__findLastQueen()
+
+            ChessBoard.__removeThreatenedSquares()
+
+            ChessBoard.__moveQueenFurther(lastQueensPos)
+
+            nextRowIndx = chr(ord(list(lastQueensPos.keys())[0]) + 1 )
+
+            ChessBoard.__queens[nextRowIndx]['cPos'] = ChessBoard.__rows[nextRowIndx][0]
+
+
 
 
     def __str__(self):
@@ -171,12 +173,13 @@ class ChessBoard:
 
 
                 if len(ChessBoard.__rows[qRow]) > 0 and ChessBoard.__queens[qRow]['cPos'] != 0:
-
+                    print(qColumn['cPos'])
                     nextColumnIndx =  (ChessBoard.__rows[qRow].index(qColumn['cPos']) + 1) \
                                       % len(ChessBoard.__rows[qRow])
 
-                    repositioningSuccess = (ChessBoard.__rows[qRow][nextColumnIndx]     != queen[qRow]['cPos']) \
-                                           and ChessBoard.__rows[qRow][nextColumnIndx] != queen[qRow]['iPos']
+                    nextRow = chr(ord(qRow) + 1)  # get next alphabetic letter
+                    repositioningSuccess = (len(ChessBoard.__rows[nextRow]) > 0) \
+                                            and ChessBoard.__rows[qRow][nextColumnIndx] != queen[qRow]['iPos']
 
                     print("row:", qRow, " | next index:",ChessBoard.__rows[qRow].index(qColumn['cPos']) + 1, " | len:", len(ChessBoard.__rows[qRow]))
 
@@ -234,10 +237,8 @@ class ChessBoard:
 
     @staticmethod
     def test():
-        # Position of the last randomly positioned queen
-        lastQueensPos = ChessBoard.__findLastQueen()
 
-        ChessBoard.__moveQueenFurther(            {'h': {'cPos': 0, 'iPos': 0}})
+        ChessBoard.positionWithBruteForce()
 
         for qRow, qColumn in ChessBoard.__queens.items():
             print(qRow + ': ' + str(qColumn))
