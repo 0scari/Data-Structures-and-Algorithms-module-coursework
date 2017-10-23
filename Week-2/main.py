@@ -1,6 +1,8 @@
 import ChessBoard as CB
 
 CB.ChessBoard.randomlyPositionQueens()
+#
+CB.ChessBoard.print()
 
 if not CB.ChessBoard.areQueensPositioned():
 

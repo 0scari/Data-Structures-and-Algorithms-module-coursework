@@ -31,6 +31,8 @@ class ChessBoard:
 
             if len(ChessBoard.__rows[row]) > 0:
 
+                print(ChessBoard.__rows[row])
+
                 ChessBoard.__queens[row]['cPos'] = random.choice(ChessBoard.__rows[row])
 
                 ChessBoard.__resetAllRows()
@@ -47,6 +49,8 @@ class ChessBoard:
 
     def positionWithBruteForce():
 
+        ChessBoard.__eliminateSquares()
+
         while ChessBoard.__queens['h']['cPos'] == 0:
 
                 # Position of the last randomly positioned queen
@@ -55,6 +59,8 @@ class ChessBoard:
                 ChessBoard.__repositionQueen(lastQueensPos)
 
                 nextRowIndx = chr(ord(list(lastQueensPos.keys())[0]) + 1 )
+
+                ChessBoard.print()
 
                 ChessBoard.__queens[nextRowIndx]['cPos'] = ChessBoard.__rows[nextRowIndx][0]
 
@@ -173,12 +179,17 @@ class ChessBoard:
 
                 if len(ChessBoard.__rows[qRow]) > 0 and ChessBoard.__queens[qRow]['cPos'] != 0:
 
+                    print(qRow, qColumn, ChessBoard.__rows[qRow])
                     nextColumnIndx =  (ChessBoard.__rows[qRow].index(qColumn['cPos']) + 1) \
                                       % len(ChessBoard.__rows[qRow])
 
+                    print(nextColumnIndx)
+
                     nextRow = chr(ord(qRow) + 1)  # get next alphabetic letter
-                    repositioningSuccess = (len(ChessBoard.__rows[nextRow]) > 0) \
+                    repositioningSuccess =  ChessBoard.__doesNextRowHasSquare(nextRow, ChessBoard.__rows[qRow][nextColumnIndx]) \
                                             and ChessBoard.__rows[qRow][nextColumnIndx] != queen[qRow]['iPos']
+
+                    print("next row:", ChessBoard.__rows[nextRow])
 
 
                 # if the new column number is not the same as before nor the initial
@@ -193,6 +204,37 @@ class ChessBoard:
                     ChessBoard.__repositionQueen({prevRow: ChessBoard.__queens[prevRow]})
 
             ChessBoard.__registerQueensNewPosition(qRow, nextColumnIndx)
+
+    @staticmethod
+    def __doesNextRowHasSquare(row, newQueensColumn):
+
+        prevRow = chr(ord(row) - 1)  # get previous alphabetic letter
+
+        rows    = ChessBoard.__rows.copy()
+
+        currentQueensColumn                  = ChessBoard.__queens[prevRow]['cPos']
+
+        ChessBoard.__queens[prevRow]['cPos'] = newQueensColumn
+
+        ChessBoard.print()
+
+        ChessBoard.__eliminateSquares()
+
+        print(ChessBoard.__rows)
+
+        output = False
+
+        if len(ChessBoard.__rows[row]) > 0:
+
+            output = True
+
+        ChessBoard.__queens[prevRow]['cPos'] = currentQueensColumn
+
+        ChessBoard.__rows = rows
+
+        return output
+
+
 
     @staticmethod
     def __registerQueensNewPosition(row, columnIndx):
