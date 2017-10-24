@@ -53,6 +53,10 @@ class ChessBoard:
     def positionWithBruteForce():
         """This method repositions the queens until the last queen has been given a position"""
 
+        # at least the 1st queen must be postioned
+        if ChessBoard.__queens['a']['cPos'] not in range(1, 9):
+            ChessBoard.__queens['h']['cPos'] = " Queens set incorrectly"
+
         while ChessBoard.__queens['h']['cPos'] == 0:
 
                 # {Row: column} of the last randomly positioned queen
@@ -106,11 +110,15 @@ class ChessBoard:
         for row in queens:
 
             if row in ChessBoard.__queens.keys() \
-               and queens[row]['cPos'] in range(8):
+               and queens[row] in range(9):
 
-                ChessBoard.__queens[row]['cPos'] = queens[row]['cPos']
+                ChessBoard.__queens[row]['cPos'] = queens[row]
+
+                ChessBoard.__queens[row]['iPos'] = 0
 
                 output.append(row)
+
+        ChessBoard.__eliminateSquares()
 
         return output
 
@@ -118,10 +126,12 @@ class ChessBoard:
     def getRows():
         return ChessBoard.__rows
 
+    @staticmethod
+    def setRows(rows):
+        ChessBoard.__rows = rows
+
     #################
     ###  PRIVATE  ###
-    ### UTILITIES ###
-    #################
 
     @staticmethod
     def __resetAllSquares():
