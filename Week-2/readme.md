@@ -1,11 +1,11 @@
-# I N T R O D U C T I O N
+## I N T R O D U C T I O N
 The Eight Queens problem is a chess puzzle, first devised by the chess composer Max Bezzel in 1848.
 Can you place 8 queens on an 8 x 8 chess board so that no queen threatens another? How many ways can this
 be done?
 For now, we’re going to concentrate solely on finding a single solution.
 Why? A little practice thinking about algorithms before we move on to more complex issues.
 
-# T H I N K I N G A B O U T T H E A L G O R I T H M
+## T H I N K I N G A B O U T T H E A L G O R I T H M
 Sometimes it helps to reduce the problem to its smallest example.
 What if we had a board with one cell that needs one queen?
 Interestingly, a 2 x 2 board with 2 queens can’t work, and the same problem applies to 3 x 3 with 3 queens.
@@ -13,7 +13,7 @@ After that, we’re fine.
 Those are all the options you have for the 2 and 3 Queens problems. Any other starting point or next step is
 just a rotation and/or reflection of those.
 
-# G E N E R A L I S A T I O N
+## G E N E R A L I S A T I O N
 So we have generalised the problem to n queens on an n x n board.
 This is good for two reasons:
 Reason 1
@@ -29,7 +29,7 @@ Reason 2
 principle for solving the problem stays the same, but the complexity of the current case is lower.
 • The "four queens" problem is a good example of that. It was easy to solve that one and we can now use this
 to help us work out the general strategy.
-A L G O R I T H M 1
+## A L G O R I T H M 1
 • Try all combinations of 8 pieces
 • Work out how many need to be tested for an 8 x 8 or n x n board.
 • Think of the spaces as being choices. We have 8 x 8 = 64 of them. We can pick 4. This is a non-repeating
@@ -40,7 +40,7 @@ combination, in which order doesn’t matter, so. . .
 2
 = 635376
 
-# A L G O R I T H M 2
+## A L G O R I T H M 2
 First, we begin on the top row of the board. Since the rules mean no other queen can be placed on this row
 afterwards and also means every row must have a queen on it (think about why we can say this just from the
 rules we have!), we can solve the problem one row at a time.
@@ -51,7 +51,7 @@ another already-placed queen".
 3. Repeat.
 Simple, yes? Does it properly work however?
 
-#A L G O R I T H M 3
+## A L G O R I T H M 3
 What we would do as humans, is to try our solution and if it doesn’t work, go back a step and try the
 alternatives. If they don’t work, go back a step further and try the alternatives there.
 Let’s think about how that might work. . .
