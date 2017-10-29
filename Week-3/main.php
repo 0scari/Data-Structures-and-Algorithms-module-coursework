@@ -9,4 +9,15 @@
 require 'CubeTower.php';
 use Week3\CubeTower;
 
-var_dump(CubeTower::printCubes());
+CubeTower::setCubes([
+    ['colour' => "red",     'length' => 4],
+    ['colour' => "grey",    'length' => 1],
+    ['colour' => "red",     'length' => 2],
+    ['colour' => "red",     'length' => 3],
+    ['colour' => "grey",    'length' => 4],
+    ['colour' => "purple",  'length' => 2]]);
+
+CubeTower::sortCubes();
+
+CubeTower::printCubes();
+
