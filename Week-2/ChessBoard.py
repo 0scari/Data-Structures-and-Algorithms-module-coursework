@@ -1,7 +1,7 @@
 class ChessBoard:
 
     # cPos: current position
-    # iPos: the initial position of a queen when reposition starts
+    # iPos: the initial position of a queen when repositioning starts
     __queens = { 'a': {'cPos': 0, 'iPos': 0},
                  'b': {'cPos': 0, 'iPos': 0},
                  'c': {'cPos': 0, 'iPos': 0},
@@ -12,7 +12,7 @@ class ChessBoard:
                  'h': {'cPos': 0, 'iPos': 0}
     }
 
-    # Rows and the square numbers that are not threatened by the queens
+    # Board rows, and the square numbers not threatened by the queens
     __rows   = {
         'a': [1, 2, 3, 4, 5, 6, 7, 8],
         'b': [1, 2, 3, 4, 5, 6, 7, 8],
@@ -259,7 +259,7 @@ class ChessBoard:
     def __doesNextRowHasSquare(row, newQueensColumn):
         """Imitate queens positioning with the data in the parameters 
            and return whether or not the following row would have
-           available squares under the respective settings."""
+           available squares under these settings."""
 
         prevRow = chr(ord(row) - 1)  # get previous alphabetic letter
 
