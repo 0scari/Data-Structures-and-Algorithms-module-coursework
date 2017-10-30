@@ -36,7 +36,7 @@ class CubeTower
 
         static::setLengthOrder();
 
-        static::sortCubesByColour([], self::getPossibleCubes());
+        static::$cubes = static::sortCubesByColour([], self::getPossibleCubes());
 
     }
 
@@ -90,11 +90,14 @@ class CubeTower
     static private function sortCubesByColour($sorted, $cubes)
     {
 
+
         if (empty($cubes))
             $cubes = self::getPossibleCubes($sorted[count($sorted)-1]['length']);
 
-        if (is_null($cubes))
+        if (is_null($cubes)) {
             return $sorted;
+
+        }
 
         count($sorted) > 0 ?
             $prevColour = $sorted[count($sorted) - 1]['colour'] :
@@ -107,10 +110,13 @@ class CubeTower
                 $temp = $cubes;
                 unset($temp[$key]);
 
-                $sorted [] = $cube;
+                $sorted []= $cube;
 
-                if ($isSorted = static::sortCubesByColour($sorted, array_values($temp)))
+                if ($isSorted = static::sortCubesByColour($sorted, $temp))
                     return $isSorted;
+                else
+                    array_pop($sorted);
+
             }
         }
 

@@ -15,7 +15,12 @@ CubeTower::setCubes([
     ['colour' => "red",     'length' => 2],
     ['colour' => "red",     'length' => 3],
     ['colour' => "grey",    'length' => 4],
-    ['colour' => "purple",  'length' => 2]]);
+    ['colour' => "purple",  'length' => 2],
+    ['colour' => "blue",    'length' => 5],
+    ['colour' => "red",     'length' => 5],
+
+
+]);
 
 CubeTower::sortCubes();
 
