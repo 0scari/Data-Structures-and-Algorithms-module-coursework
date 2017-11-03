@@ -1,7 +1,5 @@
 "use strict"
 
-var matrix = [];
-
 const ROWS    = 6;
 const COLUMNS = 8;
 
@@ -41,7 +39,7 @@ function findSequence(matrix, row, column, sequence = []) {
         columnOnLeft = column - 1;
 
     var columnOnRight = COLUMNS;
-    if (column < COLUMNS)
+    if (column < COLUMNS - 1)
         columnOnRight = column + 1;
 
     var rowAbove = 0;
@@ -49,48 +47,115 @@ function findSequence(matrix, row, column, sequence = []) {
         rowAbove = row - 1;
 
     var rowBelow = row;
-    if (row < ROWS)
+    if (row < ROWS - 1)
         rowBelow = row + 1;
 
-    if (matrix[row][column] === matrix[row][columnOnLeft]
-        && column !== columnOnLeft ) {
-        findSequences(matrix, row, columnOnLeft, sequence)
-    }
+    var recursions = [];
 
-    matrix[row][column] = 0;
-    sequence.unshift({"row": row, "column": column});
+    if (matrix[row][column] === matrix[row][columnOnLeft]
+        && column !== columnOnLeft )
+        recursions.push({"row":row, "column":columnOnLeft});
+
+    if (matrix[row][column] === matrix[row][columnOnRight]
+        && column !== columnOnRight )
+        recursions.push({"row":row, "column":columnOnRight});
+
+    if (matrix[row][column] === matrix[rowAbove][column]
+        && row !== rowAbove)
+        recursions.push({"row":rowAbove, "column":column});
+
+    if (matrix[row][column] === matrix[rowBelow][column]
+        && row !== rowBelow )
+        recursions.push({"row":rowBelow, "column":column});
+
+    if (recursions.length) {
+
+        matrix[row][column] = 0;
+        sequence.push({"row": row, "column": column});
+
+        recursions.forEach( function (recursion) {
+
+            sequence.concat(findSequence(matrix, recursion["row"], recursion["column"], sequence));
+            matrix[recursion["row"]][recursion["column"]] = 0;
+        })
+
+    } else if (sequence.length)
+        sequence.push({"row": row, "column": column});
+
+    return sequence;
 }
 
 function findSequences(matrix, rows, columns) {
 
     var sequences = {};
-    var sequence  = null;
+    var sequence  = []; //TODO change initial type
 
     for (var i = 0; i < rows; i++) {
 
         for (var j = 0; j < columns; j++) {
 
-            if (i === 0 && j === 0)
+            if (matrix[i][j] === 0)
                 continue;
 
             else
-                sequence = findSequence(matrix, i, j);
+                var number = matrix[i][j];
+                sequence   = findSequence(matrix, i, j);
 
-                if (sequence)
-                    if (sequences[matrix[i][j]] < sequence)
-                        sequences[matrix[i][j]] = sequence;
+                if (sequence.length > 0)
+                    if(sequences.hasOwnProperty(number)) {
+                        if (Object.keys(sequences[number]).length < sequence.length)
+                            sequences[number] = sequence;
+                    } else
+                        sequences[number] = sequence;
         }
     }
 
+    return sequences;
+}
+
+function checkIfWithinTheLongestSequence(row, column, longestSequence) {
+
+    var match = false;
+
+    longestSequence.forEach(function (rowColumnPair) {
+
+        console.log(rowColumnPair["row"] === row);
+        console.log(rowColumnPair["column"] === column);
+
+        if ((rowColumnPair["row"] === row)
+            && (rowColumnPair["column"] === column)) {
+            match = true;
+            return;
+        }
+    });
+
+    return match;
+
+}
+
+function getLongestSequence(sequences) {
+
+    var longest = [];
+    
+    for (var attrib in sequences) {
+        // skip loop if the property is from prototype
+        if (!sequences.hasOwnProperty(attrib)) continue;
+
+        if (sequences[attrib].length > longest.length)
+            longest = sequences[attrib]
+
+    }
+
+    return longest;
 }
 
 
+var matrix = fillMatrix(ROWS, COLUMNS);
 
-matrix = fillMatrix(ROWS, COLUMNS);
+var matrix1 = matrix.map(function (row) {
+    return row.slice(0);
+});
 
-// var workingMatrix = matrix.slice(0);
+var sequences       = findSequences(matrix1, ROWS, COLUMNS);
 
-
-
-
-
+var longestSequence = getLongestSequence(sequences);

@@ -8,5 +8,38 @@
 
     <script type="text/javascript" src="task1.js"> </script>
 
+    <script>
+
+
+        var table = document.createElement("table");
+        var rows  = [];
+
+        for (var i = 0; i < matrix.length; i++) {
+
+            rows[i] = table.insertRow(-1);
+
+
+
+            for (var j = 0; j < matrix[i].length; j++) {
+                var cells = [];
+
+                cells[j] = rows[i].insertCell(-1);
+
+                cells[j].appendChild(document.createTextNode(matrix[i][j]));
+
+                if (checkIfWithinTheLongestSequence(i,j, longestSequence))
+                    cells[j].style.fontWeight = "bold"
+
+            }
+        }
+
+        console.log(longestSequence);
+
+        document.body.appendChild(table);
+
+    </script>
+
+    <br>
+
 </body>
 </html>
