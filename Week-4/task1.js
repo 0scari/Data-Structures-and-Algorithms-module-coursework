@@ -11,8 +11,8 @@ function getRandomInt(min, max) {
  * This function outputs a multidimensional array with size based on the values in the parameters,
  * whose entries are arbitrary numbers in range 1..9
  *
- * @param i array
- * @param j array
+ * @param rows array
+ * @param columns array
  *
  * @returns [Array]
  */
@@ -34,6 +34,7 @@ function fillMatrix(rows, columns)
 
 function findSequence(matrix, row, column, sequence = []) {
 
+    // ### Determine positions of left, right, upper, lower elements
     var columnOnLeft = 0;
     if (column > 0)
         columnOnLeft = column - 1;
@@ -50,7 +51,13 @@ function findSequence(matrix, row, column, sequence = []) {
     if (row < ROWS - 1)
         rowBelow = row + 1;
 
+    // ##############################################################
+
+    // Will contain (row, column) positions of contiguous numbers that match each other
     var recursions = [];
+
+
+    // ### Check whether the contiguous numbers match the current one
 
     if (matrix[row][column] === matrix[row][columnOnLeft]
         && column !== columnOnLeft )
@@ -68,9 +75,14 @@ function findSequence(matrix, row, column, sequence = []) {
         && row !== rowBelow )
         recursions.push({"row":rowBelow, "column":column});
 
+    // ################################################################
+
+
     if (recursions.length) {
 
+        // mark as done
         matrix[row][column] = 0;
+
         sequence.push({"row": row, "column": column});
 
         recursions.forEach( function (recursion) {
@@ -79,31 +91,51 @@ function findSequence(matrix, row, column, sequence = []) {
             matrix[recursion["row"]][recursion["column"]] = 0;
         })
 
-    } else if (sequence.length)
+    } else if (sequence.length) // lateral element in the sequence
+        // won't have anything in $recursions, but still belongs to the sequence
         sequence.push({"row": row, "column": column});
 
     return sequence;
 }
 
+/**
+ * It iterates over the matrix and applies the recursive function to check
+ * if the contiguous elements have the same value. If so,
+ * (row, column) pairs of the sequence will be returned and added to the array
+ * comprising all the sequences which is returned by this function at the end.
+ *
+ * @param matrix [[]]
+ * @param rows int
+ * @param columns int
+ * @returns {{}}
+ */
 function findSequences(matrix, rows, columns) {
 
     var sequences = {};
-    var sequence  = []; //TODO change initial type
+    var sequence  = [];
 
     for (var i = 0; i < rows; i++) {
 
         for (var j = 0; j < columns; j++) {
 
+            // if value 0, it means the original value belonged to a sequence and was rewritten
             if (matrix[i][j] === 0)
                 continue;
 
             else
+
+                // capture the value
                 var number = matrix[i][j];
+
+                // check if a sequence can be formed
                 sequence   = findSequence(matrix, i, j);
 
                 if (sequence.length > 0)
+
+                    // if a sequence with this number already exists
                     if(sequences.hasOwnProperty(number)) {
-                        if (Object.keys(sequences[number]).length < sequence.length)
+
+                        if (sequences[number].length < sequence.length)
                             sequences[number] = sequence;
                     } else
                         sequences[number] = sequence;
@@ -113,14 +145,19 @@ function findSequences(matrix, rows, columns) {
     return sequences;
 }
 
+/**
+ * Function used during creation of the table in the HTML document. It checks if the (row, column) numbers
+ * belong to the longest sequence in order to make it bold if it does.
+ * @param row
+ * @param column
+ * @param longestSequence
+ * @returns {boolean}
+ */
 function checkIfWithinTheLongestSequence(row, column, longestSequence) {
 
     var match = false;
 
     longestSequence.forEach(function (rowColumnPair) {
-
-        console.log(rowColumnPair["row"] === row);
-        console.log(rowColumnPair["column"] === column);
 
         if ((rowColumnPair["row"] === row)
             && (rowColumnPair["column"] === column)) {
@@ -133,6 +170,11 @@ function checkIfWithinTheLongestSequence(row, column, longestSequence) {
 
 }
 
+/**
+ * Find the longest sequence among all the sequences
+ * @param sequences
+ * @returns {Array}
+ */
 function getLongestSequence(sequences) {
 
     var longest = [];
@@ -149,9 +191,9 @@ function getLongestSequence(sequences) {
     return longest;
 }
 
-
 var matrix = fillMatrix(ROWS, COLUMNS);
 
+// Create a duplicate matrix to work with
 var matrix1 = matrix.map(function (row) {
     return row.slice(0);
 });

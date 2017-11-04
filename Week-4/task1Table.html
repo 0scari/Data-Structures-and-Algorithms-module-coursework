@@ -7,11 +7,15 @@
 <body>
 
     <script type="text/javascript" src="task1.js"> </script>
+    <script type="text/javascript" src="task2.js"> </script>
+
 
     <script>
-
+        // FORM TABLE
 
         var table = document.createElement("table");
+        table.style.border = "1px solid #000";
+
         var rows  = [];
 
         for (var i = 0; i < matrix.length; i++) {
@@ -32,8 +36,6 @@
 
             }
         }
-
-        console.log(longestSequence);
 
         document.body.appendChild(table);
 
