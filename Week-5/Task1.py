@@ -1,8 +1,9 @@
 from random import randint
 
 class Task1:
-    __m = 0
-    __n = 0
+
+    __m = 0     # size of the matrix
+    __n = 0     # the n
 
     __matrix = []
 
@@ -13,7 +14,7 @@ class Task1:
 
 
     def fillMatrix (self):
-
+        """Fill the matrix with random elements from 0 - 9"""
         Task1.__matrix = []
 
         for i in range(0,Task1.__m):
@@ -22,59 +23,69 @@ class Task1:
                 Task1.__matrix[i].append(randint(0,9))
 
     def getContiguousDiagonals(self):
+        """Get an array of arrays that contain numbers aligned in parallel to the main diagonal and 
+         and don't exceed the length of n"""
 
         diagonals = []
-        y = 0
 
-        w = 1
+        # negative index will denote how many rows to skip in the matrix
+        firstElementIndx = 0
+
+        iterations = 1
 
         while (True):
 
             diagonal = []
 
-            x = y
+            iterator = firstElementIndx
 
             for row in Task1.__matrix:
 
-                if (x < 0):
-                    x += 1
+                # skip the row if the index is negative
+                if (iterator < 0):
+                    iterator += 1
                     continue
 
-                if (x < len(row)):
-                    diagonal.append(row[x])
-                    x += 1
+                if (iterator < len(row)):
+                    diagonal.append(row[iterator])
+                    # increment the index of the subsequent element in the next row
+                    iterator += 1
 
                 else:
                     break
 
             if (len(diagonal) >= Task1.__n):
 
-                diagonals.append(diagonal)
+                diagonals.append(set(diagonal))
 
-                w += 1
+                iterations += 1
 
-                if (w % 2 == 0):
-                    y = - (y - 1)
-
-                else:
-                    y = -y
-
+                # check if the diagonal has the length
+                # of n for the second time
                 if (len(diagonal) == Task1.__n
-                    and w % 2 == 0):
+                    and iterations % 2 == 0):
 
                         break
+
+                if (iterations % 2 == 0):
+                    # Decrement the index and make it positive
+                    firstElementIndx = - (firstElementIndx - 1)
+
+                else:
+                    firstElementIndx = -firstElementIndx
+
 
         return diagonals
 
     def mergeElementsFromDiagonals(self, diagonals):
 
-        x = []
+        output = set()
 
         for diagonal in diagonals:
 
-            x += [element for element in set(diagonal) if element not in x]
+            output = output.union(diagonal)
 
-        return x
+        return output
 
     def returnSumOfNSmallestElements (self, numbers):
 
@@ -85,13 +96,6 @@ class Task1:
             if (i < Task1.__n):
                 sum += numbers[i]
 
-        return sum
-
-
-
-
-
-
-
-
+            else:
+                return sum
 
