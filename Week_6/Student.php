@@ -18,15 +18,12 @@ class Student
     private $status;
     private $session;
 
-    function __construct()
+    function __construct($name, $dob, $address, $enrolmentDate, $status)
     {
         $this->id = static::$ID;
 
         static::$ID ++;
-    }
 
-    public function setDetails($name, $dob, $address, $enrolmentDate, $status)
-    {
         if (!is_string($name))
             throw new UnexpectedValueException("Student's name not string");
 
@@ -39,8 +36,20 @@ class Student
         if (!$this->enrolmentDate = strtotime($enrolmentDate))
             throw new UnexpectedValueException("Student's name not time");
 
-        if (!is_string($status))
+        if (is_string($address))
+            if (strtolower($status) == "undergraduate" || strtolower($status) == "postgraduate")
+                throw new UnexpectedValueException("Incorrect student status");
+        else
             throw new UnexpectedValueException("Student's status not string");
+
+        $this->name     = $name;
+
+        $this->dob      = $dob;
+
+        $this->address  = $address;
+
+        $this->status   = $status;
+
 
     }
 
