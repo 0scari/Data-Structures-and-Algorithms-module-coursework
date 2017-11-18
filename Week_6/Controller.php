@@ -1,6 +1,6 @@
 <?php
 
-require("BinarySearchTree.php");
+require("Tree.php");
 
 /**
  * Created by PhpStorm.
