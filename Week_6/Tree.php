@@ -24,7 +24,9 @@ class BinarySearchTree {
 
     public function findNode($id)
     {
-        return $this->hasNode() ? $this->root->find($id) : false;
+        if ($this->hasNode())
+            return $this->root->find($id);
+
     }
 
     public function deleteNode($id)
@@ -34,22 +36,27 @@ class BinarySearchTree {
 
     public function hasNode()
     {
-        return isset($this->root);
+        if(isset($this->root))
+            return true;
+
+        else
+            throw new Exception("No registered students");
+
     }
 
 
-    public function getAllNodes($node = null, $nodes = [])
+    public function getAllStudents($node = null, $nodes = [])
     {
         if (is_null($node))
             $node = $this->root;
 
         if($node->left)
-            $nodes = $this->getAllNodes($node->left, $nodes);
+            $nodes = $this->getAllStudents($node->left, $nodes);
 
         $nodes []= $node->student;
 
         if($node->right)
-            $nodes = $this->getAllNodes($node->right, $nodes);
+            $nodes = $this->getAllStudents($node->right, $nodes);
 
         return $nodes;
     }

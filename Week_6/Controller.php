@@ -1,6 +1,7 @@
 <?php
 
 require("Tree.php");
+require("Student.php");
 
 /**
  * Created by PhpStorm.
@@ -29,19 +30,42 @@ class Controller
     {
         static::requireInstance();
 
-            $student = new Student($name, $dob, $address, $enrolmentDate, $status);
+        $student = new Student();
+        $student->updateDetails($name, $dob, $address, $enrolmentDate, $status);
 
-            static::$INSTANCE_BST->create($student);
+        $studentNode = new Node($student);
+        static::$INSTANCE_BST->insert($studentNode);
+
+        return $student->id;
 
     }
     
-    public static function findStudentById($id = 0) 
+    public static function findStudent($id = null)
     {
-        
+        if ($id)
+
+            if (is_int(intval($id)))
+                return static::$INSTANCE_BST->findNode($id);
+
+            else
+                throw new UnexpectedValueException("Id $id has wrong format");
+
+        else
+            return static::$INSTANCE_BST->getAllStudents();
     }
 
     public static function findGraduatedStudents()
     {
+        $students = static::$INSTANCE_BST->getAllStudents();
+
+        $grads    = [];
+
+        foreach ($students as $student)
+
+            if (strtolower($student->status) === "postgraduate")
+                $grads []= $student;
+
+        return $grads;
 
     }
 
@@ -60,9 +84,30 @@ class Controller
 
     }
 
-    public static function listStudents(array $students)
+    public static function sortStudentsAsc(array $students)
     {
+        // built-in quick sort based on supplementary parameters
+        // it moves the $b variable up or down in respect to the $a variable
+        usort($students, function($a, $b) {
+            // a == b = 0 | a > b = 1 | a < b = -1
+            return static::lexicographicComparison($a->name, $b->name);
+        });
 
+        return $students;
+    }
+
+    private static function lexicographicComparison($word1, $word2)
+    {
+        for ($i = 0; $i < strlen(min($word1, $word2)); $i++) {
+
+            if (ord($word1[$i]) > ord($word2[$i]))
+                return 1;
+
+            elseif (ord($word1[$i]) < ord($word2[$i]))
+                return -1;
+        }
+
+        return 0;
     }
 
     public static function deleteStudent($student)
