@@ -68,11 +68,11 @@ class Controller
      * @param array $details
      * @return Student
      */
-    public static function updateStudentDetails($studentId, $details)
+    public static function updateStudentDetails($studentId, array $details)
     {
         self::requireInstance();
 
-        $student        = static::findStudents($studentId);
+        $student        = static::findStudent($studentId);
 
         $name           = null;
         $dob            = null;
@@ -116,7 +116,7 @@ class Controller
     /**
      * Student search based on various parameters such as course code and status.
      *
-     * @param $sessionCodes
+     * @param array $sessionCodes if empty, all codes are searched
      * @param bool $undergrads
      * @param bool $postgrads
      * @return array whose keys are session codes and values students at those sessions, "": no-session
@@ -254,7 +254,7 @@ class Controller
     {
         self::requireInstance();
 
-        $graduates = static::findGraduatedStudents();
+        $graduates = static::findStudents([], false, true);
 
         foreach ($graduates as $graduate)
             static::deleteStudent($graduate->id);
