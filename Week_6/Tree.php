@@ -44,22 +44,38 @@ class BinarySearchTree {
 
     }
 
-
-    public function getAllStudents($node = null, $nodes = [])
+    /**
+     * BST traversal that returns visited nodes. If callback $validator present, will also evaluate
+     * nodes to output against a condition.
+     *
+     * @param null $validator a bool output callback to return nodes that match the criterion.
+     * @param null $node
+     * @param array $nodes
+     * @return array
+     */
+    public function getAllStudents($validator = null, $node = null, $nodes = [])
     {
         if (is_null($node))
             $node = $this->root;
 
         if($node->left)
-            $nodes = $this->getAllStudents($node->left, $nodes);
+            $nodes = $this->getAllStudents($validator, $node->left, $nodes);
 
-        $nodes []= $node->student;
+
+        if (is_callable($validator)) {
+
+            if ($validator($node))
+                $nodes[$node->student->session->code] []= $node->student;
+
+        } else
+            $nodes [] = $node->student;
 
         if($node->right)
-            $nodes = $this->getAllStudents($node->right, $nodes);
+            $nodes = $this->getAllStudents($validator, $node->right, $nodes);
 
         return $nodes;
     }
+
 
 }
 class Node {

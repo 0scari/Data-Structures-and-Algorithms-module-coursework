@@ -16,58 +16,73 @@ class Student
     public $address;
     public $enrolmentDate;
     public $status;
-    public $session;
+    public $session = "0";
 
     function __construct()
     {
         $this->id = static::$ID;
         static::$ID++;
-
     }
 
     function __toString()
     {
-//        echo (strtotime("28-10-1993"));
         return  "Student: ".    $this->name.
                 "| id: ".       $this->id.
                 "| dob: ".      $this->dob.
                 "| address: ".  $this->address.
                 "| enrolled: ". date("d-m-Y", $this->enrolmentDate).
                 "| status: ".   $this->status.
-                "| session: ".  $this->session;
+                "| session: ".  $this->session->name;
 
     }
 
     function updateDetails($name, $dob, $address, $enrolmentDate, $status)
     {
-        if (!is_string($name))
-            throw new UnexpectedValueException("Student's name not string");
+        if ($name) {
+
+            if (!is_string($name))
+                throw new UnexpectedValueException("Student's name not string");
+
+            $this->name     = $name;
+        }
+
+        if ($dob) {
+
+            if (!$this->dob = strtotime($dob))
+                throw new UnexpectedValueException("$name's date of birth not time");
+
+            $this->dob      = $dob;
+
+        }
+
+        if ($address) {
+
+            if (!is_string($address))
+                throw new UnexpectedValueException("Student's address not string");
+
+            $this->address  = $address;
+        }
 
 
+        if ($enrolmentDate)
 
-        if (!$this->dob = strtotime($dob))
-            throw new UnexpectedValueException("$name's date of birth not time");
+            if (!$this->enrolmentDate = strtotime($enrolmentDate))
+                throw new UnexpectedValueException("$name's enrolment date not time");
 
-        if (!is_string($address))
-            throw new UnexpectedValueException("Student's address not string");
+        if ($status)
 
-        if (!$this->enrolmentDate = strtotime($enrolmentDate))
-            throw new UnexpectedValueException("$name's enrolment date not time");
+            if (is_string($status)) {
 
-        if (is_string($status)) {
+                if (strtolower($status) != "undergraduate" and strtolower($status) != "postgraduate")
+                    throw new UnexpectedValueException("Incorrect student status for $name");
 
-            if (strtolower($status) != "undergraduate" and strtolower($status) != "postgraduate")
-                throw new UnexpectedValueException("Incorrect student status for $name");
-        } else
-            throw new UnexpectedValueException("Student's status not string");
+                else
+                    $this->status   = $status;
 
-        $this->name     = $name;
+            } else
+                throw new UnexpectedValueException("Student's status not string");
 
-        $this->dob      = $dob;
-
-        $this->address  = $address;
-
-        $this->status   = $status;
+        return $this;
     }
 
     /**

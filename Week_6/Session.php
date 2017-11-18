@@ -8,20 +8,21 @@
  */
 class Session
 {
-    private $id;
-    private $name;
+    public $id;
+    public $name;
+    public $code;
 
     private static $ID = 1;
 
-    public function __construct($name)
+    public function __construct($code, $name)
     {
 
-        if(is_string($name))
+        if(is_string($name) && is_string($code)) {
             $this->name = $name;
+            $this->code = $code;
 
-        else
-            throw new UnexpectedValueException("Session name not string");
-
+        } else
+            throw new UnexpectedValueException("Session name or code not string");
 
         $this->id = static::$ID;
         static::$ID ++;
