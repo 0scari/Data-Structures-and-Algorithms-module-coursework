@@ -16,6 +16,13 @@ function VertexNotIdentifiedException(intVal)
 
 }
 
+function IncorrectEdgePropertyException(message)
+{
+    this.message = message
+    this.name    = 'VertexNotIdentifiedException'
+
+}
+
 function isPositiveInteger (input)
 {
     if ($.isNumeric(input))
@@ -50,4 +57,17 @@ function getKeys(inArray)
             return parseInt(val)
         })
 
+}
+
+function checkIfEdgeOK(edge)
+{
+    if (!"to" in edge)
+        throw new IncorrectEdgePropertyException("Edge has no 'to' indicator")
+
+    isPositiveInteger(edge.to)
+
+    Graph2.vertexExists(edge.to)
+
+    if (!"weight" in edge)
+        throw new IncorrectEdgePropertyException("Edge has no 'weight' indicator")
 }

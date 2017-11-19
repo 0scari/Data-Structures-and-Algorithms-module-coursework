@@ -1,40 +1,33 @@
 /**
  * Created by oscar on 19/11/2017.
  */
+/**
+ * Created by oscar on 19/11/2017.
+ */
 
 /**
  * Graph2 Unweighted and undirected graph data structure
  */
-class Graph1
+class Graph2
+    // TODO create vertex validation
 {
     /**
-     * Add a vertex
-     * @param vertex value
-     * @param neighbours
+     * Add a value
+     * @param value value
+     * @param edges
      */
-    static addVertex(vertex, neighbours = [])
+    static addVertex(value, edges = [])
     {
-       if (isPositiveInteger(vertex) && isArray(neighbours)) {
+        if (isPositiveInteger(value) && isArray(edges)) {
 
-           // check whether the neighbours are registered vertices
-           neighbours.forEach(function (neighbour) {
+            edges.forEach(function (edge) {
 
-               let vertices = getKeys(Graph1.vertices)
+                checkIfEdgeOK(edge)
 
-               // if not in array
-               if ($.inArray(neighbour, vertices) === -1)
+            })
 
-                   throw new VertexNotIdentifiedException(neighbour)
-
-               else // register with the neighbour the edge to the vertex
-
-                   if ($.inArray(vertex, Graph1.vertices[neighbour]) === -1)
-                       Graph1.vertices[neighbour].push(vertex)
-
-           })
-
-           Graph1.vertices[vertex] = neighbours
-       }
+            Graph2.vertices[value] = edges
+        }
     }
 
     /**
@@ -44,36 +37,36 @@ class Graph1
      */
     static editVertex(vertex, newNeighbours = []) {
 
-        if (Graph1.vertexExists(vertex) && isArray(newNeighbours)) {
+        if (Graph2.vertexExists(vertex) && isArray(newNeighbours)) {
 
-            let oldNeighbours       = Graph1.vertices[vertex]
-            Graph1.vertices[vertex] = newNeighbours
+            let oldNeighbours       = Graph2.vertices[vertex]
+            Graph2.vertices[vertex] = newNeighbours
 
             $.each(newNeighbours, function (key, newNeighbour) {
 
                 alert(newNeighbour)
 
                 // new neighbour must be a registered vertex
-                if ($.inArray(newNeighbour, getKeys(Graph1.vertices)) === -1)
+                if ($.inArray(newNeighbour, getKeys(Graph2.vertices)) === -1)
                     throw new VertexNotIdentifiedException(newNeighbour)
 
                 // if not in oldNeighbours
                 if ($.inArray(newNeighbour, oldNeighbours) === -1)
 
-                    // register with the neighbour the edge to the vertex
-                    Graph1.vertices[newNeighbour].push(vertex)
+                // register with the neighbour the edge to the vertex
+                    Graph2.vertices[newNeighbour].push(vertex)
 
                 else // remove
                     oldNeighbours.splice( $.inArray(newNeighbour, oldNeighbours), 1 );
-                    alert(oldNeighbours)
+                alert(oldNeighbours)
             })
 
             if (oldNeighbours.length) // if the old neighbours not present in new neighbours
 
-                // remove the edge
+            // remove the edge
                 $.each(oldNeighbours, function (key, oldNeighbour) {
 
-                    Graph1.vertices[oldNeighbour].splice($.inArray(vertex, Graph1.vertices[oldNeighbour]), 1);
+                    Graph2.vertices[oldNeighbour].splice($.inArray(vertex, Graph2.vertices[oldNeighbour]), 1);
 
                 })
         }
@@ -83,7 +76,7 @@ class Graph1
     {
         if (isPositiveInteger(vertex))
 
-            if ($.inArray(vertex, getKeys(Graph1.vertices)) != -1)
+            if ($.inArray(vertex, getKeys(Graph2.vertices)) != -1)
                 return true
 
         throw new VertexNotIdentifiedException(vertex)
@@ -97,7 +90,7 @@ class Graph1
      */
     static isConnectedDFT()
     {
-        let v, vertices = getKeys(Graph1.vertices)
+        let v, vertices = getKeys(Graph2.vertices)
 
         if (v = vertices.pop()) {
 
@@ -115,14 +108,14 @@ class Graph1
 
                     visited.push(neighbour);
 
-                    Graph1.vertices[neighbour].forEach(function (edge) {
+                    Graph2.vertices[neighbour].forEach(function (edge) {
 
                         neighbours.push(edge)
                     })
                 }
             }
 
-            return visited.length === getKeys(Graph1.vertices).length
+            return visited.length === getKeys(Graph2.vertices).length
 
         } else
 
@@ -134,4 +127,4 @@ class Graph1
  * Static property of the class Graph2 that holds all the vertices
  * @type {Array}
  */
-Graph1.vertices = []
+Graph2.vertices = []
