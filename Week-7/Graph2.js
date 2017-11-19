@@ -16,7 +16,7 @@ class Graph2
      * @param value value
      * @param edges
      */
-    static addVertex(value, edges = [])
+    static setVertex(value, edges = [])
     {
         if (isPositiveInteger(value) && isArray(edges)) {
 
@@ -26,49 +26,13 @@ class Graph2
 
             })
 
-            Graph2.vertices[value] = edges
-        }
-    }
+            Graph2.vertices[value]             = []
 
-    /**
-     * Edit the given vertex's neighbours
-     * @param vertex
-     * @param newNeighbours
-     */
-    static editVertex(vertex, newNeighbours = []) {
+            Graph2.vertices[value]["edges"]    = edges
 
-        if (Graph2.vertexExists(vertex) && isArray(newNeighbours)) {
-
-            let oldNeighbours       = Graph2.vertices[vertex]
-            Graph2.vertices[vertex] = newNeighbours
-
-            $.each(newNeighbours, function (key, newNeighbour) {
-
-                alert(newNeighbour)
-
-                // new neighbour must be a registered vertex
-                if ($.inArray(newNeighbour, getKeys(Graph2.vertices)) === -1)
-                    throw new VertexNotIdentifiedException(newNeighbour)
-
-                // if not in oldNeighbours
-                if ($.inArray(newNeighbour, oldNeighbours) === -1)
-
-                // register with the neighbour the edge to the vertex
-                    Graph2.vertices[newNeighbour].push(vertex)
-
-                else // remove
-                    oldNeighbours.splice( $.inArray(newNeighbour, oldNeighbours), 1 );
-                alert(oldNeighbours)
-            })
-
-            if (oldNeighbours.length) // if the old neighbours not present in new neighbours
-
-            // remove the edge
-                $.each(oldNeighbours, function (key, oldNeighbour) {
-
-                    Graph2.vertices[oldNeighbour].splice($.inArray(vertex, Graph2.vertices[oldNeighbour]), 1);
-
-                })
+            // indicates how many times the vertex has been
+            // visited while seeking the longest path
+            Graph2.vertices[value]["visited"]  = 0
         }
     }
 
@@ -82,45 +46,42 @@ class Graph2
         throw new VertexNotIdentifiedException(vertex)
 
     }
-
-    /**
-     * Traverse through the vertices using DFT and return whether or not the quantity of visited vertices
-     * is the same as the total quantity of vertices.
-     * @returns {boolean}
-     */
-    static isConnectedDFT()
+    
+    
+    static findLongestSimplePath()
     {
-        let v, vertices = getKeys(Graph2.vertices)
+        //TODO reset visited properties
 
-        if (v = vertices.pop()) {
+        paths = []
 
-            let neighbours = [];
+        $.each(Graph2.vertices, function (vertex, satelliteData) {
+
+            // if all the paths have been followed
+            if (vertex.nVisited == vertex.edges.length)
+                return
+
+            paths.push(Graph2.followPath(vertex))
+
+        })
+    }
+    
+    static followPath(vertex, pathLength = 0)
+    {
+        vertex.visited += 1
+
+        if (vertex.edges.length){
 
             let visited = []
 
-            neighbours.push(v)
+            $.each(vertex.edges, function (edge) {
 
-            while (neighbours.length) {
+                visited[edge.to] = followPath(edge.to)
 
-                let neighbour = neighbours.pop()
-
-                if ($.inArray(neighbour, visited) === -1) {
-
-                    visited.push(neighbour);
-
-                    Graph2.vertices[neighbour].forEach(function (edge) {
-
-                        neighbours.push(edge)
-                    })
-                }
-            }
-
-            return visited.length === getKeys(Graph2.vertices).length
-
+            })
         } else
-
-            return false
+            return pathLength
     }
+
 }
 
 /**

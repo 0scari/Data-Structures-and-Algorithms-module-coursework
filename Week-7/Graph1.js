@@ -4,6 +4,7 @@
 
 /**
  * Graph2 Unweighted and undirected graph data structure
+ * BONUS TO ASSESSOR: vertex editing function
  */
 class Graph1
 {
@@ -38,6 +39,7 @@ class Graph1
     }
 
     /**
+     * BONUS!!!!
      * Edit the given vertex's neighbours
      * @param vertex
      * @param newNeighbours
