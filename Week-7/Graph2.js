@@ -54,34 +54,69 @@ class Graph2
 
         paths = []
 
-        $.each(Graph2.vertices, function (vertex, satelliteData) {
+        $.each(Graph2.vertices, function (vertex) {
 
-            // if all the paths have been followed
+            // if all the paths of vertex already have been followed
             if (vertex.nVisited == vertex.edges.length)
                 return
 
-            paths.push(Graph2.followPath(vertex))
+            else {
 
+                $.each(vertex.edges, function (edge) {
+
+                    paths[vertex] = [Graph2.followPath(edge.to, edge.weight, [vertex])]
+                })
+            }
         })
+
+        return Graph2.longestPathIn(paths)
     }
     
-    static followPath(vertex, pathLength = 0)
+    static followPath(vertex, totalLength, waypoints = [])
     {
+        // register followed path
         vertex.visited += 1
+
+        let visited = []
 
         if (vertex.edges.length){
 
-            let visited = []
-
             $.each(vertex.edges, function (edge) {
 
-                visited[edge.to] = followPath(edge.to)
+                if (!edge.to in waypoints)
 
+                    visited[edge.to] = Graph2.followPath(edge.to,
+                                                         edge.length + totalLength,
+                                                         waypoints.push(vertex))
             })
-        } else
-            return pathLength
+        }
+
+        return visited.length ?
+                  Graph2.longestPathIn(visited) :
+                    {'length': totalLength, 'vertices': waypoints}
     }
 
+    /**
+     *
+     * @param paths 2D array
+     * @returns {{length: number, vertices: array}}
+     */
+    static longestPathIn(paths)
+    {
+        if (isArray(paths)) {
+
+            let startingVertices = getKeys(paths)
+
+            let maxPath = {'length': 0};
+
+            startingVertices.forEach(function (sVertex) {
+
+                if (paths[sVertex].length > maxPath.length)
+                    maxPath = paths[sVertex]
+            })
+            return maxPath
+        }
+    }
 }
 
 /**
