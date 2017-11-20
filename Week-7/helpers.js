@@ -46,6 +46,10 @@ function isArray(input)
 
 }
 
+/**
+ * @param inArray
+ * @returns {*}
+ */
 function getKeys(inArray)
 {
 

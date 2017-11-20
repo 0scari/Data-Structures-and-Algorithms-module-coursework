@@ -5,14 +5,18 @@
  * Created by oscar on 19/11/2017.
  */
 
+"use strict"
+
 /**
  * Graph2 Unweighted and undirected graph data structure
  */
 class Graph2
-    // TODO create vertex validation
 {
     /**
-     * Add a value
+     * Set a vertex and its edges. The edges must have
+     * existent vertices on the both side, or exception
+     * is thrown.
+     *
      * @param value value
      * @param edges
      */
@@ -29,13 +33,14 @@ class Graph2
             Graph2.vertices[value]             = []
 
             Graph2.vertices[value]["edges"]    = edges
-
-            // indicates how many times the vertex has been
-            // visited while seeking the longest path
-            Graph2.vertices[value]["visited"]  = 0
         }
     }
 
+    /**
+     * The method checks whether the input value is a valid vertex value
+     * @param vertex
+     * @returns {boolean}
+     */
     static vertexExists(vertex)
     {
         if (isPositiveInteger(vertex))
@@ -46,58 +51,74 @@ class Graph2
         throw new VertexNotIdentifiedException(vertex)
 
     }
-    
-    
+
+    /**
+     * Traverses over each vertex and follows the paths.
+     * Then Graph2.followPath() recursively searches for
+     * the longest path.
+     *
+     * @returns {{length: number, vertices: array}}
+     */
     static findLongestSimplePath()
     {
-        //TODO reset visited properties
+        let paths = []
 
-        paths = []
+        getKeys(Graph2.vertices).forEach( function (vertexValue) {
 
-        $.each(Graph2.vertices, function (vertex) {
+            let vertex = Graph2.vertices[vertexValue]
 
-            // if all the paths of vertex already have been followed
-            if (vertex.nVisited == vertex.edges.length)
-                return
+                vertex.edges.forEach(function (edge) {
 
-            else {
-
-                $.each(vertex.edges, function (edge) {
-
-                    paths[vertex] = [Graph2.followPath(edge.to, edge.weight, [vertex])]
+                    paths.push( Graph2.followPath(edge.to,
+                                                  edge.weight,
+                                                  [vertexValue]))
                 })
             }
-        })
+        )
 
         return Graph2.longestPathIn(paths)
     }
-    
-    static followPath(vertex, totalLength, waypoints = [])
+
+    /**
+     * Recursively follows each path/edge of the vertex
+     *
+     * @param vertexValue original vertex value
+     * @param totalLength
+     * @param Array waypoints visited vertices in the path
+     * @returns {*}
+     */
+    static followPath(vertexValue, totalLength, waypoints)
     {
-        // register followed path
-        vertex.visited += 1
+        // clone the waypoints array, so that different recursion branches
+        // use different copy of the array
+        let waypoints1 = waypoints.slice()
+        waypoints1.push(vertexValue)
+
+        // get the satellite data of the vertex
+        let vertex = Graph2.vertices[vertexValue]
 
         let visited = []
 
         if (vertex.edges.length){
 
-            $.each(vertex.edges, function (edge) {
+            vertex.edges.forEach( function (edge) {
 
-                if (!edge.to in waypoints)
+                if (!(edge.to in waypoints1)){
 
-                    visited[edge.to] = Graph2.followPath(edge.to,
-                                                         edge.length + totalLength,
-                                                         waypoints.push(vertex))
+                    visited.push( Graph2.followPath(edge.to,
+                                                    edge.weight + totalLength,
+                                                    waypoints1))
+                }
             })
         }
 
         return visited.length ?
                   Graph2.longestPathIn(visited) :
-                    {'length': totalLength, 'vertices': waypoints}
+                    {'length': totalLength, 'vertices': waypoints1}
     }
 
     /**
-     *
+     * Find the path with the largest .length value
      * @param paths 2D array
      * @returns {{length: number, vertices: array}}
      */
@@ -105,14 +126,12 @@ class Graph2
     {
         if (isArray(paths)) {
 
-            let startingVertices = getKeys(paths)
-
             let maxPath = {'length': 0};
 
-            startingVertices.forEach(function (sVertex) {
+            paths.forEach(function (path) {
 
-                if (paths[sVertex].length > maxPath.length)
-                    maxPath = paths[sVertex]
+                if (path.length > maxPath.length)
+                    maxPath = path
             })
             return maxPath
         }

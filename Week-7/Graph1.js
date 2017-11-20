@@ -53,8 +53,6 @@ class Graph1
 
             $.each(newNeighbours, function (key, newNeighbour) {
 
-                alert(newNeighbour)
-
                 // new neighbour must be a registered vertex
                 if ($.inArray(newNeighbour, getKeys(Graph1.vertices)) === -1)
                     throw new VertexNotIdentifiedException(newNeighbour)
@@ -67,7 +65,6 @@ class Graph1
 
                 else // remove
                     oldNeighbours.splice( $.inArray(newNeighbour, oldNeighbours), 1 );
-                    alert(oldNeighbours)
             })
 
             if (oldNeighbours.length) // if the old neighbours not present in new neighbours
