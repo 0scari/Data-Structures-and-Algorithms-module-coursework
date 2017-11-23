@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="51d7bbcb-2f67-4744-a3e7-c06acaa47d63" name="Default" comment="" />
+    <list default="true" id="51d7bbcb-2f67-4744-a3e7-c06acaa47d63" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week-7/Vertex.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Week-7/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Week-7/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Week-7/Graph1.js" afterPath="$PROJECT_DIR$/../Week-7/Graph1.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,11 +26,36 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Tree.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Tree.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Tree.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1830">
-              <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+            <state relative-caret-position="171">
+              <caret line="96" column="7" lean-forward="true" selection-start-line="96" selection-start-column="7" selection-end-line="96" selection-end-column="7" />
+              <folding>
+                <element signature="n#__construct#0;n#BinarySearchTree#0;n#!!top" expanded="false" />
+                <element signature="n#getRoot#0;n#BinarySearchTree#0;n#!!top" expanded="false" />
+                <element signature="n#findNode#0;n#BinarySearchTree#0;n#!!top" expanded="false" />
+                <element signature="n#hasNode#0;n#BinarySearchTree#0;n#!!top" expanded="false" />
+                <element signature="e#883#1213#0#PHP" expanded="false" />
+                <element signature="n#getAllStudents#0;n#BinarySearchTree#0;n#!!top" expanded="false" />
+                <element signature="e#1474#1670#0#PHP" expanded="false" />
+                <element signature="n#__construct#0;n#Node#0;n#!!top" expanded="false" />
+                <element signature="e#2772#3103#0#PHP" expanded="false" />
+                <element signature="e#2910#3053#0#PHP" expanded="false" />
+                <element signature="n#find#0;n#Node#0;n#!!top" expanded="false" />
+                <element signature="e#3269#3585#0#PHP" expanded="false" />
+                <element signature="e#3391#3514#0#PHP" expanded="false" />
+                <element signature="n#insert#0;n#Node#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="24" column="33" lean-forward="false" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -44,13 +74,49 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Controller.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="118" column="58" lean-forward="false" selection-start-line="118" selection-start-column="58" selection-end-line="118" selection-end-column="58" />
+            <state relative-caret-position="334">
+              <caret line="245" column="45" lean-forward="false" selection-start-line="245" selection-start-column="44" selection-end-line="245" selection-end-column="45" />
               <folding>
                 <element signature="e#77#158#0#PHP" expanded="false" />
+                <element signature="e#183#261#0#PHP" expanded="false" />
+                <element signature="e#303#368#0#PHP" expanded="false" />
+                <element signature="e#407#478#0#PHP" expanded="false" />
+                <element signature="n#setNewInstance#0;n#Controller#0;n#!!top" expanded="false" />
+                <element signature="n#addStudent#0;n#Controller#0;n#!!top" expanded="false" />
+                <element signature="e#967#1053#0#PHP" expanded="false" />
+                <element signature="n#findStudent#0;n#Controller#0;n#!!top" expanded="false" />
+                <element signature="e#1329#1421#0#PHP" expanded="false" />
+                <element signature="n#updateStudentDetails#0;n#Controller#0;n#!!top" expanded="false" />
+                <element signature="e#1799#2586#0#PHP" expanded="false" />
+                <element signature="e#1828#1933#0#PHP" expanded="false" />
+                <element signature="e#1947#2049#0#PHP" expanded="false" />
+                <element signature="e#2063#2177#0#PHP" expanded="false" />
+                <element signature="e#2191#2323#0#PHP" expanded="false" />
+                <element signature="e#2337#2448#0#PHP" expanded="false" />
+                <element signature="e#2462#2576#0#PHP" expanded="false" />
+                <element signature="e#2739#3071#0#PHP" expanded="false" />
+                <element signature="n#findStudents#0;n#Controller#0;n#!!top" expanded="false" />
+                <element signature="e#3772#4229#1#PHP" expanded="false" />
+                <element signature="e#4367#4543#0#PHP" expanded="false" />
+                <element signature="n#sessionSort#0;n#Controller#0;n#!!top" expanded="false" />
+                <element signature="n#findStudentsPlainly#0;n#Controller#0;n#!!top" expanded="false" />
+                <element signature="n#getAllSessionCodes#0;n#Controller#0;n#!!top" expanded="false" />
+                <element signature="n#sortAllStudentsByNameAsc#0;n#Controller#0;n#!!top" expanded="false" />
+                <element signature="n#sortStudentsAsc#0;n#Controller#0;n#!!top" expanded="false" />
+                <element signature="e#5615#5784#0#PHP" expanded="false" />
+                <element signature="e#5632#5783#1#PHP" expanded="false" />
+                <element signature="e#5824#5981#0#PHP" expanded="false" />
+                <element signature="n#lexicographicComparison#0;n#Controller#0;n#!!top" expanded="false" />
+                <element signature="e#6138#6455#0#PHP" expanded="false" />
+                <element signature="n#deleteGraduates#0;n#Controller#0;n#!!top" expanded="false" />
+                <element signature="n#addSession#0;n#Controller#0;n#!!top" expanded="false" />
+                <element signature="n#signInToSession#0;n#Controller#0;n#!!top" expanded="false" />
+                <element signature="n#findSession#0;n#Controller#0;n#!!top" expanded="false" />
+                <element signature="e#7914#8018#0#PHP" expanded="false" />
+                <element signature="n#requireInstance#0;n#Controller#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -59,9 +125,40 @@
       <file leaf-file-name="Student.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Student.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-              <folding />
+            <state relative-caret-position="345">
+              <caret line="94" column="1" lean-forward="true" selection-start-line="94" selection-start-column="1" selection-end-line="94" selection-end-column="1" />
+              <folding>
+                <element signature="e#7#88#0#PHP" expanded="false" />
+                <element signature="n#__construct#0;n#Student#0;n#!!top" expanded="false" />
+                <element signature="n#__toString#0;n#Student#0;n#!!top" expanded="false" />
+                <element signature="n#updateDetails#0;n#Student#0;n#!!top" expanded="false" />
+                <element signature="e#849#1026#0#PHP" expanded="false" />
+                <element signature="e#1036#1229#0#PHP" expanded="false" />
+                <element signature="e#1239#1428#0#PHP" expanded="false" />
+                <element signature="e#1649#2043#0#PHP" expanded="false" />
+                <element signature="e#2078#2118#0#PHP" expanded="false" />
+                <element signature="n#setSession#0;n#Student#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Session.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Session.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="16" column="45" lean-forward="false" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+              <folding>
+                <element signature="e#7#88#0#PHP" expanded="false" />
+                <element signature="n#__construct#0;n#Session#0;n#!!top" expanded="false" />
+                <element signature="e#248#455#0#PHP" expanded="false" />
+                <element signature="e#525#555#0#PHP" expanded="false" />
+                <element signature="n#getId#0;n#Session#0;n#!!top" expanded="false" />
+                <element signature="e#627#660#0#PHP" expanded="false" />
+                <element signature="n#getName#0;n#Session#0;n#!!top" expanded="false" />
+                <element signature="e#736#774#0#PHP" expanded="false" />
+                <element signature="n#setName#0;n#Session#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -114,10 +211,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 7" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-372" />
-    <option name="y" value="-1080" />
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -137,6 +232,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -151,8 +248,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -292,22 +387,20 @@
       <updated>1510431798254</updated>
       <workItem from="1510928515430" duration="10224000" />
       <workItem from="1511005129629" duration="30379000" />
+      <workItem from="1511434667270" duration="1518000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40846000" />
+    <option name="totallyTimeSpent" value="42364000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-372" y="-1080" width="1920" height="1080" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26144835" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22213247" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871288" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -316,10 +409,12 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871288" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -353,16 +448,126 @@
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Tree.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1830">
+          <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+          <folding>
+            <element signature="n#__construct#0;n#BinarySearchTree#0;n#!!top" expanded="false" />
+            <element signature="n#getRoot#0;n#BinarySearchTree#0;n#!!top" expanded="false" />
+            <element signature="n#findNode#0;n#BinarySearchTree#0;n#!!top" expanded="false" />
+            <element signature="n#hasNode#0;n#BinarySearchTree#0;n#!!top" expanded="false" />
+            <element signature="e#883#1213#0#PHP" expanded="false" />
+            <element signature="n#getAllStudents#0;n#BinarySearchTree#0;n#!!top" expanded="false" />
+            <element signature="e#1474#1670#0#PHP" expanded="false" />
+            <element signature="n#__construct#0;n#Node#0;n#!!top" expanded="false" />
+            <element signature="e#2772#3103#0#PHP" expanded="false" />
+            <element signature="e#2910#3053#0#PHP" expanded="false" />
+            <element signature="n#find#0;n#Node#0;n#!!top" expanded="false" />
+            <element signature="e#3269#3585#0#PHP" expanded="false" />
+            <element signature="e#3391#3514#0#PHP" expanded="false" />
+            <element signature="n#insert#0;n#Node#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="300">
+            <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Student.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+          <folding>
+            <element signature="e#7#88#0#PHP" expanded="false" />
+            <element signature="n#__construct#0;n#Student#0;n#!!top" expanded="false" />
+            <element signature="n#__toString#0;n#Student#0;n#!!top" expanded="false" />
+            <element signature="n#updateDetails#0;n#Student#0;n#!!top" expanded="false" />
+            <element signature="e#849#1026#0#PHP" expanded="false" />
+            <element signature="e#1036#1229#0#PHP" expanded="false" />
+            <element signature="e#1239#1428#0#PHP" expanded="false" />
+            <element signature="e#1649#2043#0#PHP" expanded="false" />
+            <element signature="e#2078#2118#0#PHP" expanded="false" />
+            <element signature="n#setSession#0;n#Student#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1695">
+          <caret line="118" column="58" lean-forward="false" selection-start-line="118" selection-start-column="58" selection-end-line="118" selection-end-column="58" />
+          <folding>
+            <element signature="e#77#158#0#PHP" expanded="false" />
+            <element signature="e#183#261#0#PHP" expanded="false" />
+            <element signature="e#303#368#0#PHP" expanded="false" />
+            <element signature="e#407#478#0#PHP" expanded="false" />
+            <element signature="n#setNewInstance#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="n#addStudent#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="e#967#1053#0#PHP" expanded="false" />
+            <element signature="n#findStudent#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="e#1329#1421#0#PHP" expanded="false" />
+            <element signature="n#updateStudentDetails#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="e#1799#2586#0#PHP" expanded="false" />
+            <element signature="e#1828#1933#0#PHP" expanded="false" />
+            <element signature="e#1947#2049#0#PHP" expanded="false" />
+            <element signature="e#2063#2177#0#PHP" expanded="false" />
+            <element signature="e#2191#2323#0#PHP" expanded="false" />
+            <element signature="e#2337#2448#0#PHP" expanded="false" />
+            <element signature="e#2462#2576#0#PHP" expanded="false" />
+            <element signature="e#2739#3071#0#PHP" expanded="false" />
+            <element signature="n#findStudents#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="e#3772#4229#1#PHP" expanded="false" />
+            <element signature="e#4367#4543#0#PHP" expanded="false" />
+            <element signature="n#sessionSort#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="n#findStudentsPlainly#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="n#getAllSessionCodes#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="n#sortAllStudentsByNameAsc#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="n#sortStudentsAsc#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="e#5615#5784#0#PHP" expanded="false" />
+            <element signature="e#5632#5783#1#PHP" expanded="false" />
+            <element signature="e#5824#5981#0#PHP" expanded="false" />
+            <element signature="n#lexicographicComparison#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="e#6138#6455#0#PHP" expanded="false" />
+            <element signature="n#deleteGraduates#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="n#addSession#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="n#signInToSession#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="n#findSession#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="e#7914#8018#0#PHP" expanded="false" />
+            <element signature="n#requireInstance#0;n#Controller#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Student.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#7#88#0#PHP" expanded="false" />
+            <element signature="n#__construct#0;n#Student#0;n#!!top" expanded="false" />
+            <element signature="n#__toString#0;n#Student#0;n#!!top" expanded="false" />
+            <element signature="n#updateDetails#0;n#Student#0;n#!!top" expanded="false" />
+            <element signature="e#849#1026#0#PHP" expanded="false" />
+            <element signature="e#1036#1229#0#PHP" expanded="false" />
+            <element signature="e#1239#1428#0#PHP" expanded="false" />
+            <element signature="e#1649#2043#0#PHP" expanded="false" />
+            <element signature="e#2078#2118#0#PHP" expanded="false" />
+            <element signature="n#setSession#0;n#Student#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -380,6 +585,42 @@
           <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
           <folding>
             <element signature="e#77#158#0#PHP" expanded="false" />
+            <element signature="e#183#261#0#PHP" expanded="false" />
+            <element signature="e#303#368#0#PHP" expanded="false" />
+            <element signature="e#407#478#0#PHP" expanded="false" />
+            <element signature="n#setNewInstance#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="n#addStudent#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="e#967#1053#0#PHP" expanded="false" />
+            <element signature="n#findStudent#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="e#1329#1421#0#PHP" expanded="false" />
+            <element signature="n#updateStudentDetails#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="e#1799#2586#0#PHP" expanded="false" />
+            <element signature="e#1828#1933#0#PHP" expanded="false" />
+            <element signature="e#1947#2049#0#PHP" expanded="false" />
+            <element signature="e#2063#2177#0#PHP" expanded="false" />
+            <element signature="e#2191#2323#0#PHP" expanded="false" />
+            <element signature="e#2337#2448#0#PHP" expanded="false" />
+            <element signature="e#2462#2576#0#PHP" expanded="false" />
+            <element signature="e#2739#3071#0#PHP" expanded="false" />
+            <element signature="n#findStudents#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="e#3772#4229#1#PHP" expanded="false" />
+            <element signature="e#4367#4543#0#PHP" expanded="false" />
+            <element signature="n#sessionSort#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="n#findStudentsPlainly#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="n#getAllSessionCodes#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="n#sortAllStudentsByNameAsc#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="n#sortStudentsAsc#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="e#5615#5784#0#PHP" expanded="false" />
+            <element signature="e#5632#5783#1#PHP" expanded="false" />
+            <element signature="e#5824#5981#0#PHP" expanded="false" />
+            <element signature="n#lexicographicComparison#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="e#6138#6455#0#PHP" expanded="false" />
+            <element signature="n#deleteGraduates#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="n#addSession#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="n#signInToSession#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="n#findSession#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="e#7914#8018#0#PHP" expanded="false" />
+            <element signature="n#requireInstance#0;n#Controller#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -399,7 +640,7 @@
         <state relative-caret-position="225">
           <caret line="20" column="18" lean-forward="false" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
           <folding>
-            <element signature="e#6#87#0#PHP" expanded="true" />
+            <element signature="e#6#87#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -448,7 +689,7 @@
         <state relative-caret-position="331">
           <caret line="24" column="33" lean-forward="false" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
           <folding>
-            <element signature="e#6#87#0#PHP" expanded="true" />
+            <element signature="e#6#87#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -457,7 +698,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-          <folding />
+          <folding>
+            <element signature="e#7#88#0#PHP" expanded="false" />
+            <element signature="n#__construct#0;n#Student#0;n#!!top" expanded="false" />
+            <element signature="n#__toString#0;n#Student#0;n#!!top" expanded="false" />
+            <element signature="n#updateDetails#0;n#Student#0;n#!!top" expanded="false" />
+            <element signature="e#849#1026#0#PHP" expanded="false" />
+            <element signature="e#1036#1229#0#PHP" expanded="false" />
+            <element signature="e#1239#1428#0#PHP" expanded="false" />
+            <element signature="e#1649#2043#0#PHP" expanded="false" />
+            <element signature="e#2078#2118#0#PHP" expanded="false" />
+            <element signature="n#setSession#0;n#Student#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -473,7 +725,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1830">
           <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="n#__construct#0;n#BinarySearchTree#0;n#!!top" expanded="false" />
+            <element signature="n#getRoot#0;n#BinarySearchTree#0;n#!!top" expanded="false" />
+            <element signature="n#findNode#0;n#BinarySearchTree#0;n#!!top" expanded="false" />
+            <element signature="n#hasNode#0;n#BinarySearchTree#0;n#!!top" expanded="false" />
+            <element signature="e#883#1213#0#PHP" expanded="false" />
+            <element signature="n#getAllStudents#0;n#BinarySearchTree#0;n#!!top" expanded="false" />
+            <element signature="e#1474#1670#0#PHP" expanded="false" />
+            <element signature="n#__construct#0;n#Node#0;n#!!top" expanded="false" />
+            <element signature="e#2772#3103#0#PHP" expanded="false" />
+            <element signature="e#2910#3053#0#PHP" expanded="false" />
+            <element signature="n#find#0;n#Node#0;n#!!top" expanded="false" />
+            <element signature="e#3269#3585#0#PHP" expanded="false" />
+            <element signature="e#3391#3514#0#PHP" expanded="false" />
+            <element signature="n#insert#0;n#Node#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -494,6 +761,42 @@
           <caret line="67" column="49" lean-forward="false" selection-start-line="67" selection-start-column="49" selection-end-line="67" selection-end-column="49" />
           <folding>
             <element signature="e#77#158#0#PHP" expanded="false" />
+            <element signature="e#183#261#0#PHP" expanded="false" />
+            <element signature="e#303#368#0#PHP" expanded="false" />
+            <element signature="e#407#478#0#PHP" expanded="false" />
+            <element signature="n#setNewInstance#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="n#addStudent#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="e#967#1053#0#PHP" expanded="false" />
+            <element signature="n#findStudent#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="e#1329#1421#0#PHP" expanded="false" />
+            <element signature="n#updateStudentDetails#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="e#1799#2586#0#PHP" expanded="false" />
+            <element signature="e#1828#1933#0#PHP" expanded="false" />
+            <element signature="e#1947#2049#0#PHP" expanded="false" />
+            <element signature="e#2063#2177#0#PHP" expanded="false" />
+            <element signature="e#2191#2323#0#PHP" expanded="false" />
+            <element signature="e#2337#2448#0#PHP" expanded="false" />
+            <element signature="e#2462#2576#0#PHP" expanded="false" />
+            <element signature="e#2739#3071#0#PHP" expanded="false" />
+            <element signature="n#findStudents#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="e#3772#4229#1#PHP" expanded="false" />
+            <element signature="e#4367#4543#0#PHP" expanded="false" />
+            <element signature="n#sessionSort#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="n#findStudentsPlainly#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="n#getAllSessionCodes#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="n#sortAllStudentsByNameAsc#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="n#sortStudentsAsc#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="e#5615#5784#0#PHP" expanded="false" />
+            <element signature="e#5632#5783#1#PHP" expanded="false" />
+            <element signature="e#5824#5981#0#PHP" expanded="false" />
+            <element signature="n#lexicographicComparison#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="e#6138#6455#0#PHP" expanded="false" />
+            <element signature="n#deleteGraduates#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="n#addSession#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="n#signInToSession#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="n#findSession#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="e#7914#8018#0#PHP" expanded="false" />
+            <element signature="n#requireInstance#0;n#Controller#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -502,7 +805,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#7#88#0#PHP" expanded="false" />
+            <element signature="n#__construct#0;n#Student#0;n#!!top" expanded="false" />
+            <element signature="n#__toString#0;n#Student#0;n#!!top" expanded="false" />
+            <element signature="n#updateDetails#0;n#Student#0;n#!!top" expanded="false" />
+            <element signature="e#849#1026#0#PHP" expanded="false" />
+            <element signature="e#1036#1229#0#PHP" expanded="false" />
+            <element signature="e#1239#1428#0#PHP" expanded="false" />
+            <element signature="e#1649#2043#0#PHP" expanded="false" />
+            <element signature="e#2078#2118#0#PHP" expanded="false" />
+            <element signature="n#setSession#0;n#Student#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -519,6 +833,42 @@
           <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
           <folding>
             <element signature="e#77#158#0#PHP" expanded="false" />
+            <element signature="e#183#261#0#PHP" expanded="false" />
+            <element signature="e#303#368#0#PHP" expanded="false" />
+            <element signature="e#407#478#0#PHP" expanded="false" />
+            <element signature="n#setNewInstance#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="n#addStudent#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="e#967#1053#0#PHP" expanded="false" />
+            <element signature="n#findStudent#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="e#1329#1421#0#PHP" expanded="false" />
+            <element signature="n#updateStudentDetails#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="e#1799#2586#0#PHP" expanded="false" />
+            <element signature="e#1828#1933#0#PHP" expanded="false" />
+            <element signature="e#1947#2049#0#PHP" expanded="false" />
+            <element signature="e#2063#2177#0#PHP" expanded="false" />
+            <element signature="e#2191#2323#0#PHP" expanded="false" />
+            <element signature="e#2337#2448#0#PHP" expanded="false" />
+            <element signature="e#2462#2576#0#PHP" expanded="false" />
+            <element signature="e#2739#3071#0#PHP" expanded="false" />
+            <element signature="n#findStudents#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="e#3772#4229#1#PHP" expanded="false" />
+            <element signature="e#4367#4543#0#PHP" expanded="false" />
+            <element signature="n#sessionSort#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="n#findStudentsPlainly#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="n#getAllSessionCodes#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="n#sortAllStudentsByNameAsc#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="n#sortStudentsAsc#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="e#5615#5784#0#PHP" expanded="false" />
+            <element signature="e#5632#5783#1#PHP" expanded="false" />
+            <element signature="e#5824#5981#0#PHP" expanded="false" />
+            <element signature="n#lexicographicComparison#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="e#6138#6455#0#PHP" expanded="false" />
+            <element signature="n#deleteGraduates#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="n#addSession#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="n#signInToSession#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="n#findSession#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="e#7914#8018#0#PHP" expanded="false" />
+            <element signature="n#requireInstance#0;n#Controller#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -538,7 +888,7 @@
         <state relative-caret-position="225">
           <caret line="20" column="18" lean-forward="false" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
           <folding>
-            <element signature="e#6#87#0#PHP" expanded="true" />
+            <element signature="e#6#87#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -582,46 +932,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="24" column="33" lean-forward="false" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
-          <folding>
-            <element signature="e#6#87#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="118" column="58" lean-forward="false" selection-start-line="118" selection-start-column="58" selection-end-line="118" selection-end-column="58" />
-          <folding>
-            <element signature="e#77#158#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Student.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tree.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1830">
-          <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Session.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="7" lean-forward="true" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
+        <state relative-caret-position="165">
+          <caret line="16" column="45" lean-forward="false" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+          <folding>
+            <element signature="e#7#88#0#PHP" expanded="false" />
+            <element signature="n#__construct#0;n#Session#0;n#!!top" expanded="false" />
+            <element signature="e#248#455#0#PHP" expanded="false" />
+            <element signature="e#525#555#0#PHP" expanded="false" />
+            <element signature="n#getId#0;n#Session#0;n#!!top" expanded="false" />
+            <element signature="e#627#660#0#PHP" expanded="false" />
+            <element signature="n#getName#0;n#Session#0;n#!!top" expanded="false" />
+            <element signature="e#736#774#0#PHP" expanded="false" />
+            <element signature="n#setName#0;n#Session#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -633,6 +958,102 @@
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="245" column="45" lean-forward="false" selection-start-line="245" selection-start-column="44" selection-end-line="245" selection-end-column="45" />
+          <folding>
+            <element signature="e#77#158#0#PHP" expanded="false" />
+            <element signature="e#183#261#0#PHP" expanded="false" />
+            <element signature="e#303#368#0#PHP" expanded="false" />
+            <element signature="e#407#478#0#PHP" expanded="false" />
+            <element signature="n#setNewInstance#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="n#addStudent#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="e#967#1053#0#PHP" expanded="false" />
+            <element signature="n#findStudent#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="e#1329#1421#0#PHP" expanded="false" />
+            <element signature="n#updateStudentDetails#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="e#1799#2586#0#PHP" expanded="false" />
+            <element signature="e#1828#1933#0#PHP" expanded="false" />
+            <element signature="e#1947#2049#0#PHP" expanded="false" />
+            <element signature="e#2063#2177#0#PHP" expanded="false" />
+            <element signature="e#2191#2323#0#PHP" expanded="false" />
+            <element signature="e#2337#2448#0#PHP" expanded="false" />
+            <element signature="e#2462#2576#0#PHP" expanded="false" />
+            <element signature="e#2739#3071#0#PHP" expanded="false" />
+            <element signature="n#findStudents#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="e#3772#4229#1#PHP" expanded="false" />
+            <element signature="e#4367#4543#0#PHP" expanded="false" />
+            <element signature="n#sessionSort#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="n#findStudentsPlainly#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="n#getAllSessionCodes#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="n#sortAllStudentsByNameAsc#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="n#sortStudentsAsc#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="e#5615#5784#0#PHP" expanded="false" />
+            <element signature="e#5632#5783#1#PHP" expanded="false" />
+            <element signature="e#5824#5981#0#PHP" expanded="false" />
+            <element signature="n#lexicographicComparison#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="e#6138#6455#0#PHP" expanded="false" />
+            <element signature="n#deleteGraduates#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="n#addSession#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="n#signInToSession#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="n#findSession#0;n#Controller#0;n#!!top" expanded="false" />
+            <element signature="e#7914#8018#0#PHP" expanded="false" />
+            <element signature="n#requireInstance#0;n#Controller#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="24" column="33" lean-forward="false" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Student.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="94" column="1" lean-forward="true" selection-start-line="94" selection-start-column="1" selection-end-line="94" selection-end-column="1" />
+          <folding>
+            <element signature="e#7#88#0#PHP" expanded="false" />
+            <element signature="n#__construct#0;n#Student#0;n#!!top" expanded="false" />
+            <element signature="n#__toString#0;n#Student#0;n#!!top" expanded="false" />
+            <element signature="n#updateDetails#0;n#Student#0;n#!!top" expanded="false" />
+            <element signature="e#849#1026#0#PHP" expanded="false" />
+            <element signature="e#1036#1229#0#PHP" expanded="false" />
+            <element signature="e#1239#1428#0#PHP" expanded="false" />
+            <element signature="e#1649#2043#0#PHP" expanded="false" />
+            <element signature="e#2078#2118#0#PHP" expanded="false" />
+            <element signature="n#setSession#0;n#Student#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tree.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="96" column="7" lean-forward="true" selection-start-line="96" selection-start-column="7" selection-end-line="96" selection-end-column="7" />
+          <folding>
+            <element signature="n#__construct#0;n#BinarySearchTree#0;n#!!top" expanded="false" />
+            <element signature="n#getRoot#0;n#BinarySearchTree#0;n#!!top" expanded="false" />
+            <element signature="n#findNode#0;n#BinarySearchTree#0;n#!!top" expanded="false" />
+            <element signature="n#hasNode#0;n#BinarySearchTree#0;n#!!top" expanded="false" />
+            <element signature="e#883#1213#0#PHP" expanded="false" />
+            <element signature="n#getAllStudents#0;n#BinarySearchTree#0;n#!!top" expanded="false" />
+            <element signature="e#1474#1670#0#PHP" expanded="false" />
+            <element signature="n#__construct#0;n#Node#0;n#!!top" expanded="false" />
+            <element signature="e#2772#3103#0#PHP" expanded="false" />
+            <element signature="e#2910#3053#0#PHP" expanded="false" />
+            <element signature="n#find#0;n#Node#0;n#!!top" expanded="false" />
+            <element signature="e#3269#3585#0#PHP" expanded="false" />
+            <element signature="e#3391#3514#0#PHP" expanded="false" />
+            <element signature="n#insert#0;n#Node#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

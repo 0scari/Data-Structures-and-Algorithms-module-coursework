@@ -11,12 +11,12 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state relative-caret-position="285">
+              <caret line="19" column="18" lean-forward="false" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -25,21 +25,55 @@
       <file leaf-file-name="Graph1.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Graph1.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+            <state relative-caret-position="60">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
+                <element signature="n#!!doc;n#Graph1#0" expanded="false" />
+                <element signature="n#!!doc;n#addVertex#0;n#Graph1#0" expanded="false" />
+                <element signature="n#!!block;n#addVertex#0;n#Graph1#0" expanded="false" />
+                <element signature="e#371#1001#0" expanded="false" />
+                <element signature="e#492#942#0" expanded="false" />
+                <element signature="n#!!doc;n#editVertex#0;n#Graph1#0" expanded="false" />
+                <element signature="n#!!block;n#editVertex#0;n#Graph1#0" expanded="false" />
+                <element signature="e#1253#2372#0" expanded="false" />
+                <element signature="e#1434#2030#0" expanded="false" />
+                <element signature="e#2229#2361#0" expanded="false" />
+                <element signature="n#!!block;n#vertexExists#0;n#Graph1#0" expanded="false" />
+                <element signature="n#!!doc;n#isConnectedDFT#0;n#Graph1#0" expanded="false" />
+                <element signature="n#!!block;n#isConnectedDFT#0;n#Graph1#0" expanded="false" />
+                <element signature="e#2937#3490#0" expanded="false" />
+                <element signature="e#3074#3408#0" expanded="false" />
+                <element signature="e#3185#3394#0" expanded="false" />
+                <element signature="e#3305#3375#0" expanded="false" />
+                <element signature="e#3531#3622#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Graph2.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Graph2.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Graph2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2025">
-              <caret line="137" column="5" lean-forward="false" selection-start-line="137" selection-start-column="5" selection-end-line="137" selection-end-column="5" />
-              <folding />
+            <state relative-caret-position="255">
+              <caret line="101" column="32" lean-forward="true" selection-start-line="101" selection-start-column="32" selection-end-line="101" selection-end-column="32" />
+              <folding>
+                <element signature="e#43#85#0" expanded="false" />
+                <element signature="n#!!doc;n#Graph2#0" expanded="false" />
+                <element signature="n#!!doc;n#setVertex#0;n#Graph2#0" expanded="false" />
+                <element signature="n#!!block;n#setVertex#0;n#Graph2#0" expanded="false" />
+                <element signature="e#481#699#0" expanded="false" />
+                <element signature="e#526#579#0" expanded="false" />
+                <element signature="n#!!doc;n#vertexExists#0;n#Graph2#0" expanded="false" />
+                <element signature="n#!!block;n#vertexExists#0;n#Graph2#0" expanded="false" />
+                <element signature="n#!!doc;n#findLongestSimplePath#0;n#Graph2#0" expanded="false" />
+                <element signature="e#1535#1743#0" expanded="false" />
+                <element signature="n#!!doc;n#followPath#0;n#Graph2#0" expanded="false" />
+                <element signature="e#2526#2813#0" expanded="false" />
+                <element signature="e#2574#2799#0" expanded="false" />
+                <element signature="n#!!doc;n#longestPathIn#0;n#Graph2#0" expanded="false" />
+                <element signature="e#3285#3386#0" expanded="false" />
+                <element signature="e#3434#3525#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -47,10 +81,19 @@
       <file leaf-file-name="helpers.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/helpers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
-              <caret line="49" column="17" lean-forward="true" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
+            <state relative-caret-position="255">
+              <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc;n#WrongTypeException#0" expanded="false" />
+                <element signature="n#!!block;n#WrongTypeException#0" expanded="false" />
+                <element signature="n#!!block;n#VertexNotIdentifiedException#0" expanded="false" />
+                <element signature="n#!!block;n#IncorrectEdgePropertyException#0" expanded="false" />
+                <element signature="n#!!block;n#isPositiveInteger#0" expanded="false" />
+                <element signature="n#!!block;n#isArray#0" expanded="false" />
+                <element signature="n#!!doc;n#getKeys#0" expanded="false" />
+                <element signature="n#!!block;n#getKeys#0" expanded="false" />
+                <element signature="e#1010#1054#0" expanded="false" />
+                <element signature="n#!!block;n#checkIfEdgeOK#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -81,10 +124,10 @@
       <list>
         <option value="$PROJECT_DIR$/Graph2.php" />
         <option value="$PROJECT_DIR$/Vertex.js" />
-        <option value="$PROJECT_DIR$/Graph1.js" />
         <option value="$PROJECT_DIR$/helpers.js" />
         <option value="$PROJECT_DIR$/Graph2.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/Graph1.js" />
       </list>
     </option>
   </component>
@@ -115,7 +158,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -130,6 +172,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -190,6 +233,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -223,33 +272,33 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1511105220729</updated>
-      <workItem from="1511105222275" duration="34649000" />
+      <workItem from="1511105222275" duration="34796000" />
+      <workItem from="1511434603601" duration="2721000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34649000" />
+    <option name="totallyTimeSpent" value="37517000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16397415" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16639742" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -265,72 +314,38 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/Graph1.js</url>
           <line>36</line>
-          <properties />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/Graph1.js</url>
           <line>100</line>
-          <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/index.html</url>
           <line>15</line>
-          <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/Graph2.js</url>
           <line>65</line>
-          <properties />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/index.html</url>
+          <line>19</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="8" />
+      <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_ajax.googleapis.com_ajax_libs_jquery_3.2.1_jquery.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="401" column="4" lean-forward="false" selection-start-line="401" selection-start-column="4" selection-end-line="401" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graph2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="931">
-          <caret line="144" column="20" lean-forward="false" selection-start-line="144" selection-start-column="20" selection-end-line="144" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vertex.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-          <folding>
-            <element signature="n#!!doc;n#Vertex#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/helpers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="49" column="17" lean-forward="true" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
-          <folding>
-            <element signature="n#!!doc;n#WrongTypeException#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graph2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2025">
-          <caret line="137" column="5" lean-forward="false" selection-start-line="137" selection-start-column="5" selection-end-line="137" selection-end-column="5" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -340,16 +355,163 @@
         <state relative-caret-position="735">
           <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc;n#Graph1#0" expanded="false" />
+            <element signature="n#!!doc;n#addVertex#0;n#Graph1#0" expanded="false" />
+            <element signature="n#!!block;n#addVertex#0;n#Graph1#0" expanded="false" />
+            <element signature="e#371#1001#0" expanded="false" />
+            <element signature="e#492#942#0" expanded="false" />
+            <element signature="n#!!doc;n#editVertex#0;n#Graph1#0" expanded="false" />
+            <element signature="n#!!block;n#editVertex#0;n#Graph1#0" expanded="false" />
+            <element signature="e#1253#2372#0" expanded="false" />
+            <element signature="e#1434#2030#0" expanded="false" />
+            <element signature="e#2229#2361#0" expanded="false" />
+            <element signature="n#!!block;n#vertexExists#0;n#Graph1#0" expanded="false" />
+            <element signature="n#!!doc;n#isConnectedDFT#0;n#Graph1#0" expanded="false" />
+            <element signature="n#!!block;n#isConnectedDFT#0;n#Graph1#0" expanded="false" />
+            <element signature="e#2937#3490#0" expanded="false" />
+            <element signature="e#3074#3408#0" expanded="false" />
+            <element signature="e#3185#3394#0" expanded="false" />
+            <element signature="e#3305#3375#0" expanded="false" />
+            <element signature="e#3531#3622#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graph2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2025">
+          <caret line="137" column="5" lean-forward="false" selection-start-line="137" selection-start-column="5" selection-end-line="137" selection-end-column="5" />
+          <folding>
+            <element signature="e#43#85#0" expanded="false" />
+            <element signature="n#!!doc;n#Graph2#0" expanded="false" />
+            <element signature="n#!!doc;n#setVertex#0;n#Graph2#0" expanded="false" />
+            <element signature="n#!!block;n#setVertex#0;n#Graph2#0" expanded="false" />
+            <element signature="e#481#699#0" expanded="false" />
+            <element signature="e#526#579#0" expanded="false" />
+            <element signature="n#!!doc;n#vertexExists#0;n#Graph2#0" expanded="false" />
+            <element signature="n#!!block;n#vertexExists#0;n#Graph2#0" expanded="false" />
+            <element signature="n#!!doc;n#findLongestSimplePath#0;n#Graph2#0" expanded="false" />
+            <element signature="e#1535#1743#0" expanded="false" />
+            <element signature="n#!!doc;n#followPath#0;n#Graph2#0" expanded="false" />
+            <element signature="e#2526#2813#0" expanded="false" />
+            <element signature="e#2574#2799#0" expanded="false" />
+            <element signature="n#!!doc;n#longestPathIn#0;n#Graph2#0" expanded="false" />
+            <element signature="e#3285#3386#0" expanded="false" />
+            <element signature="e#3434#3525#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helpers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="49" column="17" lean-forward="true" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
+          <folding>
+            <element signature="n#!!doc;n#WrongTypeException#0" expanded="false" />
+            <element signature="n#!!block;n#WrongTypeException#0" expanded="false" />
+            <element signature="n#!!block;n#VertexNotIdentifiedException#0" expanded="false" />
+            <element signature="n#!!block;n#IncorrectEdgePropertyException#0" expanded="false" />
+            <element signature="n#!!block;n#isPositiveInteger#0" expanded="false" />
+            <element signature="n#!!block;n#isArray#0" expanded="false" />
+            <element signature="n#!!doc;n#getKeys#0" expanded="false" />
+            <element signature="n#!!block;n#getKeys#0" expanded="false" />
+            <element signature="e#1010#1054#0" expanded="false" />
+            <element signature="n#!!block;n#checkIfEdgeOK#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_ajax.googleapis.com_ajax_libs_jquery_3.2.1_jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="401" column="4" lean-forward="false" selection-start-line="401" selection-start-column="4" selection-end-line="401" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graph2.php" />
+    <entry file="file://$PROJECT_DIR$/Vertex.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helpers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc;n#WrongTypeException#0" expanded="false" />
+            <element signature="n#!!block;n#WrongTypeException#0" expanded="false" />
+            <element signature="n#!!block;n#VertexNotIdentifiedException#0" expanded="false" />
+            <element signature="n#!!block;n#IncorrectEdgePropertyException#0" expanded="false" />
+            <element signature="n#!!block;n#isPositiveInteger#0" expanded="false" />
+            <element signature="n#!!block;n#isArray#0" expanded="false" />
+            <element signature="n#!!doc;n#getKeys#0" expanded="false" />
+            <element signature="n#!!block;n#getKeys#0" expanded="false" />
+            <element signature="e#1010#1054#0" expanded="false" />
+            <element signature="n#!!block;n#checkIfEdgeOK#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graph1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc;n#Graph1#0" expanded="false" />
+            <element signature="n#!!doc;n#addVertex#0;n#Graph1#0" expanded="false" />
+            <element signature="n#!!block;n#addVertex#0;n#Graph1#0" expanded="false" />
+            <element signature="e#371#1001#0" expanded="false" />
+            <element signature="e#492#942#0" expanded="false" />
+            <element signature="n#!!doc;n#editVertex#0;n#Graph1#0" expanded="false" />
+            <element signature="n#!!block;n#editVertex#0;n#Graph1#0" expanded="false" />
+            <element signature="e#1253#2372#0" expanded="false" />
+            <element signature="e#1434#2030#0" expanded="false" />
+            <element signature="e#2229#2361#0" expanded="false" />
+            <element signature="n#!!block;n#vertexExists#0;n#Graph1#0" expanded="false" />
+            <element signature="n#!!doc;n#isConnectedDFT#0;n#Graph1#0" expanded="false" />
+            <element signature="n#!!block;n#isConnectedDFT#0;n#Graph1#0" expanded="false" />
+            <element signature="e#2937#3490#0" expanded="false" />
+            <element signature="e#3074#3408#0" expanded="false" />
+            <element signature="e#3185#3394#0" expanded="false" />
+            <element signature="e#3305#3375#0" expanded="false" />
+            <element signature="e#3531#3622#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="285">
+          <caret line="19" column="18" lean-forward="false" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graph2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="101" column="32" lean-forward="true" selection-start-line="101" selection-start-column="32" selection-end-line="101" selection-end-column="32" />
+          <folding>
+            <element signature="e#43#85#0" expanded="false" />
+            <element signature="n#!!doc;n#Graph2#0" expanded="false" />
+            <element signature="n#!!doc;n#setVertex#0;n#Graph2#0" expanded="false" />
+            <element signature="n#!!block;n#setVertex#0;n#Graph2#0" expanded="false" />
+            <element signature="e#481#699#0" expanded="false" />
+            <element signature="e#526#579#0" expanded="false" />
+            <element signature="n#!!doc;n#vertexExists#0;n#Graph2#0" expanded="false" />
+            <element signature="n#!!block;n#vertexExists#0;n#Graph2#0" expanded="false" />
+            <element signature="n#!!doc;n#findLongestSimplePath#0;n#Graph2#0" expanded="false" />
+            <element signature="e#1535#1743#0" expanded="false" />
+            <element signature="n#!!doc;n#followPath#0;n#Graph2#0" expanded="false" />
+            <element signature="e#2526#2813#0" expanded="false" />
+            <element signature="e#2574#2799#0" expanded="false" />
+            <element signature="n#!!doc;n#longestPathIn#0;n#Graph2#0" expanded="false" />
+            <element signature="e#3285#3386#0" expanded="false" />
+            <element signature="e#3434#3525#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
