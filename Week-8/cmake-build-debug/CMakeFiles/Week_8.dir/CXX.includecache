@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/oscar/My_Files/Git/210CT/Week-8/main.cpp
+iostream
+-
+string
+-
+array
+-
+map
+-
+vector
+-
+
