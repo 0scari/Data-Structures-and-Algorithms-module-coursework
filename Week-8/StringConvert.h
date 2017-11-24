@@ -59,7 +59,6 @@ public:
 
                 strUnion[i + n] = stringA[i];
 
-                // s = s.substr(0, i) + s.substr(i + 1, s.length() - i);
                 stringA = stringA.substr(0, i) + stringA.substr(i +1, stringA.length() - i);
                 stringB = stringB.substr(0, i) + stringB.substr(i +1, stringB.length() - i);
 
@@ -68,6 +67,17 @@ public:
                 n      += 1;
             }
         }
+    }
+
+    string restoreUnion(string strIn)
+    {
+        for (auto letter : strUnion)
+
+            strIn = strIn.substr(0,letter.first)
+                    + string(1,letter.second)
+                    + strIn.substr(letter.first, strIn.length() - letter.first);
+
+        return strIn;
     }
 
 

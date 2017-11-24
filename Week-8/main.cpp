@@ -138,9 +138,17 @@ int main() {
     StringConvert::removeUnion(s1, s2);
 
     cout <<  endl << s1 + "\n" + s2;
-    for (auto a : StringConvert::strUnion)
-        cout << a.first << ": " << a.second << "\n";
+//    for (auto a : StringConvert::strUnion)
+//        cout << a.first << ": " << a.second << "\n";
 
+//    cout << "dbg";
+
+    for (auto letter : StringConvert::strUnion) {
+        cout << ": " + string(1,letter.second);
+        s2 = s2.substr(0,letter.first) + string(1,letter.second) + s2.substr(letter.first, s2.length() - letter.first);
+        cout << endl <<  s2 << endl;
+
+    }
 
 //    vector < map <string, vector <int>> > res = StringMatch::matchStrings("ABCDEFG", "DFG");
 //
