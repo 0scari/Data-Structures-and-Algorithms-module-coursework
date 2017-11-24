@@ -7,7 +7,7 @@
 
 using namespace std;
 
-//#include "StringConvert.h"
+#include "StringConvert.h"
 
 int getMatchingStrAPos (map <string, string> stringA, int index)
 {
@@ -58,10 +58,64 @@ vector < map <string, vector <int>> > findMatchingStrings(map <string, string> s
 }
 
 
+map <string, string> createBuffersForMatching(string stringA, unsigned int stringB)
+{
+    string buffer1 = stringA.substr(0, stringA.length() - 1);
+    string buffer2 = stringA.substr(stringA.length() - 1, 1) + string(stringB -1, ' ');
 
+    return {{"buffer1", buffer1}, {"buffer2", buffer2}};
+}
+
+void repositionLetters(map <string, string> &strBuffers)
+{
+    char letterN = ' ';
+    char letterM;
+
+    for (int i = 0; i < strBuffers["buffer1"].length(); ++i) {
+
+        letterM = strBuffers["buffer1"][i];
+
+        strBuffers["buffer1"][i] = letterN;
+
+        letterN = letterM;
+    }
+
+    for (int i = 0; i < strBuffers["buffer2"].length(); ++i) {
+
+        letterM = strBuffers["buffer2"][i];
+
+        strBuffers["buffer2"][i] = letterN;
+
+        letterN = letterM;
+    }
+
+};
+
+void printBuffers(map <string, string> buffers)
+{
+    for (auto buffer : buffers) {
+        cout << buffer.first << ": " << buffer.second << "|" << endl;
+    }
+
+
+    return;
+}
 
 int main() {
 
+    createBuffersForMatching("ABCDEFG", 3);
+
+    map <string, string> buffers = createBuffersForMatching("ABCDEFG", 3);
+
+    printBuffers(buffers);
+
+    repositionLetters(buffers);
+
+    printBuffers(buffers);
+
+
+
+//    cout << s;
 
 //    vector < map <string, vector <int>> > res = findMatchingStrings( {{"buffer1", " MU"}, {"buffer2", "BACDEUX "}},
 //                                                                      "BADEMLXX");
