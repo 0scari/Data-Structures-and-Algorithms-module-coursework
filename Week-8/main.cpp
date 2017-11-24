@@ -7,7 +7,6 @@
 
 using namespace std;
 
-//#include "StringConvert.h"
 
 int getMatchingStrAPos (map <string, string> stringA, int index)
 {
@@ -118,9 +117,10 @@ void printMatchArray (vector < map <string, vector <int>> > matches) {
 }
 
 #include "StringMatch.h"
-
+#include "StringConvert.h"
 
 int main() {
+
 //    createBuffersForMatching("ABCDEFG", 3);
 //
 //    map <string, string> buffers = createBuffersForMatching("ABCDEFG", 3);
@@ -132,10 +132,17 @@ int main() {
 //    printBuffers(buffers);
 
 
+    string s1 = "ABCLOLAT";
+    string s2 = "ABCXAXAZL";
 
-//    cout << s;
+    StringConvert::removeUnion(s1, s2);
 
-    vector < map <string, vector <int>> > res = StringMatch::matchStrings("ABCDEFG", "DFG");
+    cout <<  endl << s1 + "\n" + s2;
+    for (auto a : StringConvert::strUnion)
+        cout << a.first << ": " << a.second << "\n";
 
-    printMatchArray(res);
+
+//    vector < map <string, vector <int>> > res = StringMatch::matchStrings("ABCDEFG", "DFG");
+//
+//    printMatchArray(res);
 }

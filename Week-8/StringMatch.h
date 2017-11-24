@@ -8,22 +8,22 @@
 class StringMatch
 {
 public:
+
     static vector <map <string, vector <int>> > matchStrings (string stringA, string stringB)
     {
         vector < map <string, vector <int>> > output;
         vector < map <string, vector <int>> > outputPairs;
 
-
         map <string, string>   stringABuffers;
         stringABuffers    =    createBuffersForMatching(stringA, stringB.length());
-        
+
         do {
-            outputPairs     = findMatchingStrings(stringABuffers, stringB);
-            output.insert   ( output.end(), outputPairs.begin(), outputPairs.end());
+            outputPairs   = findMatchingStrings(stringABuffers, stringB);
+            output.insert ( output.end(), outputPairs.begin(), outputPairs.end());
 
             repositionLetters(stringABuffers);
 
-        } while (hasLetters(stringABuffers["buffer2"]));
+        } while ( hasLetters(stringABuffers["buffer2"]) );
 
         return output;
     }
@@ -43,7 +43,7 @@ private:
         char letterN = ' ';
         char letterM;
 
-        for (int i = 0; i < strBuffers["buffer1"].length(); ++i) {
+        for (int i  = 0; i < strBuffers["buffer1"].length(); ++i) {
 
             letterM = strBuffers["buffer1"][i];
 
@@ -52,7 +52,7 @@ private:
             letterN = letterM;
         }
 
-        for (int i = 0; i < strBuffers["buffer2"].length(); ++i) {
+        for (int i  = 0; i < strBuffers["buffer2"].length(); ++i) {
 
             letterM = strBuffers["buffer2"][i];
 
@@ -84,7 +84,6 @@ private:
 
                 matchedPair["strA"] = {};
                 matchedPair["strB"] = {};
-
             }
         }
 
