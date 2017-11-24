@@ -7,7 +7,7 @@
 
 using namespace std;
 
-#include "StringConvert.h"
+//#include "StringConvert.h"
 
 int getMatchingStrAPos (map <string, string> stringA, int index)
 {
@@ -101,35 +101,41 @@ void printBuffers(map <string, string> buffers)
     return;
 }
 
+void printMatchArray (vector < map <string, vector <int>> > matches) {
+
+    for(auto vectM : matches)
+    {
+        for(auto map : vectM)
+        {
+            cout << endl << map.first << endl;
+
+            for(auto vI : map.second) {
+
+                cout << vI, ", ";
+            }
+        }
+    }
+}
+
+#include "StringMatch.h"
+
+
 int main() {
-
-    createBuffersForMatching("ABCDEFG", 3);
-
-    map <string, string> buffers = createBuffersForMatching("ABCDEFG", 3);
-
-    printBuffers(buffers);
-
-    repositionLetters(buffers);
-
-    printBuffers(buffers);
+//    createBuffersForMatching("ABCDEFG", 3);
+//
+//    map <string, string> buffers = createBuffersForMatching("ABCDEFG", 3);
+//
+//    printBuffers(buffers);
+//
+//    repositionLetters(buffers);
+//
+//    printBuffers(buffers);
 
 
 
 //    cout << s;
 
-//    vector < map <string, vector <int>> > res = findMatchingStrings( {{"buffer1", " MU"}, {"buffer2", "BACDEUX "}},
-//                                                                      "BADEMLXX");
-//
-//    for(auto vectM : res)
-//    {
-//        for(auto map : vectM)
-//        {
-//            cout << endl << map.first << endl;
-//
-//            for(auto vI : map.second) {
-//
-//                cout << vI, ", ";
-//            }
-//        }
-//    }
+    vector < map <string, vector <int>> > res = StringMatch::matchStrings("ABCDEFG", "DFG");
+
+    printMatchArray(res);
 }
