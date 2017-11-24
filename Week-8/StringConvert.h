@@ -55,50 +55,62 @@ private:
 
     }
 
-    vector < array <vector <int>, 2> > matchStrings (string stringA, string stringB)
+    vector <map <string, vector <int>> > matchStrings (string stringA, string stringB)
     {
-        vector < array <vector <int>, 2> > output;
+        vector < map <string, vector <int>> > output;
 
-        array <string, 2>   stringForMatching;
-        stringForMatching = getStringsForMatching(stringA, stringB.length());
+        map <string, string>   stringAMatch;
+        stringAMatch     =     getStringsForMatching(stringA, stringB.length());
 
-        for (string matching : stringsForMatching) {
+        map <string, vector <int>> matchedPair { {'strA', {}}, {'strB', {}} };
 
-        }
 
+
+        return output;
     }
 
-    array <string, 2> getStringsForMatching (string stringA, long int stringB)
+    map <string, string> getStringsForMatching (string stringA, long int stringB)
     {
-        return {"CDEBDE", "     "};
+        map <string, string> output;
+        output.emplace('buffer1', "CDEBDE");
+        output.emplace('buffer2', "     ");
+
+        return output;
     }
 
-    vector < array <vector <int>, 2> > findMatchingStrings(string stringA, string stringB)
+    vector < map <string, vector <int>> > findMatchingStrings(map <string, string> stringA, string stringB)
     {
-        vector < array  <vector  <int>, 2> > output;
-        array  < vector <int>, 2 >           matchingPair;
+        vector < map <string, vector <int>> > output;
 
-        array  < string, 2 > strAForMatching = ; // TODO where to put it?
+        map <string, vector <int>> matchedPair { {'strA', {}}, {'strB', {}} };
 
-        do {
+        for (int i = 0; i < stringB.length(); ++i) {
 
-            for (int i = 0; i < stringA.length(); ++i) {
+            if (stringA["buffer2"][i] == stringB[i]) {
 
-                if (stringA[i] == stringB[i]) {
+                matchedPair["strA"].push_back ( getMatchingStrAPos(stringA, i) );
+                matchedPair["strB"].push_back ( i );
 
-                    matchingPair[1].push_back(getMatchingStrAPos(i));
-                    matchingPair[1].push_back(i);
+            } else {
+
+                if ( matchedPair["strA"].size() > 0 ) {
+
+                    output.push_back(matchedPair);
+
+                    matchedPair["strA"] = {};
+                    matchedPair["strB"] = {};
+
                 }
-
             }
-        } while
+        }
+        return output;
     }
 
-    int getMatchingStrAPos (array <string, 2> stringA, int index)
+    int getMatchingStrAPos (map <string, string> stringA, int index)
     {
         int stringALen = -1;
 
-        for (char ch : stringA[0])
+        for (char ch : stringA["buffer1"])
 
             if (ch != ' ')
                 stringALen += 1;
@@ -106,7 +118,7 @@ private:
 
         for (int i = 0; i <= index; ++i)
 
-            if (stringA[1][i] != ' ')
+            if (stringA["buffer2"][i] != ' ')
                 stringALen += 1;
 
         return stringALen;
