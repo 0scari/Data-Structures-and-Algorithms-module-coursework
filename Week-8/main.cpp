@@ -117,7 +117,34 @@ void printMatchArray (vector < map <string, vector <int>> > matches) {
 }
 
 #include "StringMatch.h"
+#include "RangeIntersectionResolver.h"
 #include "StringConvert.h"
+
+//map <string, unsigned int> getMinMax (map <string, vector <int>> matchedPair)
+//{
+//    unsigned int min = matchedPair["strA"][0];
+//    unsigned int max = matchedPair["strA"][0];
+//
+//    for (auto matchingPos : matchedPair["strA"]) {
+//
+//            if (matchingPos < min)
+//                min = matchingPos;
+//
+//            if (matchingPos > max)
+//                max = matchingPos;
+//        }
+//
+//    for (auto matchingPos : matchedPair["strB"]) {
+//
+//            if (matchingPos < min)
+//                min = matchingPos;
+//
+//            if (matchingPos > max)
+//                max = matchingPos;
+//        }
+//
+//    return {{"min", min}, {"max", max}};
+//}
 
 int main() {
 
@@ -132,25 +159,44 @@ int main() {
 //    printBuffers(buffers);
 
 
-    string s1 = "ABCLOLAT";
-    string s2 = "ABCXAXAZL";
-
-    StringConvert::removeUnion(s1, s2);
-
-    cout <<  endl << s1 + "\n" + s2;
+//    string s1 = "ABCLOLAT";
+//    string s2 = "ABCXAXAZL";
+//
+//    StringConvert::removeUnion(s1, s2);
+//
+//    cout <<  endl << s1 + "\n" + s2;
 //    for (auto a : StringConvert::strUnion)
 //        cout << a.first << ": " << a.second << "\n";
 
 //    cout << "dbg";
 
-    for (auto letter : StringConvert::strUnion) {
-        cout << ": " + string(1,letter.second);
-        s2 = s2.substr(0,letter.first) + string(1,letter.second) + s2.substr(letter.first, s2.length() - letter.first);
-        cout << endl <<  s2 << endl;
+//    for (auto letter : StringConvert::strUnion) {
+//        cout << ": " + string(1,letter.second);
+//        s2 = s2.substr(0,letter.first) + string(1,letter.second) + s2.substr(letter.first, s2.length() - letter.first);
+//        cout << endl <<  s2 << endl;
+//
+//    }
 
-    }
-
-//    vector < map <string, vector <int>> > res = StringMatch::matchStrings("ABCDEFG", "DFG");
+//    vector < map <string, vector <int>> > res = StringMatch::matchStrings("ABCDEUX", "BADEMLQX");
 //
 //    printMatchArray(res);
+
+//    map <string, unsigned int> test = getMinMax({{"strA", {5,6,7}},{"strB", {2,3,4}}});
+//    cout << "min " << test["min"] << " | max: " << test["max"];
+
+    vector < map <string, vector<int>> > test = {{{"buffer1", {1,2,3}}, {"buffer2", {1,2,4}}}, {{"buffer1", {1,2,3}}, {"buffer2", {1,2,4}}}};
+
+    map <string, vector<int>> *ptr = &test[1];
+
+    cout << test.size() << endl;
+
+    for (int i = 0; i < test.size(); ++i)
+
+        if (ptr == &test[i])
+            test.erase(test.begin() + i);
+
+    cout << test.size();
+
+
+
 }

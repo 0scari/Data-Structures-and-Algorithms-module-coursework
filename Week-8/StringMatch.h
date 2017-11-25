@@ -9,10 +9,10 @@ class StringMatch
 {
 public:
 
-    static vector <map <string, vector <int>> > matchStrings (string stringA, string stringB)
+    static vector <map <string, vector <unsigned int>> > matchStrings (string stringA, string stringB)
     {
-        vector < map <string, vector <int>> > output;
-        vector < map <string, vector <int>> > outputPairs;
+        vector < map <string, vector <unsigned int>> > output;
+        vector < map <string, vector <unsigned int>> > outputPairs;
 
         map <string, string>   stringABuffers;
         stringABuffers    =    createBuffersForMatching(stringA, stringB.length());
@@ -62,14 +62,14 @@ private:
         }
     }
 
-    static vector < map <string, vector <int>> > findMatchingStrings(map <string, string> stringA, string stringB)
+    static vector < map <string, vector <unsigned int>> > findMatchingStrings(map <string, string> stringA, string stringB)
     {
-        vector < map <string, vector <int>> > outputVector;
+        vector < map <string, vector <unsigned int>> > outputVector;
 
         // { {"strA", {}}, {"strB", {}} }
-        map <string, vector <int>> matchedPair {};
+        map <string, vector <unsigned int>> matchedPair {};
 
-        for (int i = 0; i < stringB.length(); ++i) {
+        for (unsigned int i = 0; i < stringB.length(); ++i) {
 
             if (stringA["buffer2"][i] == stringB[i]) {
 
@@ -97,7 +97,7 @@ private:
         return outputVector;
     }
 
-    static int getMatchingStrAPos (map <string, string> stringA, int index)
+    static int getMatchingStrAPos (map <string, string> stringA, unsigned int index)
     {
         int stringALen = -1;
 
@@ -121,6 +121,27 @@ private:
 
         return false;
     }
+
+    bool canReduceCost(map <string, vector <unsigned int>> matchedPair, map <string, string> string)
+    {
+
+    }
+
+    int calcAlteringCost (map <string, unsigned int> range, int sizeDifference)
+    {
+
+    }
+
+    int calcReplacementCost ()
+    {
+
+    }
+
+    int calcSizeDifference (map <string, string> string)
+    {
+
+    }
+
 };
 
 #endif //WEEK_8_STRINGMATCH_H

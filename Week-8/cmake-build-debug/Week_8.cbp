@@ -80,6 +80,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/oscar/My_Files/Git/210CT/Week-8/RangeIntersectionResolver.h">
+			<Option target="Week_8"/>
+		</Unit>
 		<Unit filename="/Users/oscar/My_Files/Git/210CT/Week-8/StringConvert.h">
 			<Option target="Week_8"/>
 		</Unit>

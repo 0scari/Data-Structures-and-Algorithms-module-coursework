@@ -3,5 +3,5 @@ project(Week_8)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp StringConvert.h StringMatch.h)
+set(SOURCE_FILES main.cpp StringConvert.h StringMatch.h RangeIntersectionResolver.h)
 add_executable(Week_8 ${SOURCE_FILES})
