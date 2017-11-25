@@ -13,6 +13,7 @@ public:
     static vector <map <string, vector <unsigned int>> > matchStrings (string stringA, string stringB)
     {
         StringMatch::stringA = stringA;
+        StringMatch::stringB = stringB;
 
         vector < map <string, vector <unsigned int>> > output;
         vector < map <string, vector <unsigned int>> > outputPairs;
@@ -21,7 +22,7 @@ public:
         stringABuffers    =    createBuffersForMatching(stringA, stringB.length());
 
         do {
-            outputPairs   = findMatchingStrings(stringABuffers, stringB);
+            outputPairs   = findMatchingStrings(stringABuffers);
             output.insert ( output.end(), outputPairs.begin(), outputPairs.end());
 
             repositionLetters(stringABuffers);
@@ -31,9 +32,28 @@ public:
         return output;
     }
 
+    static unsigned int calcConversionCost(unsigned int start, unsigned int end,
+                                           bool replacement = false, unsigned int matchingLetters = 0)
+    {
+        map <string, unsigned int> range = {{"min", start}, {"max", end}};
+
+        int sizeDifference = calcSizeDifference_A_to_B(range);
+
+
+        if (replacement == true)
+
+            return calcReplacementCost(range, matchingLetters, sizeDifference);
+
+        else
+
+            return calcAlteringCost(range, sizeDifference);
+
+    }
+
 private:
 
     static string stringA;
+    static string stringB;
 
     static map <string, string> createBuffersForMatching(string stringA, unsigned int stringB)
     {
@@ -67,16 +87,16 @@ private:
         }
     }
 
-    static vector < map <string, vector <unsigned int>> > findMatchingStrings(map <string, string> stringA, string stringB)
+    static vector < map <string, vector <unsigned int>> > findMatchingStrings(map <string, string> stringA)
     {
         vector < map <string, vector <unsigned int>> > outputVector;
 
         // { {"strA", {}}, {"strB", {}} }
         map <string, vector <unsigned int>> matchedPair {};
 
-        for (unsigned int i = 0; i < stringB.length(); ++i) {
+        for (unsigned int i = 0; i < StringMatch::stringB.length(); ++i) {
 
-            if (stringA["buffer2"][i] == stringB[i]) {
+            if (stringA["buffer2"][i] == StringMatch::stringB[i]) {
 
                 matchedPair["strA"].push_back ( getMatchingStrAPos(stringA, i) );
                 matchedPair["strB"].push_back ( i );
@@ -85,7 +105,7 @@ private:
 
                 if ( matchedPair["strA"].size() > 0
                      and canReduceCost(matchedPair, {{'A', StringMatch::stringA},
-                                                     {'B', stringB}}))
+                                                     {'B', StringMatch::stringB}}))
 
                     outputVector.push_back(matchedPair);
 
@@ -94,7 +114,6 @@ private:
                 matchedPair["strB"] = {};
             }
         }
-
         // in case the matching letters were the rightmost
         // then we are 1 iteration short in the for loop
         // to push the pair into the output vector
@@ -104,24 +123,22 @@ private:
 
             outputVector.push_back(matchedPair);
 
-
         return outputVector;
     }
 
-    static int getMatchingStrAPos (map <string, string> stringA, unsigned int index)
+    static int getMatchingStrAPos (map <string, string> stringA_Buffer, unsigned int index)
     {
         int stringALen = -1;
 
-        for (char ch : stringA["buffer1"])
+        for (char ch : stringA_Buffer["buffer1"])
             if (ch != ' ')
                 stringALen += 1;
 
         for (int i = 0; i <= index; ++i)
-            if (stringA["buffer2"][i] != ' ')
+            if (stringA_Buffer["buffer2"][i] != ' ')
             stringALen += 1;
 
         return stringALen;
-
     }
 
     static bool hasLetters(string string1)
@@ -136,7 +153,7 @@ private:
     static bool canReduceCost(map <string, vector <unsigned int>> matchedPair, map <char, string> strings)
     {
         map <string, unsigned int> range = calcRange(matchedPair);
-        int sizeDifference               = calcSizeDifference_A_to_B(range, strings);
+        int sizeDifference               = calcSizeDifference_A_to_B(range);
 
         unsigned int alteringCost        = calcAlteringCost(range, sizeDifference);
         unsigned int replacementCost     = calcReplacementCost(range,
@@ -168,24 +185,23 @@ private:
         return (range["max"] - range["min"] - matchingLetters + 1) * 7 + sizeDifference;
     }
 
-    static int calcSizeDifference_A_to_B (map <string, unsigned int> range, map <char, string> string)
+    static int calcSizeDifference_A_to_B (map <string, unsigned int> range)
     {
+        if (range["max"] > StringMatch::stringA.length() -1)
 
-        if (range["max"] > string['A'].length() -1)
+            return StringMatch::stringA.length() - 1 - range["max"];
 
-            return string['A'].length() - 1 - range["max"];
+        else if (range["max"] > StringMatch::stringB.length() -1)
 
-         else if (range["max"] > string['B'].length() -1)
-
-            return range["max"] - (string['B'].length() - 1);
-
+            return range["max"] - (StringMatch::stringB.length() - 1);
 
         return 0;
-
     }
 
 };
 
 string StringMatch::stringA;
+string StringMatch::stringB;
+
 
 #endif //WEEK_8_STRINGMATCH_H

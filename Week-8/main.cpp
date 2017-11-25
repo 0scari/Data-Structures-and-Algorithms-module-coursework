@@ -116,36 +116,19 @@ void printMatchArray (vector < map <string, vector <unsigned int>> > matches) {
     }
 }
 
+int* dMTest (array<int, 5> &arr)
+{
+    for (int &i : arr)
+        if (i == 2)
+            return &i;
+
+};
+
 #include "helpers.h"
 #include "StringMatch.h"
-//#include "RangeIntersectionResolver.h"
+#include "RangeIntersectionResolver.h"
 #include "StringConvert.h"
 
-//map <string, unsigned int> getMinMax (map <string, vector <int>> matchedPair)
-//{
-//    unsigned int min = matchedPair["strA"][0];
-//    unsigned int max = matchedPair["strA"][0];
-//
-//    for (auto matchingPos : matchedPair["strA"]) {
-//
-//            if (matchingPos < min)
-//                min = matchingPos;
-//
-//            if (matchingPos > max)
-//                max = matchingPos;
-//        }
-//
-//    for (auto matchingPos : matchedPair["strB"]) {
-//
-//            if (matchingPos < min)
-//                min = matchingPos;
-//
-//            if (matchingPos > max)
-//                max = matchingPos;
-//        }
-//
-//    return {{"min", min}, {"max", max}};
-//}
 
 int main() {
 
@@ -194,10 +177,17 @@ int main() {
 //
 //    cout << test.size();
 
-    vector < map <string, vector <unsigned int>> > res = StringMatch::matchStrings("DEGOLIMAZ", "ABCTTTTTTTTTTTTTDE");
+    vector < map <string, vector <unsigned int>> > res = StringMatch::matchStrings("DEG", "TTDE");
 
     printMatchArray(res);
 
-
-
+//    array <int, 5> arr {1,2,3,4,5};
+//
+//    int *a = dMTest(arr);
+//
+//    for (auto &ar : arr)
+//        if (a == &ar)
+//            cout << &ar << endl;
+//
+////    cout << a;
 }
