@@ -100,7 +100,7 @@ void printBuffers(map <string, string> buffers)
     return;
 }
 
-void printMatchArray (vector < map <string, vector <int>> > matches) {
+void printMatchArray (vector < map <string, vector <unsigned int>> > matches) {
 
     for(auto vectM : matches)
     {
@@ -116,8 +116,9 @@ void printMatchArray (vector < map <string, vector <int>> > matches) {
     }
 }
 
+#include "helpers.h"
 #include "StringMatch.h"
-#include "RangeIntersectionResolver.h"
+//#include "RangeIntersectionResolver.h"
 #include "StringConvert.h"
 
 //map <string, unsigned int> getMinMax (map <string, vector <int>> matchedPair)
@@ -177,25 +178,25 @@ int main() {
 //
 //    }
 
-//    vector < map <string, vector <int>> > res = StringMatch::matchStrings("ABCDEUX", "BADEMLQX");
-//
-//    printMatchArray(res);
-
 //    map <string, unsigned int> test = getMinMax({{"strA", {5,6,7}},{"strB", {2,3,4}}});
 //    cout << "min " << test["min"] << " | max: " << test["max"];
 
-    vector < map <string, vector<int>> > test = {{{"buffer1", {1,2,3}}, {"buffer2", {1,2,4}}}, {{"buffer1", {1,2,3}}, {"buffer2", {1,2,4}}}};
+//    vector < map <string, vector<int>> > test = {{{"buffer1", {1,2,3}}, {"buffer2", {1,2,4}}}, {{"buffer1", {1,2,3}}, {"buffer2", {1,2,4}}}};
+//
+//    map <string, vector<int>> *ptr = &test[1];
+//
+//    cout << test.size() << endl;
+//
+//    for (int i = 0; i < test.size(); ++i)
+//
+//        if (ptr == &test[i])
+//            test.erase(test.begin() + i);
+//
+//    cout << test.size();
 
-    map <string, vector<int>> *ptr = &test[1];
+    vector < map <string, vector <unsigned int>> > res = StringMatch::matchStrings("DEGOLIMAZ", "ABCTTTTTTTTTTTTTDE");
 
-    cout << test.size() << endl;
-
-    for (int i = 0; i < test.size(); ++i)
-
-        if (ptr == &test[i])
-            test.erase(test.begin() + i);
-
-    cout << test.size();
+    printMatchArray(res);
 
 
 

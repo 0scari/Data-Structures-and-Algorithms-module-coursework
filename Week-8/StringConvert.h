@@ -14,7 +14,7 @@ public:
 
         this->stringB = stringB;
 
-        convert("CDEBDE", "ABCDE");
+        convert("DEGOLIMAZ", "ABCTTTTTTTTTTTTTDE");
     }
 
 //private:

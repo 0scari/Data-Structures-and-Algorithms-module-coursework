@@ -8,6 +8,10 @@
 
 /Users/oscar/My_Files/Git/210CT/Week-8/StringConvert.h
 
+/Users/oscar/My_Files/Git/210CT/Week-8/StringMatch.h
+
+/Users/oscar/My_Files/Git/210CT/Week-8/helpers.h
+
 /Users/oscar/My_Files/Git/210CT/Week-8/main.cpp
 iostream
 -
@@ -19,6 +23,10 @@ map
 -
 vector
 -
+helpers.h
+/Users/oscar/My_Files/Git/210CT/Week-8/helpers.h
+StringMatch.h
+/Users/oscar/My_Files/Git/210CT/Week-8/StringMatch.h
 StringConvert.h
 /Users/oscar/My_Files/Git/210CT/Week-8/StringConvert.h
 

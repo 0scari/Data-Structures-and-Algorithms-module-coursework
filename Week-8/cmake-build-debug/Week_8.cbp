@@ -89,6 +89,9 @@
 		<Unit filename="/Users/oscar/My_Files/Git/210CT/Week-8/StringMatch.h">
 			<Option target="Week_8"/>
 		</Unit>
+		<Unit filename="/Users/oscar/My_Files/Git/210CT/Week-8/helpers.h">
+			<Option target="Week_8"/>
+		</Unit>
 		<Unit filename="/Users/oscar/My_Files/Git/210CT/Week-8/main.cpp">
 			<Option target="Week_8"/>
 		</Unit>

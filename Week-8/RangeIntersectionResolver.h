@@ -50,38 +50,10 @@ private:
 
     }
 
-    static unsigned int calcRange (unsigned int min, unsigned int max)
-    {
-
-    }
-
     static vector < map <string, vector <unsigned int>> > resolveRangeIntersection ()
-
-    map <string, unsigned int> getMinMax (map <string, vector <unsigned int>> matchedPair)
     {
-        unsigned int min = matchedPair["strA"][0];
-        unsigned int max = matchedPair["strA"][0];
-
-        for (auto matchingPos : matchedPair["strA"]) {
-
-            if (matchingPos < min)
-                min = matchingPos;
-
-            if (matchingPos > max)
-                max = matchingPos;
-        }
-
-        for (auto matchingPos : matchedPair["strB"]) {
-
-            if (matchingPos < min)
-                min = matchingPos;
-
-            if (matchingPos > max)
-                max = matchingPos;
-        }
-
-        return {{"min", min}, {"max", max}};
     }
+
 };
 
 #endif //WEEK_8_RANGEINTERSECTIONRESOLVER_H
