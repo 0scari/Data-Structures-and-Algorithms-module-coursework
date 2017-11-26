@@ -12,14 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1dad88b6-1156-4032-a9ac-698e6aec2bef" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Week_8.dir/main.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Week_8.dir/main.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Week_8" afterPath="$PROJECT_DIR$/cmake-build-debug/Week_8" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Week_8.dir/main.cpp.o" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RangeIntersectionResolver.h" afterPath="$PROJECT_DIR$/RangeIntersectionResolver.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StringMatch.h" afterPath="$PROJECT_DIR$/StringMatch.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Week_8.dir/CXX.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Week_8.dir/CXX.includecache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Week_8.dir/depend.internal" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Week_8.dir/depend.internal" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Week_8.dir/depend.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Week_8.dir/depend.make" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -47,16 +41,17 @@
           <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/main.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="697">
-                  <caret line="179" column="87" lean-forward="true" selection-start-line="179" selection-start-column="87" selection-end-line="179" selection-end-column="87" />
+                <state relative-caret-position="120">
+                  <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
                   <folding>
-                    <element signature="e#113#435#0" expanded="false" />
-                    <element signature="e#437#1155#0" expanded="false" />
-                    <element signature="e#1158#1453#0" expanded="false" />
-                    <element signature="e#1455#1934#0" expanded="false" />
-                    <element signature="e#1937#2112#0" expanded="false" />
-                    <element signature="e#2114#2425#0" expanded="false" />
-                    <element signature="e#2533#2553#0" expanded="true" />
+                    <element signature="e#0#19#0" expanded="true" />
+                    <element signature="e#134#456#0" expanded="false" />
+                    <element signature="e#458#1176#0" expanded="false" />
+                    <element signature="e#1179#1474#0" expanded="false" />
+                    <element signature="e#1476#1955#0" expanded="false" />
+                    <element signature="e#1958#2133#0" expanded="false" />
+                    <element signature="e#2135#2446#0" expanded="false" />
+                    <element signature="e#2554#2574#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -84,8 +79,8 @@
           <file leaf-file-name="RangeIntersectionResolver.h" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/RangeIntersectionResolver.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="360">
-                  <caret line="24" column="72" lean-forward="false" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="72" />
+                <state relative-caret-position="533">
+                  <caret line="94" column="0" lean-forward="true" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -98,11 +93,20 @@
           <file leaf-file-name="StringMatch.h" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/StringMatch.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1388">
-                  <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+                <state relative-caret-position="98">
+                  <caret line="94" column="19" lean-forward="false" selection-start-line="94" selection-start-column="19" selection-end-line="94" selection-end-column="19" />
                   <folding>
                     <element signature="e#0#2#0" expanded="false" />
+                    <element signature="e#147#895#0" expanded="false" />
+                    <element signature="e#901#1423#0" expanded="false" />
+                    <element signature="e#1494#1816#0" expanded="false" />
+                    <element signature="e#1822#2365#0" expanded="false" />
+                    <element signature="e#3782#4173#0" expanded="false" />
                     <element signature="e#4179#4340#0" expanded="false" />
+                    <element signature="e#4346#4978#0" expanded="false" />
+                    <element signature="e#4984#5241#0" expanded="false" />
+                    <element signature="e#5247#5734#0" expanded="false" />
+                    <element signature="e#5740#6112#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -134,8 +138,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/StringConvert.h" />
-        <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/helpers.h" />
+        <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/StringMatch.h" />
         <option value="$PROJECT_DIR$/RangeIntersectionResolver.h" />
       </list>
@@ -224,12 +228,12 @@
       <workItem from="1511443864316" duration="8825000" />
       <workItem from="1511519369478" duration="14543000" />
       <workItem from="1511540336251" duration="1621000" />
-      <workItem from="1511542064995" duration="30721000" />
+      <workItem from="1511542064995" duration="40886000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55710000" />
+    <option name="totallyTimeSpent" value="65875000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -276,11 +280,31 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/StringMatch.h</url>
-          <line>152</line>
-          <option name="timeStamp" value="2" />
+          <line>89</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/StringMatch.h</url>
+          <line>121</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/StringMatch.h</url>
+          <line>120</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/StringMatch.h</url>
+          <line>107</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/StringMatch.h</url>
+          <line>106</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="3" />
+      <option name="time" value="11" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -315,13 +339,14 @@
         <state relative-caret-position="2085">
           <caret line="139" column="28" lean-forward="false" selection-start-line="139" selection-start-column="27" selection-end-line="139" selection-end-column="28" />
           <folding>
-            <element signature="e#113#435#0" expanded="false" />
-            <element signature="e#437#1155#0" expanded="false" />
-            <element signature="e#1158#1453#0" expanded="false" />
-            <element signature="e#1455#1934#0" expanded="false" />
-            <element signature="e#1937#2112#0" expanded="false" />
-            <element signature="e#2114#2425#0" expanded="false" />
-            <element signature="e#2533#2553#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#134#456#0" expanded="false" />
+            <element signature="e#458#1176#0" expanded="false" />
+            <element signature="e#1179#1474#0" expanded="false" />
+            <element signature="e#1476#1955#0" expanded="false" />
+            <element signature="e#1958#2133#0" expanded="false" />
+            <element signature="e#2135#2446#0" expanded="false" />
+            <element signature="e#2554#2574#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -357,7 +382,16 @@
           <caret line="11" column="51" lean-forward="false" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
           <folding>
             <element signature="e#0#2#0" expanded="false" />
+            <element signature="e#147#895#0" expanded="false" />
+            <element signature="e#901#1423#0" expanded="false" />
+            <element signature="e#1494#1816#0" expanded="false" />
+            <element signature="e#1822#2365#0" expanded="false" />
+            <element signature="e#3782#4173#0" expanded="false" />
             <element signature="e#4179#4340#0" expanded="false" />
+            <element signature="e#4346#4978#0" expanded="false" />
+            <element signature="e#4984#5241#0" expanded="false" />
+            <element signature="e#5247#5734#0" expanded="false" />
+            <element signature="e#5740#6112#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -367,13 +401,14 @@
         <state relative-caret-position="2025">
           <caret line="135" column="0" lean-forward="true" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
           <folding>
-            <element signature="e#113#435#0" expanded="false" />
-            <element signature="e#437#1155#0" expanded="false" />
-            <element signature="e#1158#1453#0" expanded="false" />
-            <element signature="e#1455#1934#0" expanded="false" />
-            <element signature="e#1937#2112#0" expanded="false" />
-            <element signature="e#2114#2425#0" expanded="false" />
-            <element signature="e#2533#2553#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#134#456#0" expanded="false" />
+            <element signature="e#458#1176#0" expanded="false" />
+            <element signature="e#1179#1474#0" expanded="false" />
+            <element signature="e#1476#1955#0" expanded="false" />
+            <element signature="e#1958#2133#0" expanded="false" />
+            <element signature="e#2135#2446#0" expanded="false" />
+            <element signature="e#2554#2574#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -391,13 +426,14 @@
         <state relative-caret-position="150">
           <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
-            <element signature="e#113#435#0" expanded="false" />
-            <element signature="e#437#1155#0" expanded="false" />
-            <element signature="e#1158#1453#0" expanded="false" />
-            <element signature="e#1455#1934#0" expanded="false" />
-            <element signature="e#1937#2112#0" expanded="false" />
-            <element signature="e#2114#2425#0" expanded="false" />
-            <element signature="e#2533#2553#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#134#456#0" expanded="false" />
+            <element signature="e#458#1176#0" expanded="false" />
+            <element signature="e#1179#1474#0" expanded="false" />
+            <element signature="e#1476#1955#0" expanded="false" />
+            <element signature="e#1958#2133#0" expanded="false" />
+            <element signature="e#2135#2446#0" expanded="false" />
+            <element signature="e#2554#2574#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -427,18 +463,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/vector">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2974">
-          <caret line="449" column="27" lean-forward="false" selection-start-line="449" selection-start-column="27" selection-end-line="449" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/map">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="1093" column="16" lean-forward="false" selection-start-line="1093" selection-start-column="16" selection-end-line="1093" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helpers.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -462,43 +498,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="179" column="87" lean-forward="true" selection-start-line="179" selection-start-column="87" selection-end-line="179" selection-end-column="87" />
+        <state relative-caret-position="120">
+          <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
           <folding>
-            <element signature="e#113#435#0" expanded="false" />
-            <element signature="e#437#1155#0" expanded="false" />
-            <element signature="e#1158#1453#0" expanded="false" />
-            <element signature="e#1455#1934#0" expanded="false" />
-            <element signature="e#1937#2112#0" expanded="false" />
-            <element signature="e#2114#2425#0" expanded="false" />
-            <element signature="e#2533#2553#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#134#456#0" expanded="false" />
+            <element signature="e#458#1176#0" expanded="false" />
+            <element signature="e#1179#1474#0" expanded="false" />
+            <element signature="e#1476#1955#0" expanded="false" />
+            <element signature="e#1958#2133#0" expanded="false" />
+            <element signature="e#2135#2446#0" expanded="false" />
+            <element signature="e#2554#2574#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/helpers.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/StringMatch.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1388">
-          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+        <state relative-caret-position="98">
+          <caret line="94" column="19" lean-forward="false" selection-start-line="94" selection-start-column="19" selection-end-line="94" selection-end-column="19" />
           <folding>
             <element signature="e#0#2#0" expanded="false" />
+            <element signature="e#147#895#0" expanded="false" />
+            <element signature="e#901#1423#0" expanded="false" />
+            <element signature="e#1494#1816#0" expanded="false" />
+            <element signature="e#1822#2365#0" expanded="false" />
+            <element signature="e#3782#4173#0" expanded="false" />
             <element signature="e#4179#4340#0" expanded="false" />
+            <element signature="e#4346#4978#0" expanded="false" />
+            <element signature="e#4984#5241#0" expanded="false" />
+            <element signature="e#5247#5734#0" expanded="false" />
+            <element signature="e#5740#6112#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/vector">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="471" column="4" lean-forward="false" selection-start-line="471" selection-start-column="4" selection-end-line="471" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RangeIntersectionResolver.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="72" lean-forward="false" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="72" />
+        <state relative-caret-position="533">
+          <caret line="94" column="0" lean-forward="true" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
           <folding />
         </state>
       </provider>

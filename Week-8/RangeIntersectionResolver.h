@@ -9,17 +9,64 @@ class RangeIntersectionResolver
 {
 
 public:
-    static map <string, vector <unsigned int>>* hasRangeIntersection (
-                                                vector < map <string, vector <unsigned int>> > &matchedPairContainer,
-                                                map <string, vector <unsigned int>>   matchedPair)
+
+    static vector < map <string, vector <unsigned int>>> resolve (
+                                    vector < map <string, vector <unsigned int>> > &matchedPairContainer)
     {
-        for (auto &containerPair : matchedPairContainer)
+        vector < vector <map <string, vector <unsigned int>>*>> intersectingPairs;
+        vector <map <string, vector <unsigned int>>*>           intersectingPair;
 
-            if (rangesIntersect(matchedPair, containerPair))
+        // pairs that can be merged not causing logic errors
+        // example: [strA: "ABCDEF", strB: "XYWBAE"], merge B - E ranges (strA(2) and strB(6))
+        map < map <string, vector <unsigned int>>*,
+                vector < map <string, vector <unsigned int>>*>> consecutivePairs;
 
-                return &containerPair;
+        for (int i = 0; i < matchedPairContainer.size() -2; ++i) {
 
-        return nullptr;
+            for (int j = i + 1; j < matchedPairContainer.size() -1; ++j) {
+
+                if (rangesIntersect(matchedPairContainer[i], matchedPairContainer[j])) {
+
+                    // if intersects the preceding pair becomes a value of the other pair that becomes the key
+                    // in consecutivePairs vector
+                    checkIfConsecutive(matchedPairContainer[i], matchedPairContainer[j], consecutivePairs);
+
+                    intersectingPair.push_back(&matchedPairContainer[i]);
+                    intersectingPair.push_back(&matchedPairContainer[j]);
+                }
+            }
+
+            // reset content of intersectingPair
+            if (intersectingPair.size() > 0) {
+
+                intersectingPairs.push_back(intersectingPair);
+                intersectingPair = {};
+
+            }
+        }
+
+        if (consecutivePairs.size() > 0)
+            intersectingPairs = mergeConsecutivePairs(consecutivePairs, intersectingPairs);
+
+    }
+
+    static bool checkIfConsecutive (map <string, vector <unsigned int>> &pair1,
+                                    map <string, vector <unsigned int>> &pair2,
+                                    map < map <string, vector <unsigned int>>*,
+                                            vector < map <string, vector <unsigned int>>*>> &consecutivePairs) {
+
+        if (pair1["min"] < pair2["min"] && pair1["max"] < pair2["max"]) { // pair2 precedes p1
+
+            consecutivePairs[&pair1].push_back(&pair2);
+            return true;
+
+        } else if (pair1["min"] < pair2["min"] && pair1["max"] < pair2["max"]) { // pair1 precedes p2
+
+            consecutivePairs[&pair2].push_back(&pair1);
+            return true;
+
+        } else
+            return false;
     }
 
     static  map <string, vector <unsigned int>>* getCheapestIntersection (
@@ -34,16 +81,23 @@ public:
         map <string, unsigned int> totalRange         = calcTotalRange(containerPairRange,
                                                                        matchedPairRange);
 
-
     };
 
 
 
 private:
 
-    static unsigned int getRangeConvertingCosts (map <string, unsigned int> range,
-                                                 map <string, unsigned int> totalRange)
+    static vector < vector <map <string, vector <unsigned int>>*>> mergeConsecutivePairs (
+                map < map <string, vector <unsigned int>>*,
+                    vector < map <string, vector <unsigned int>>*>>     consecutivePairs,
+                vector < vector <map <string, vector <unsigned int>>*>> intersectingPairs)
     {
+
+    }
+
+    static unsigned int getRangeConversionCosts (map <string, unsigned int> range,
+                                                 map <string, unsigned int> totalRange)
+    {   // TODO test
         unsigned int conversionCost = 0;
 
         if (range["min"] == totalRange["min"]) { // will be two substrings

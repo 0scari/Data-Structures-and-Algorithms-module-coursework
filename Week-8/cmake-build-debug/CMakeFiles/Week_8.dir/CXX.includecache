@@ -25,6 +25,8 @@ map
 -
 vector
 -
+algorithm
+-
 helpers.h
 /Users/oscar/My_Files/Git/210CT/Week-8/helpers.h
 StringMatch.h
