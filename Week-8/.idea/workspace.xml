@@ -12,9 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1dad88b6-1156-4032-a9ac-698e6aec2bef" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Week_8.dir/main.cpp.o" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RangeIntersectionResolver.h" afterPath="$PROJECT_DIR$/RangeIntersectionResolver.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -79,9 +77,17 @@
           <file leaf-file-name="RangeIntersectionResolver.h" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/RangeIntersectionResolver.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="533">
-                  <caret line="94" column="0" lean-forward="true" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
-                  <folding />
+                <state relative-caret-position="872">
+                  <caret line="163" column="21" lean-forward="false" selection-start-line="163" selection-start-column="21" selection-end-line="163" selection-end-column="21" />
+                  <folding>
+                    <element signature="e#1970#2548#0" expanded="false" />
+                    <element signature="e#2761#2892#0" expanded="false" />
+                    <element signature="e#2565#3328#0" expanded="false" />
+                    <element signature="e#3441#3548#0" expanded="false" />
+                    <element signature="e#3680#5817#0" expanded="false" />
+                    <element signature="e#5823#6275#0" expanded="false" />
+                    <element signature="e#6281#6592#0" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -93,7 +99,7 @@
           <file leaf-file-name="StringMatch.h" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/StringMatch.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="98">
+                <state relative-caret-position="495">
                   <caret line="94" column="19" lean-forward="false" selection-start-line="94" selection-start-column="19" selection-end-line="94" selection-end-column="19" />
                   <folding>
                     <element signature="e#0#2#0" expanded="false" />
@@ -228,12 +234,12 @@
       <workItem from="1511443864316" duration="8825000" />
       <workItem from="1511519369478" duration="14543000" />
       <workItem from="1511540336251" duration="1621000" />
-      <workItem from="1511542064995" duration="40886000" />
+      <workItem from="1511542064995" duration="41586000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65875000" />
+    <option name="totallyTimeSpent" value="66575000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -515,7 +521,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/StringMatch.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
+        <state relative-caret-position="495">
           <caret line="94" column="19" lean-forward="false" selection-start-line="94" selection-start-column="19" selection-end-line="94" selection-end-column="19" />
           <folding>
             <element signature="e#0#2#0" expanded="false" />
@@ -543,9 +549,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/RangeIntersectionResolver.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="94" column="0" lean-forward="true" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="872">
+          <caret line="163" column="21" lean-forward="false" selection-start-line="163" selection-start-column="21" selection-end-line="163" selection-end-column="21" />
+          <folding>
+            <element signature="e#1970#2548#0" expanded="false" />
+            <element signature="e#2761#2892#0" expanded="false" />
+            <element signature="e#2565#3328#0" expanded="false" />
+            <element signature="e#3441#3548#0" expanded="false" />
+            <element signature="e#3680#5817#0" expanded="false" />
+            <element signature="e#5823#6275#0" expanded="false" />
+            <element signature="e#6281#6592#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

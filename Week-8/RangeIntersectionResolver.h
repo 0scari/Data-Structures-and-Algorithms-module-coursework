@@ -48,25 +48,8 @@ public:
         if (consecutivePairs.size() > 0)
             intersectingPairs = mergeConsecutivePairs(consecutivePairs, intersectingPairs);
 
-    }
+        eliminateMostExpensivePairsInIntersections(intersectingPairs, matchedPairContainer);
 
-    static bool checkIfConsecutive (map <string, vector <unsigned int>> &pair1,
-                                    map <string, vector <unsigned int>> &pair2,
-                                    map < map <string, vector <unsigned int>>*,
-                                            vector < map <string, vector <unsigned int>>*>> &consecutivePairs) {
-
-        if (pair1["min"] < pair2["min"] && pair1["max"] < pair2["max"]) { // pair2 precedes p1
-
-            consecutivePairs[&pair1].push_back(&pair2);
-            return true;
-
-        } else if (pair1["min"] < pair2["min"] && pair1["max"] < pair2["max"]) { // pair1 precedes p2
-
-            consecutivePairs[&pair2].push_back(&pair1);
-            return true;
-
-        } else
-            return false;
     }
 
     static  map <string, vector <unsigned int>>* getCheapestIntersection (
@@ -83,9 +66,27 @@ public:
 
     };
 
-
-
 private:
+
+    static bool checkIfConsecutive (map <string, vector <unsigned int>> &pair1,
+                                    map <string, vector <unsigned int>> &pair2,
+                                    map < map <string, vector <unsigned int>>*,
+                                            vector < map <string, vector <unsigned int>>*>> &consecutivePairs)
+    {
+
+        if (pair1["min"] < pair2["min"] && pair1["max"] < pair2["max"]) { // pair2 precedes p1
+
+            consecutivePairs[&pair1].push_back(&pair2);
+            return true;
+
+        } else if (pair1["min"] < pair2["min"] && pair1["max"] < pair2["max"]) { // pair1 precedes p2
+
+            consecutivePairs[&pair2].push_back(&pair1);
+            return true;
+
+        } else
+            return false;
+    }
 
     static vector < vector <map <string, vector <unsigned int>>*>> mergeConsecutivePairs (
                 map < map <string, vector <unsigned int>>*,
@@ -95,9 +96,10 @@ private:
 
     }
 
+    // TODO test
     static unsigned int getRangeConversionCosts (map <string, unsigned int> range,
                                                  map <string, unsigned int> totalRange)
-    {   // TODO test
+    {
         unsigned int conversionCost = 0;
 
         if (range["min"] == totalRange["min"]) { // will be two substrings
@@ -159,8 +161,10 @@ private:
     }
 
 
-
-    static vector < map <string, vector <unsigned int>> > resolveRangeIntersection ()
+    // TODO Implement
+    static void eliminateMostExpensivePairsInIntersections(
+            vector < vector <map <string, vector <unsigned int>>*>> intersectingPairs,
+            vector < map <string, vector <unsigned int>> >          &matchedPairContainer)
     {
 
     }
