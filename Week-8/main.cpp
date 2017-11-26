@@ -103,8 +103,11 @@ void printBuffers(map <string, string> buffers)
 
 void printMatchArray (vector < map <string, vector <unsigned int>> > matches) {
 
+    cout << "Container size: " << matches.size() << endl;
+
     for(auto vectM : matches)
     {
+        cout << endl << "----- \n";
         for(auto map : vectM)
         {
             cout << endl << map.first << endl;
@@ -178,9 +181,11 @@ int main() {
 //
 //    cout << test.size();
 
-    vector < map <string, vector <unsigned int>> > res = StringMatch::matchStrings("DEG", "TTDE");
+    vector < map <string, vector <unsigned int>> > res = StringMatch::matchStrings("ABCDEFG", "IIIIACE");
 
-    printMatchArray(res);
+//    printMatchArray(res);
+
+    RangeIntersectionResolver::resolve(res);
 
 //    array <int, 5> arr {1,2,3,4,5};
 //

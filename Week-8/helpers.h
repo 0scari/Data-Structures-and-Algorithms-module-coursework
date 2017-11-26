@@ -31,4 +31,96 @@ map <string, unsigned int> calcRange (map<string, vector<unsigned int>> matchedP
     return {{"min", min}, {"max", max}};
 }
 
+void printIntersectingPairs (vector < vector <map <string, vector <unsigned int>>*>> intersectingPairs)
+{
+    for (auto pair : intersectingPairs) {
+
+        cout << "\n Pair \n";
+
+        for (auto strPair : pair) {
+
+            cout << "\nString Pair \n";
+
+            for (auto strRange : *strPair) {
+
+                cout << endl << strRange.first << ": ";
+
+                for (auto letter : strRange.second) {
+
+                    cout << letter << " - ";
+                }
+
+            }
+            cout << endl;
+
+        }
+    }
+}
+
+void printIntersectingPair (vector <map <string, vector <unsigned int>>*> intersectingPair)
+{
+    cout << "\n Pair \n";
+
+    for (auto strPair : intersectingPair) {
+
+        cout << "\nString Pair \n";
+
+        for (auto strRange : *strPair) {
+
+            cout << endl << strRange.first << ": ";
+
+            for (auto letter : strRange.second) {
+
+                cout << letter << " - ";
+            }
+
+        }
+        cout << endl;
+
+    }
+}
+
+void printConsecutivePairs (map < map <string, vector <unsigned int>>*,
+        vector < map <string, vector <unsigned int>>*>> consecutivePairs)
+{
+    for (auto pair : consecutivePairs) {
+
+        cout << "\n Consecutive Pair \n";
+
+        cout << "\n Key \n";
+
+
+        for (auto strRange : *pair.first) {
+
+            cout << endl << strRange.first << ": ";
+
+            for (auto letter : strRange.second) {
+
+                cout << letter << " - ";
+            }
+        }
+
+        cout << "\n Value \n";
+
+
+        for (auto strPair : pair.second) {
+
+            cout << "\nString Pair \n";
+
+            for (auto strRange : *strPair) {
+
+                cout << endl << strRange.first << ": ";
+
+                for (auto letter : strRange.second) {
+
+                    cout << letter << " - ";
+                }
+
+            }
+            cout << endl;
+
+        }
+    }
+}
+
 #endif //WEEK_8_HELPERS_H

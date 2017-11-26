@@ -103,9 +103,7 @@ private:
 
             } else {
 
-                if ( matchedPair["strA"].size() > 0
-                     and canReduceCost(matchedPair, {{'A', StringMatch::stringA},
-                                                     {'B', StringMatch::stringB}}))
+                if ( matchedPair["strA"].size() > 0)
 
                     outputVector.push_back(matchedPair);
 
@@ -117,9 +115,7 @@ private:
         // in case the matching letters were the rightmost
         // then we are 1 iteration short in the for loop
         // to push the pair into the output vector
-        if ( matchedPair["strA"].size() > 0
-             and canReduceCost(matchedPair, {{'A', StringMatch::stringA},
-                                             {'B', stringB}}))
+        if ( matchedPair["strA"].size() > 0)
 
             outputVector.push_back(matchedPair);
 

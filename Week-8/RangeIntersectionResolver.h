@@ -17,13 +17,15 @@ public:
         vector <map <string, vector <unsigned int>>*>           intersectingPair;
 
         // pairs that can be merged not causing logic errors
-        // example: [strA: "ABCDEF", strB: "XYWBAE"], merge B - E ranges (strA(2) and strB(6))
+        // example: [strA: "ABCDEF", strB: "XYWBAE"], merge B - E ranges (strA(2) to strB(6))
         map < map <string, vector <unsigned int>>*,
                 vector < map <string, vector <unsigned int>>*>> consecutivePairs;
 
-        for (int i = 0; i < matchedPairContainer.size() -2; ++i) {
+        for (int i = 0; i < matchedPairContainer.size() -1; ++i) {
 
-            for (int j = i + 1; j < matchedPairContainer.size() -1; ++j) {
+            bool i_wasPushed = false;
+
+            for (int j = i + 1; j < matchedPairContainer.size(); ++j) {
 
                 if (rangesIntersect(matchedPairContainer[i], matchedPairContainer[j])) {
 
@@ -31,7 +33,10 @@ public:
                     // in consecutivePairs vector
                     checkIfConsecutive(matchedPairContainer[i], matchedPairContainer[j], consecutivePairs);
 
-                    intersectingPair.push_back(&matchedPairContainer[i]);
+                    if (!i_wasPushed) {
+                        intersectingPair.push_back(&matchedPairContainer[i]);
+                        i_wasPushed = true;
+                    }
                     intersectingPair.push_back(&matchedPairContainer[j]);
                 }
             }
@@ -45,10 +50,17 @@ public:
             }
         }
 
-        if (consecutivePairs.size() > 0)
-            intersectingPairs = mergeConsecutivePairs(consecutivePairs, intersectingPairs);
 
-        eliminateMostExpensivePairsInIntersections(intersectingPairs, matchedPairContainer);
+//        printConsecutivePairs(consecutivePairs);
+
+
+//        if (consecutivePairs.size() > 0)
+//            intersectingPairs = mergeConsecutivePairs(consecutivePairs, intersectingPairs);
+
+
+//        printConsecutivePairs(consecutivePairs);
+
+//        eliminateMostExpensivePairsInIntersections(intersectingPairs, matchedPairContainer);
 
     }
 
@@ -73,19 +85,41 @@ private:
                                     map < map <string, vector <unsigned int>>*,
                                             vector < map <string, vector <unsigned int>>*>> &consecutivePairs)
     {
+        static vector <map <string, vector <unsigned int>>*> consecutives;
 
-        if (pair1["min"] < pair2["min"] && pair1["max"] < pair2["max"]) { // pair2 precedes p1
+        // if intersection contains sequence as 1:-> 2 -> 3, so 2:-> 3 does not happen
+        if(std::find(consecutives.begin(), consecutives.end(), &pair2) != consecutives.end() &&
+           std::find(consecutives.begin(), consecutives.end(), &pair1) != consecutives.end()) {
 
-            consecutivePairs[&pair1].push_back(&pair2);
-            return true;
-
-        } else if (pair1["min"] < pair2["min"] && pair1["max"] < pair2["max"]) { // pair1 precedes p2
-
-            consecutivePairs[&pair2].push_back(&pair1);
-            return true;
-
-        } else
             return false;
+
+        } else {
+
+            map <string, unsigned int> range1 = calcRange(pair1);
+            map <string, unsigned int> range2 = calcRange(pair2);
+
+            bool pairsAreConsecutive = false;
+
+            if ((range1["min"] < range2["min"]) && (range1["max"] < range2["max"])) { // pair2 precedes p1
+
+                pairsAreConsecutive = true;
+
+            } else if ((range2["min"] < range1["min"]) && (range2["max"] < range1["max"])) { // pair1 precedes p2
+
+                pairsAreConsecutive = true;
+
+            } else
+                return false;
+
+            if (pairsAreConsecutive) {
+
+                consecutivePairs[&pair1].push_back(&pair2);
+
+                consecutives.push_back(&pair1);
+                consecutives.push_back(&pair2);
+                return true;
+            }
+        }
     }
 
     static vector < vector <map <string, vector <unsigned int>>*>> mergeConsecutivePairs (
@@ -151,8 +185,12 @@ private:
         return {{"min", min}, {"max", max}};
     }
 
-    static bool rangesIntersect(map<string, vector<unsigned int>> range1, map<string, vector<unsigned int>> range2)
+    static bool rangesIntersect(map <string, vector <unsigned int>> pair1,
+                                map <string, vector <unsigned int>> pair2)
     {
+        map <string, unsigned int> range1 = calcRange(pair1);
+        map <string, unsigned int> range2 = calcRange(pair2);
+
         if (range1["min"] >= range2["min"] and range1["min"] <= range2["max"])
 
             return true;
