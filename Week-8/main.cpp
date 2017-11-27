@@ -4,6 +4,7 @@
 #include <map>
 #include <vector>
 #include <algorithm>
+#include <stdexcept>
 
 
 using namespace std;
@@ -128,8 +129,8 @@ int* dMTest (array<int, 5> &arr)
 
 };
 
-#include "RangeIntersection.h"
 #include "helpers.h"
+#include "RangeIntersection.h"
 #include "StringMatch.h"
 #include "RangeIntersectionResolver.h"
 #include "StringConvert.h"

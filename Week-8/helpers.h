@@ -123,15 +123,27 @@ void printConsecutivePairs (map < map <string, vector <unsigned int>>*,
     }
 }
 
-vector <const unique_ptr<map<string, unsigned int>>> getKeys (map < unique_ptr<map<string, unsigned int>>,
-        RangeIntersection> &rangeIntersections)
+static map <string, unsigned int> calcTotalRange (map <string, unsigned int> range1,
+                                                  map <string, unsigned int> range2)
 {
-    vector <const unique_ptr<map<string, unsigned int>>> keys;
+    unsigned int min;
+    unsigned int max;
 
-    for (const auto &elem : rangeIntersections)
-        keys.push_back(elem.first);
+    range1["min"] <= range2["min"] ? min = range1["min"] : min = range2["min"];
+    range1["max"] >= range2["max"] ? max = range1["max"] : max = range2["max"];
 
-    return keys;
-};
+    return {{"min", min}, {"max", max}};
+}
+
+//vector <const unique_ptr<map<string, unsigned int>>> getKeys (map < unique_ptr<map<string, unsigned int>>,
+//        RangeIntersection> &rangeIntersections)
+//{
+//    vector <const unique_ptr<map<string, unsigned int>>> keys;
+//
+//    for (const auto &elem : rangeIntersections)
+//        keys.push_back(elem.first);
+//
+//    return keys;
+//};
 
 #endif //WEEK_8_HELPERS_H
