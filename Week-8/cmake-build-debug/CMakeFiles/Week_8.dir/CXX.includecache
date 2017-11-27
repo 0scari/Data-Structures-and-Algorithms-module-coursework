@@ -6,6 +6,8 @@
 
 #IncludeRegexTransform: 
 
+/Users/oscar/My_Files/Git/210CT/Week-8/RangeIntersection.h
+
 /Users/oscar/My_Files/Git/210CT/Week-8/RangeIntersectionResolver.h
 
 /Users/oscar/My_Files/Git/210CT/Week-8/StringConvert.h
@@ -27,6 +29,8 @@ vector
 -
 algorithm
 -
+RangeIntersection.h
+/Users/oscar/My_Files/Git/210CT/Week-8/RangeIntersection.h
 helpers.h
 /Users/oscar/My_Files/Git/210CT/Week-8/helpers.h
 StringMatch.h

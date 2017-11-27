@@ -7,62 +7,57 @@
 
 class RangeIntersectionResolver
 {
+    static map < unique_ptr<map<string, unsigned int>>, RangeIntersection> rangeIntersections;
 
 public:
 
-    static vector < map <string, vector <unsigned int>>> resolve (
-                                    vector < map <string, vector <unsigned int>> > &matchedPairContainer)
-    {
-        vector < vector <map <string, vector <unsigned int>>*>> intersectingPairs;
-        vector <map <string, vector <unsigned int>>*>           intersectingPair;
-
-        // pairs that can be merged not causing logic errors
-        // example: [strA: "ABCDEF", strB: "XYWBAE"], merge B - E ranges (strA(2) to strB(6))
-        map < map <string, vector <unsigned int>>*,
-                vector < map <string, vector <unsigned int>>*>> consecutivePairs;
-
-        for (int i = 0; i < matchedPairContainer.size() -1; ++i) {
-
-            bool i_wasPushed = false;
-
-            for (int j = i + 1; j < matchedPairContainer.size(); ++j) {
-
-                if (rangesIntersect(matchedPairContainer[i], matchedPairContainer[j])) {
-
-                    // if intersects the preceding pair becomes a value of the other pair that becomes the key
-                    // in consecutivePairs vector
-                    checkIfConsecutive(matchedPairContainer[i], matchedPairContainer[j], consecutivePairs);
-
-                    if (!i_wasPushed) {
-                        intersectingPair.push_back(&matchedPairContainer[i]);
-                        i_wasPushed = true;
-                    }
-                    intersectingPair.push_back(&matchedPairContainer[j]);
-                }
-            }
-
-            // reset content of intersectingPair
-            if (intersectingPair.size() > 0) {
-
-                intersectingPairs.push_back(intersectingPair);
-                intersectingPair = {};
-
-            }
-        }
-
-
+//    static vector < map <string, vector <unsigned int>>> resolve (
+//                                    vector < map <string, vector <unsigned int>> > &matchedPairsContainer)
+//    {
+//        for (int i = 0; i < matchedPairsContainer.size() -1; ++i) {
+//
+//            bool i_wasPushed = false;
+//
+//            for (int j = i + 1; j < matchedPairsContainer.size(); ++j) {
+//
+//                if (rangesIntersect(matchedPairsContainer[i], matchedPairsContainer[j])) {
+//
+//
+//
+//                    // if intersects the preceding pair becomes a value of the other pair that becomes the key
+//                    // in consecutivePairs vector
+//                    checkIfConsecutive(matchedPairsContainer[i], matchedPairsContainer[j], consecutivePairs);
+//
+//                    if (!i_wasPushed) {
+//                        intersectingPair.push_back(&matchedPairsContainer[i]);
+//                        i_wasPushed = true;
+//                    }
+//                    intersectingPair.push_back(&matchedPairsContainer[j]);
+//                }
+//            }
+//
+//            // reset content of intersectingPair
+//            if (intersectingPair.size() > 0) {
+//
+//                intersectingPairs.push_back(intersectingPair);
+//                intersectingPair = {};
+//
+//            }
+//        }
+//
+////printIntersectingPairs(intersectingPairs);
 //        printConsecutivePairs(consecutivePairs);
-
-
+//
+//
 //        if (consecutivePairs.size() > 0)
 //            intersectingPairs = mergeConsecutivePairs(consecutivePairs, intersectingPairs);
-
-
-//        printConsecutivePairs(consecutivePairs);
-
-//        eliminateMostExpensivePairsInIntersections(intersectingPairs, matchedPairContainer);
-
-    }
+//
+//
+////        printConsecutivePairs(consecutivePairs);
+//
+////        eliminateMostExpensivePairsInIntersections(intersectingPairs, matchedPairsContainer);
+//
+//    }
 
     static  map <string, vector <unsigned int>>* getCheapestIntersection (
             map <string, vector <unsigned int>> &containerPair,
@@ -79,6 +74,24 @@ public:
     };
 
 private:
+
+    unique_ptr<map<string, unsigned int>> getRangeKey (map <string, unsigned int> range1,
+                                                   map <string, unsigned int> range2)
+    {
+        map <string, unsigned int> range = calcTotalRange(range1, range2);
+        vector <const unique_ptr<map<string, unsigned int>>> rangeKeys = getKeys(RangeIntersectionResolver::rangeIntersections);
+
+        for (auto &rangeKey: rangeKeys)
+
+            if (rangesIntersect(*rangeKey, range))
+
+                return rangeKey;
+
+        auto range3 = make_unique<string>(L":)");
+        RangeIntersectionResolver::rangeIntersections[range3];
+
+        return range3;
+    }
 
     static bool checkIfConsecutive (map <string, vector <unsigned int>> &pair1,
                                     map <string, vector <unsigned int>> &pair2,
@@ -198,6 +211,17 @@ private:
         return range1["max"] >= range2["min"] and range1["max"] <= range2["max"];
     }
 
+    static bool rangesIntersect(map <string, unsigned int> range1,
+                                map <string, unsigned int> range2)
+    {
+
+        if (range1["min"] >= range2["min"] and range1["min"] <= range2["max"])
+
+            return true;
+
+        return range1["max"] >= range2["min"] and range1["max"] <= range2["max"];
+    }
+
 
     // TODO Implement
     static void eliminateMostExpensivePairsInIntersections(
@@ -208,5 +232,7 @@ private:
     }
 
 };
+
+map < map<string, unsigned int>, RangeIntersection> RangeIntersectionResolver::rangeIntersections;
 
 #endif //WEEK_8_RANGEINTERSECTIONRESOLVER_H

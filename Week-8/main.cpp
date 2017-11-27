@@ -128,6 +128,7 @@ int* dMTest (array<int, 5> &arr)
 
 };
 
+#include "RangeIntersection.h"
 #include "helpers.h"
 #include "StringMatch.h"
 #include "RangeIntersectionResolver.h"
@@ -181,9 +182,9 @@ int main() {
 //
 //    cout << test.size();
 
-    vector < map <string, vector <unsigned int>> > res = StringMatch::matchStrings("ABCDEFG", "IIIIACE");
+    vector < map <string, vector <unsigned int>> > res = StringMatch::matchStrings("ABCDEFGHIJ12345", "XXXBDACFXX0013");
 
-//    printMatchArray(res);
+    printMatchArray(res);
 
     RangeIntersectionResolver::resolve(res);
 
