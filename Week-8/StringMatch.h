@@ -12,6 +12,7 @@ public:
 
     static vector <map <string, vector <unsigned int>> > matchStrings (string stringA, string stringB)
     {
+
         StringMatch::stringA = stringA;
         StringMatch::stringB = stringB;
 
@@ -89,6 +90,8 @@ private:
 
     static vector < map <string, vector <unsigned int>> > findMatchingStrings(map <string, string> stringA)
     {
+
+
         vector < map <string, vector <unsigned int>> > outputVector;
 
         // { {"strA", {}}, {"strB", {}} }

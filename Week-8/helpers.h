@@ -135,15 +135,5 @@ static map <string, unsigned int> calcTotalRange (map <string, unsigned int> ran
     return {{"min", min}, {"max", max}};
 }
 
-//vector <const unique_ptr<map<string, unsigned int>>> getKeys (map < unique_ptr<map<string, unsigned int>>,
-//        RangeIntersection> &rangeIntersections)
-//{
-//    vector <const unique_ptr<map<string, unsigned int>>> keys;
-//
-//    for (const auto &elem : rangeIntersections)
-//        keys.push_back(elem.first);
-//
-//    return keys;
-//};
 
 #endif //WEEK_8_HELPERS_H

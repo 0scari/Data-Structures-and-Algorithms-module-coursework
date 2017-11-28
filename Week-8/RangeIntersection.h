@@ -6,6 +6,7 @@
 #define WEEK_8_RANGEINTERSECTION_H
 class RangeIntersection
 {
+public:
     map<string, unsigned int> range;
 
     vector <map <string, vector <unsigned int>>*> intersectingRangePairs;
@@ -15,14 +16,31 @@ class RangeIntersection
     map < map <string, vector <unsigned int>>*,
             vector < map <string, vector <unsigned int>>*>> consecutivePairs;
 
-public:
 
-    void addRangeIntersection(map<string, vector<unsigned int>> *pair1,
-                              map<string, vector<unsigned int>> *pair2)
+
+    RangeIntersection(map <string, vector<unsigned int>> &pair1,
+                      map <string, vector<unsigned int>> &pair2,
+                      map <string, unsigned int> range) {
+
+        this->range = range;
+
+        addRangeIntersection(pair1, pair2);
+
+
+    }
+
+    void addRangeIntersection(map<string, vector<unsigned int>> &pair1,
+                              map<string, vector<unsigned int>> &pair2)
     {
-        // TODO checkIfConsecutive()
-        // TODO keepOnlyNotRegistered()
+        checkIfConsecutive(pair1, pair2);
 
+        if (std::find(intersectingRangePairs.begin(), intersectingRangePairs.end(), &pair1)
+                == intersectingRangePairs.end())
+            intersectingRangePairs.push_back(&pair1);
+
+        if (std::find(intersectingRangePairs.begin(), intersectingRangePairs.end(), &pair2)
+            == intersectingRangePairs.end())
+            intersectingRangePairs.push_back(&pair2);
     }
 
     void keepCheapestIntersections()
@@ -30,13 +48,13 @@ public:
         // TODO
     }
 
-    const map<string, unsigned int> getRange() {
+    map<string, unsigned int> getRange() {
         return range;
     }
 
 
     bool checkIfConsecutive (map <string, vector <unsigned int>> &pair1,
-                                    map <string, vector <unsigned int>> &pair2)
+                             map <string, vector <unsigned int>> &pair2)
     {
         static vector <map <string, vector <unsigned int>>*> consecutives;
 
@@ -77,7 +95,7 @@ public:
 
     void mergeConsecutivePairs ()
     {
-        
+
     }
 };
 

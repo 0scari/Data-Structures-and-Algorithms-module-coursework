@@ -12,17 +12,20 @@ class RangeIntersectionResolver
     static vector < map <string, vector <unsigned int>>> registeredIntersections;
 
 
-//public:
+public:
 
-    static vector < map <string, vector <unsigned int>>> resolve (
+    static void resolve (
                                     vector < map <string, vector <unsigned int>> > &matchedPairsContainer)
     {
+
+
 
         for (int i = 0; i < matchedPairsContainer.size() -1; ++i) {
 
 //            bool i_wasPushed = false;
 
             for (int j = i + 1; j < matchedPairsContainer.size(); ++j) {
+
 
                 if (rangesIntersect(matchedPairsContainer[i], matchedPairsContainer[j])) {
 
@@ -59,6 +62,7 @@ class RangeIntersectionResolver
 
 //        eliminateMostExpensivePairsInIntersections(intersectingPairs, matchedPairsContainer);
 
+
     }
 
 //    void eliminat
@@ -85,21 +89,27 @@ class RangeIntersectionResolver
         map <string, unsigned int> range1 = calcRange(pair1);
         map <string, unsigned int> range2 = calcRange(pair2);
 
+
         map <string, unsigned int> range = calcTotalRange(range1, range2);
 
         int i = 0;
+        bool intersectionFound = false;
 
         for (auto &rangeIntersection : rangeIntersections) {
 
             if (rangesIntersect(rangeIntersection.getRange(), range)){
                 i++;
-                rangeIntersection.addRangeIntersection(&pair1, &pair2);
+                rangeIntersection.addRangeIntersection(pair1, pair2);
+                intersectionFound = true;
             }
 
             // TODO remove once tested
             if (i > 1)
                 throw logic_error("Intersection with 2 classes!");
         }
+
+        if (!intersectionFound)
+            rangeIntersections.push_back(RangeIntersection(pair1, pair2, range));
     }
 
     // TODO test
@@ -158,7 +168,7 @@ class RangeIntersectionResolver
         return range1["max"] >= range2["min"] and range1["max"] <= range2["max"];
     }
 
-    static bool rangesIntersect(const map <string, unsigned int> range1,
+    static bool rangesIntersect(map <string, unsigned int> range1,
                                 map <string, unsigned int> range2)
     {
 
@@ -190,9 +200,28 @@ class RangeIntersectionResolver
 
     }
 
+    static void print()
+    {
+
+        int i = 0;
+
+        for (auto X : rangeIntersections) {
+            cout << "\nClass " << ++i<< endl;
+
+            printIntersectingPair(X.intersectingRangePairs);
+
+            printConsecutivePairs(X.consecutivePairs);
+
+        }
+
+
+
+
+    }
+
 };
 
-vector < map <string, vector <unsigned int>>>       RangeIntersectionResolver::registeredIntersections
-map < map<string, unsigned int>, RangeIntersection> RangeIntersectionResolver::rangeIntersections;
+vector < map <string, vector <unsigned int>>>       RangeIntersectionResolver::registeredIntersections;
+vector <RangeIntersection> RangeIntersectionResolver::rangeIntersections;
 
 #endif //WEEK_8_RANGEINTERSECTIONRESOLVER_H

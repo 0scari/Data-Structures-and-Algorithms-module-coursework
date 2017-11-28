@@ -12,8 +12,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1dad88b6-1156-4032-a9ac-698e6aec2bef" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/count.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Week_8" afterPath="$PROJECT_DIR$/cmake-build-debug/Week_8" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RangeIntersection.h" afterPath="$PROJECT_DIR$/RangeIntersection.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RangeIntersectionResolver.h" afterPath="$PROJECT_DIR$/RangeIntersectionResolver.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StringMatch.h" afterPath="$PROJECT_DIR$/StringMatch.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Week_8.dir/CXX.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Week_8.dir/CXX.includecache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helpers.h" afterPath="$PROJECT_DIR$/helpers.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
     </list>
@@ -42,8 +48,8 @@
           <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/main.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="825">
-                  <caret line="131" column="20" lean-forward="false" selection-start-line="131" selection-start-column="20" selection-end-line="131" selection-end-column="20" />
+                <state relative-caret-position="299">
+                  <caret line="146" column="0" lean-forward="true" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#19#0" expanded="true" />
                     <element signature="e#155#477#0" expanded="false" />
@@ -51,7 +57,7 @@
                     <element signature="e#1200#1495#0" expanded="false" />
                     <element signature="e#1497#1976#0" expanded="false" />
                     <element signature="e#1979#2154#0" expanded="false" />
-                    <element signature="e#2691#2721#0" expanded="true" />
+                    <element signature="e#2670#2690#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -60,12 +66,11 @@
           <file leaf-file-name="RangeIntersectionResolver.h" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/RangeIntersectionResolver.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1530">
-                  <caret line="102" column="5" lean-forward="false" selection-start-line="102" selection-start-column="5" selection-end-line="102" selection-end-column="5" />
+                <state relative-caret-position="801">
+                  <caret line="206" column="0" lean-forward="true" selection-start-line="206" selection-start-column="0" selection-end-line="206" selection-end-column="0" />
                   <folding>
-                    <element signature="e#3273#5410#0" expanded="false" />
-                    <element signature="e#5416#5886#0" expanded="false" />
-                    <element signature="e#5892#6228#0" expanded="false" />
+                    <element signature="e#3430#5567#0" expanded="false" />
+                    <element signature="e#5573#6043#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -78,34 +83,32 @@
           <file leaf-file-name="StringMatch.h" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/StringMatch.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1755">
-                  <caret line="117" column="44" lean-forward="false" selection-start-line="117" selection-start-column="44" selection-end-line="117" selection-end-column="44" />
+                <state relative-caret-position="120">
+                  <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
                   <folding>
                     <element signature="e#0#2#0" expanded="false" />
-                    <element signature="e#147#895#0" expanded="false" />
-                    <element signature="e#901#1423#0" expanded="false" />
-                    <element signature="e#1494#1816#0" expanded="false" />
-                    <element signature="e#1822#2365#0" expanded="false" />
-                    <element signature="e#3481#3872#0" expanded="false" />
-                    <element signature="e#3878#4039#0" expanded="false" />
-                    <element signature="e#4045#4677#0" expanded="false" />
-                    <element signature="e#4683#4940#0" expanded="false" />
-                    <element signature="e#4946#5433#0" expanded="false" />
-                    <element signature="e#5439#5811#0" expanded="false" />
+                    <element signature="e#902#1424#0" expanded="false" />
+                    <element signature="e#1495#1817#0" expanded="false" />
+                    <element signature="e#1823#2366#0" expanded="false" />
+                    <element signature="e#3484#3875#0" expanded="false" />
+                    <element signature="e#3881#4042#0" expanded="false" />
+                    <element signature="e#4048#4680#0" expanded="false" />
+                    <element signature="e#4686#4943#0" expanded="false" />
+                    <element signature="e#4949#5436#0" expanded="false" />
+                    <element signature="e#5442#5814#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="helpers.h" pinned="false" current-in-tab="false">
+          <file leaf-file-name="helpers.h" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/helpers.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="105">
-                  <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+                <state relative-caret-position="690">
+                  <caret line="136" column="0" lean-forward="true" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
                   <folding>
                     <element signature="e#699#1237#0" expanded="false" />
                     <element signature="e#1239#1684#0" expanded="false" />
-                    <element signature="e#1718#1813#0" expanded="false" />
                     <element signature="e#1686#2563#0" expanded="false" />
                     <element signature="e#2565#2985#0" expanded="false" />
                   </folding>
@@ -113,14 +116,12 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="RangeIntersection.h" pinned="false" current-in-tab="true">
+          <file leaf-file-name="RangeIntersection.h" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/RangeIntersection.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="645">
-                  <caret line="79" column="8" lean-forward="false" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="8" />
-                  <folding>
-                    <element signature="e#930#2284#0" expanded="false" />
-                  </folding>
+                <state relative-caret-position="165">
+                  <caret line="11" column="72" lean-forward="false" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="72" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -141,12 +142,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/StringConvert.h" />
-        <option value="$PROJECT_DIR$/StringMatch.h" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/helpers.h" />
+        <option value="$PROJECT_DIR$/StringMatch.h" />
+        <option value="$PROJECT_DIR$/RangeIntersection.h" />
         <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/RangeIntersectionResolver.h" />
-        <option value="$PROJECT_DIR$/RangeIntersection.h" />
+        <option value="$PROJECT_DIR$/helpers.h" />
       </list>
     </option>
   </component>
@@ -236,12 +237,14 @@
       <workItem from="1511540336251" duration="1621000" />
       <workItem from="1511542064995" duration="65012000" />
       <workItem from="1511745223511" duration="1597000" />
-      <workItem from="1511816062127" duration="4103000" />
+      <workItem from="1511816062127" duration="4280000" />
+      <workItem from="1511878085444" duration="1464000" />
+      <workItem from="1511879801369" duration="2283000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95701000" />
+    <option name="totallyTimeSpent" value="99625000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -256,19 +259,19 @@
     <frame x="-372" y="-1080" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16719915" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1687966" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286991" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.503231" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.49676898" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286991" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286991" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3286991" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -288,15 +291,170 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/StringMatch.h</url>
-          <line>89</line>
+          <line>90</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/helpers.h</url>
+          <line>33</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="19" />
+      <option name="time" value="21" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="38" lean-forward="false" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RangeIntersectionResolver.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="e#3430#5567#0" expanded="false" />
+            <element signature="e#5573#6043#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2925">
+          <caret line="195" column="36" lean-forward="false" selection-start-line="195" selection-start-column="36" selection-end-line="195" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#155#477#0" expanded="false" />
+            <element signature="e#479#1197#0" expanded="false" />
+            <element signature="e#1200#1495#0" expanded="false" />
+            <element signature="e#1497#1976#0" expanded="false" />
+            <element signature="e#1979#2154#0" expanded="false" />
+            <element signature="e#2670#2690#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StringMatch.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#2#0" expanded="false" />
+            <element signature="e#902#1424#0" expanded="false" />
+            <element signature="e#1495#1817#0" expanded="false" />
+            <element signature="e#1823#2366#0" expanded="false" />
+            <element signature="e#3484#3875#0" expanded="false" />
+            <element signature="e#3881#4042#0" expanded="false" />
+            <element signature="e#4048#4680#0" expanded="false" />
+            <element signature="e#4686#4943#0" expanded="false" />
+            <element signature="e#4949#5436#0" expanded="false" />
+            <element signature="e#5442#5814#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helpers.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+          <folding>
+            <element signature="e#699#1237#0" expanded="false" />
+            <element signature="e#1239#1684#0" expanded="false" />
+            <element signature="e#1686#2563#0" expanded="false" />
+            <element signature="e#2565#2985#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RangeIntersection.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="9" lean-forward="false" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="38" lean-forward="false" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1965">
+          <caret line="131" column="20" lean-forward="false" selection-start-line="131" selection-start-column="20" selection-end-line="131" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#155#477#0" expanded="false" />
+            <element signature="e#479#1197#0" expanded="false" />
+            <element signature="e#1200#1495#0" expanded="false" />
+            <element signature="e#1497#1976#0" expanded="false" />
+            <element signature="e#1979#2154#0" expanded="false" />
+            <element signature="e#2670#2690#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RangeIntersectionResolver.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1530">
+          <caret line="102" column="5" lean-forward="false" selection-start-line="102" selection-start-column="5" selection-end-line="102" selection-end-column="5" />
+          <folding>
+            <element signature="e#3430#5567#0" expanded="false" />
+            <element signature="e#5573#6043#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StringMatch.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1755">
+          <caret line="117" column="44" lean-forward="false" selection-start-line="117" selection-start-column="44" selection-end-line="117" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#2#0" expanded="false" />
+            <element signature="e#902#1424#0" expanded="false" />
+            <element signature="e#1495#1817#0" expanded="false" />
+            <element signature="e#1823#2366#0" expanded="false" />
+            <element signature="e#3484#3875#0" expanded="false" />
+            <element signature="e#3881#4042#0" expanded="false" />
+            <element signature="e#4048#4680#0" expanded="false" />
+            <element signature="e#4686#4943#0" expanded="false" />
+            <element signature="e#4949#5436#0" expanded="false" />
+            <element signature="e#5442#5814#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helpers.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+          <folding>
+            <element signature="e#699#1237#0" expanded="false" />
+            <element signature="e#1239#1684#0" expanded="false" />
+            <element signature="e#1686#2563#0" expanded="false" />
+            <element signature="e#2565#2985#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RangeIntersection.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1185">
+          <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -316,7 +474,7 @@
             <element signature="e#1200#1495#0" expanded="false" />
             <element signature="e#1497#1976#0" expanded="false" />
             <element signature="e#1979#2154#0" expanded="false" />
-            <element signature="e#2691#2721#0" expanded="true" />
+            <element signature="e#2670#2690#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -326,9 +484,8 @@
         <state relative-caret-position="2055">
           <caret line="137" column="69" lean-forward="true" selection-start-line="137" selection-start-column="69" selection-end-line="137" selection-end-column="69" />
           <folding>
-            <element signature="e#3273#5410#0" expanded="false" />
-            <element signature="e#5416#5886#0" expanded="false" />
-            <element signature="e#5892#6228#0" expanded="false" />
+            <element signature="e#3430#5567#0" expanded="false" />
+            <element signature="e#5573#6043#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -339,16 +496,15 @@
           <caret line="117" column="44" lean-forward="false" selection-start-line="117" selection-start-column="44" selection-end-line="117" selection-end-column="44" />
           <folding>
             <element signature="e#0#2#0" expanded="false" />
-            <element signature="e#147#895#0" expanded="false" />
-            <element signature="e#901#1423#0" expanded="false" />
-            <element signature="e#1494#1816#0" expanded="false" />
-            <element signature="e#1822#2365#0" expanded="false" />
-            <element signature="e#3481#3872#0" expanded="false" />
-            <element signature="e#3878#4039#0" expanded="false" />
-            <element signature="e#4045#4677#0" expanded="false" />
-            <element signature="e#4683#4940#0" expanded="false" />
-            <element signature="e#4946#5433#0" expanded="false" />
-            <element signature="e#5439#5811#0" expanded="false" />
+            <element signature="e#902#1424#0" expanded="false" />
+            <element signature="e#1495#1817#0" expanded="false" />
+            <element signature="e#1823#2366#0" expanded="false" />
+            <element signature="e#3484#3875#0" expanded="false" />
+            <element signature="e#3881#4042#0" expanded="false" />
+            <element signature="e#4048#4680#0" expanded="false" />
+            <element signature="e#4686#4943#0" expanded="false" />
+            <element signature="e#4949#5436#0" expanded="false" />
+            <element signature="e#5442#5814#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -357,9 +513,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <element signature="e#930#2284#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -370,7 +524,6 @@
           <folding>
             <element signature="e#699#1237#0" expanded="false" />
             <element signature="e#1239#1684#0" expanded="false" />
-            <element signature="e#1718#1813#0" expanded="false" />
             <element signature="e#1686#2563#0" expanded="false" />
             <element signature="e#2565#2985#0" expanded="false" />
           </folding>
@@ -388,7 +541,7 @@
             <element signature="e#1200#1495#0" expanded="false" />
             <element signature="e#1497#1976#0" expanded="false" />
             <element signature="e#1979#2154#0" expanded="false" />
-            <element signature="e#2691#2721#0" expanded="true" />
+            <element signature="e#2670#2690#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -406,9 +559,8 @@
         <state relative-caret-position="1230">
           <caret line="82" column="61" lean-forward="false" selection-start-line="82" selection-start-column="61" selection-end-line="82" selection-end-column="61" />
           <folding>
-            <element signature="e#3273#5410#0" expanded="false" />
-            <element signature="e#5416#5886#0" expanded="false" />
-            <element signature="e#5892#6228#0" expanded="false" />
+            <element signature="e#3430#5567#0" expanded="false" />
+            <element signature="e#5573#6043#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -419,16 +571,15 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#2#0" expanded="false" />
-            <element signature="e#147#895#0" expanded="false" />
-            <element signature="e#901#1423#0" expanded="false" />
-            <element signature="e#1494#1816#0" expanded="false" />
-            <element signature="e#1822#2365#0" expanded="false" />
-            <element signature="e#3481#3872#0" expanded="false" />
-            <element signature="e#3878#4039#0" expanded="false" />
-            <element signature="e#4045#4677#0" expanded="false" />
-            <element signature="e#4683#4940#0" expanded="false" />
-            <element signature="e#4946#5433#0" expanded="false" />
-            <element signature="e#5439#5811#0" expanded="false" />
+            <element signature="e#902#1424#0" expanded="false" />
+            <element signature="e#1495#1817#0" expanded="false" />
+            <element signature="e#1823#2366#0" expanded="false" />
+            <element signature="e#3484#3875#0" expanded="false" />
+            <element signature="e#3881#4042#0" expanded="false" />
+            <element signature="e#4048#4680#0" expanded="false" />
+            <element signature="e#4686#4943#0" expanded="false" />
+            <element signature="e#4949#5436#0" expanded="false" />
+            <element signature="e#5442#5814#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -440,7 +591,6 @@
           <folding>
             <element signature="e#699#1237#0" expanded="false" />
             <element signature="e#1239#1684#0" expanded="false" />
-            <element signature="e#1718#1813#0" expanded="false" />
             <element signature="e#1686#2563#0" expanded="false" />
             <element signature="e#2565#2985#0" expanded="false" />
           </folding>
@@ -451,9 +601,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <element signature="e#930#2284#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -483,7 +631,7 @@
             <element signature="e#1200#1495#0" expanded="false" />
             <element signature="e#1497#1976#0" expanded="false" />
             <element signature="e#1979#2154#0" expanded="false" />
-            <element signature="e#2691#2721#0" expanded="true" />
+            <element signature="e#2670#2690#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -509,16 +657,15 @@
           <caret line="11" column="51" lean-forward="false" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
           <folding>
             <element signature="e#0#2#0" expanded="false" />
-            <element signature="e#147#895#0" expanded="false" />
-            <element signature="e#901#1423#0" expanded="false" />
-            <element signature="e#1494#1816#0" expanded="false" />
-            <element signature="e#1822#2365#0" expanded="false" />
-            <element signature="e#3481#3872#0" expanded="false" />
-            <element signature="e#3878#4039#0" expanded="false" />
-            <element signature="e#4045#4677#0" expanded="false" />
-            <element signature="e#4683#4940#0" expanded="false" />
-            <element signature="e#4946#5433#0" expanded="false" />
-            <element signature="e#5439#5811#0" expanded="false" />
+            <element signature="e#902#1424#0" expanded="false" />
+            <element signature="e#1495#1817#0" expanded="false" />
+            <element signature="e#1823#2366#0" expanded="false" />
+            <element signature="e#3484#3875#0" expanded="false" />
+            <element signature="e#3881#4042#0" expanded="false" />
+            <element signature="e#4048#4680#0" expanded="false" />
+            <element signature="e#4686#4943#0" expanded="false" />
+            <element signature="e#4949#5436#0" expanded="false" />
+            <element signature="e#5442#5814#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -534,7 +681,7 @@
             <element signature="e#1200#1495#0" expanded="false" />
             <element signature="e#1497#1976#0" expanded="false" />
             <element signature="e#1979#2154#0" expanded="false" />
-            <element signature="e#2691#2721#0" expanded="true" />
+            <element signature="e#2670#2690#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -558,7 +705,7 @@
             <element signature="e#1200#1495#0" expanded="false" />
             <element signature="e#1497#1976#0" expanded="false" />
             <element signature="e#1979#2154#0" expanded="false" />
-            <element signature="e#2691#2721#0" expanded="true" />
+            <element signature="e#2670#2690#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -574,7 +721,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="1093" column="16" lean-forward="false" selection-start-line="1093" selection-start-column="16" selection-end-line="1093" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -592,31 +738,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StringMatch.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1755">
-          <caret line="117" column="44" lean-forward="false" selection-start-line="117" selection-start-column="44" selection-end-line="117" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#2#0" expanded="false" />
-            <element signature="e#147#895#0" expanded="false" />
-            <element signature="e#901#1423#0" expanded="false" />
-            <element signature="e#1494#1816#0" expanded="false" />
-            <element signature="e#1822#2365#0" expanded="false" />
-            <element signature="e#3481#3872#0" expanded="false" />
-            <element signature="e#3878#4039#0" expanded="false" />
-            <element signature="e#4045#4677#0" expanded="false" />
-            <element signature="e#4683#4940#0" expanded="false" />
-            <element signature="e#4946#5433#0" expanded="false" />
-            <element signature="e#5439#5811#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
           <caret line="1878" column="30" lean-forward="false" selection-start-line="1878" selection-start-column="30" selection-end-line="1878" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -628,24 +753,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/helpers.h">
+    <entry file="file://$PROJECT_DIR$/StringMatch.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+        <state relative-caret-position="120">
+          <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
           <folding>
-            <element signature="e#699#1237#0" expanded="false" />
-            <element signature="e#1239#1684#0" expanded="false" />
-            <element signature="e#1718#1813#0" expanded="false" />
-            <element signature="e#1686#2563#0" expanded="false" />
-            <element signature="e#2565#2985#0" expanded="false" />
+            <element signature="e#0#2#0" expanded="false" />
+            <element signature="e#902#1424#0" expanded="false" />
+            <element signature="e#1495#1817#0" expanded="false" />
+            <element signature="e#1823#2366#0" expanded="false" />
+            <element signature="e#3484#3875#0" expanded="false" />
+            <element signature="e#3881#4042#0" expanded="false" />
+            <element signature="e#4048#4680#0" expanded="false" />
+            <element signature="e#4686#4943#0" expanded="false" />
+            <element signature="e#4949#5436#0" expanded="false" />
+            <element signature="e#5442#5814#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RangeIntersection.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="72" lean-forward="false" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="72" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="131" column="20" lean-forward="false" selection-start-line="131" selection-start-column="20" selection-end-line="131" selection-end-column="20" />
+        <state relative-caret-position="299">
+          <caret line="146" column="0" lean-forward="true" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
             <element signature="e#155#477#0" expanded="false" />
@@ -653,29 +791,31 @@
             <element signature="e#1200#1495#0" expanded="false" />
             <element signature="e#1497#1976#0" expanded="false" />
             <element signature="e#1979#2154#0" expanded="false" />
-            <element signature="e#2691#2721#0" expanded="true" />
+            <element signature="e#2670#2690#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RangeIntersectionResolver.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="102" column="5" lean-forward="false" selection-start-line="102" selection-start-column="5" selection-end-line="102" selection-end-column="5" />
+        <state relative-caret-position="801">
+          <caret line="206" column="0" lean-forward="true" selection-start-line="206" selection-start-column="0" selection-end-line="206" selection-end-column="0" />
           <folding>
-            <element signature="e#3273#5410#0" expanded="false" />
-            <element signature="e#5416#5886#0" expanded="false" />
-            <element signature="e#5892#6228#0" expanded="false" />
+            <element signature="e#3430#5567#0" expanded="false" />
+            <element signature="e#5573#6043#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RangeIntersection.h">
+    <entry file="file://$PROJECT_DIR$/helpers.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="79" column="8" lean-forward="false" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="8" />
+        <state relative-caret-position="690">
+          <caret line="136" column="0" lean-forward="true" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
           <folding>
-            <element signature="e#930#2284#0" expanded="false" />
+            <element signature="e#699#1237#0" expanded="false" />
+            <element signature="e#1239#1684#0" expanded="false" />
+            <element signature="e#1686#2563#0" expanded="false" />
+            <element signature="e#2565#2985#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -138,6 +138,20 @@ int* dMTest (array<int, 5> &arr)
 
 int main() {
 
+    vector < map <string, vector <unsigned int>> > res = StringMatch::matchStrings("ABCDEFGHIJ12345", "XXXBDACFXX0013");
+
+
+
+//    cout << ":( " << res[6]["strB"][0] ;
+//    printMatchArray(res);
+
+
+    RangeIntersectionResolver::resolve(res);
+
+
+//
+    RangeIntersectionResolver::print();
+
 //    createBuffersForMatching("ABCDEFG", 3);
 //
 //    map <string, string> buffers = createBuffersForMatching("ABCDEFG", 3);
@@ -183,11 +197,8 @@ int main() {
 //
 //    cout << test.size();
 
-    vector < map <string, vector <unsigned int>> > res = StringMatch::matchStrings("ABCDEFGHIJ12345", "XXXBDACFXX0013");
 
-    printMatchArray(res);
 
-    RangeIntersectionResolver::resolve(res);
 
 //    array <int, 5> arr {1,2,3,4,5};
 //
@@ -198,4 +209,6 @@ int main() {
 //            cout << &ar << endl;
 //
 ////    cout << a;
+
+
 }
