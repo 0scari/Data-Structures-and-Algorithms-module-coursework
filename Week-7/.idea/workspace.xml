@@ -25,7 +25,7 @@
       <file leaf-file-name="Graph1.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Graph1.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1995">
+            <state relative-caret-position="675">
               <caret line="135" column="12" lean-forward="false" selection-start-line="135" selection-start-column="12" selection-end-line="135" selection-end-column="12" />
               <folding />
             </state>
@@ -35,7 +35,7 @@
       <file leaf-file-name="Graph2.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Graph2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="675">
               <caret line="101" column="32" lean-forward="false" selection-start-line="101" selection-start-column="32" selection-end-line="101" selection-end-column="32" />
               <folding>
                 <element signature="e#43#85#0" expanded="false" />
@@ -239,25 +239,27 @@
       <workItem from="1511105222275" duration="34796000" />
       <workItem from="1511434603601" duration="2721000" />
       <workItem from="1511448472660" duration="343000" />
+      <workItem from="1511956721698" duration="31000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37860000" />
+    <option name="totallyTimeSpent" value="37891000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16639742" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -306,6 +308,66 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="18" lean-forward="false" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graph2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="101" column="32" lean-forward="false" selection-start-line="101" selection-start-column="32" selection-end-line="101" selection-end-column="32" />
+          <folding>
+            <element signature="e#43#85#0" expanded="false" />
+            <element signature="n#!!doc;n#Graph2#0" expanded="false" />
+            <element signature="n#!!doc;n#setVertex#0;n#Graph2#0" expanded="false" />
+            <element signature="n#!!block;n#setVertex#0;n#Graph2#0" expanded="false" />
+            <element signature="e#481#699#0" expanded="false" />
+            <element signature="e#526#579#0" expanded="false" />
+            <element signature="n#!!doc;n#vertexExists#0;n#Graph2#0" expanded="false" />
+            <element signature="n#!!block;n#vertexExists#0;n#Graph2#0" expanded="false" />
+            <element signature="n#!!doc;n#findLongestSimplePath#0;n#Graph2#0" expanded="false" />
+            <element signature="e#1535#1743#0" expanded="false" />
+            <element signature="n#!!doc;n#followPath#0;n#Graph2#0" expanded="false" />
+            <element signature="e#2526#2813#0" expanded="false" />
+            <element signature="e#2574#2799#0" expanded="false" />
+            <element signature="n#!!doc;n#longestPathIn#0;n#Graph2#0" expanded="false" />
+            <element signature="e#3285#3386#0" expanded="false" />
+            <element signature="e#3434#3525#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helpers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc;n#WrongTypeException#0" expanded="false" />
+            <element signature="n#!!block;n#WrongTypeException#0" expanded="false" />
+            <element signature="n#!!block;n#VertexNotIdentifiedException#0" expanded="false" />
+            <element signature="n#!!block;n#IncorrectEdgePropertyException#0" expanded="false" />
+            <element signature="n#!!block;n#isPositiveInteger#0" expanded="false" />
+            <element signature="n#!!block;n#isArray#0" expanded="false" />
+            <element signature="n#!!doc;n#getKeys#0" expanded="false" />
+            <element signature="n#!!block;n#getKeys#0" expanded="false" />
+            <element signature="e#1010#1054#0" expanded="false" />
+            <element signature="n#!!block;n#checkIfEdgeOK#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graph1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1995">
+          <caret line="135" column="12" lean-forward="false" selection-start-line="135" selection-start-column="12" selection-end-line="135" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -456,7 +518,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Graph2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="675">
           <caret line="101" column="32" lean-forward="false" selection-start-line="101" selection-start-column="32" selection-end-line="101" selection-end-column="32" />
           <folding>
             <element signature="e#43#85#0" expanded="false" />
@@ -489,7 +551,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Graph1.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1995">
+        <state relative-caret-position="675">
           <caret line="135" column="12" lean-forward="false" selection-start-line="135" selection-start-column="12" selection-end-line="135" selection-end-column="12" />
           <folding />
         </state>

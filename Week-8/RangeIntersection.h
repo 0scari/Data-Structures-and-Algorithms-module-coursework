@@ -93,10 +93,57 @@ public:
         }
     }
 
-    void mergeConsecutivePairs ()
+    void implementConsecutivePairs ()
     {
+        vector <map <string, vector <unsigned int>>*> consecutives = mergeConsecutivePairs();
+
+
+
+
+
+
 
     }
+
+    map <string, vector <unsigned int>> mergePairs (map <string, vector <unsigned int>>* pair1,
+                     map <string, vector <unsigned int>>* pair2)
+    {
+
+    };
+
+    vector <map <string, vector <unsigned int>>*> mergeConsecutivePairs ()
+    {
+        vector <map <string, vector <unsigned int>>*> output;
+
+        bool keyAdded = false;
+
+        for (auto pair : consecutivePairs) {
+
+            output.push_back(pair.first);
+
+            for (auto pairValue : pair.second)
+
+                output.push_back(pairValue);
+        }
+
+        return output;
+    }
+
+    vector <map <string, vector <unsigned int>>*> removeMostExpensiveIntersectingConsecutivePairs(
+            vector <map <string, vector <unsigned int>>*> consecutives)
+    {
+//        vector <map <string, vector <unsigned int>>*> consecutivesTmp = consecutives;
+//
+//        for (int i = 0; i < consecutives.size() -1; ++i) {
+//
+//            for (int j = i +1; j < consecutives.size(); ++j) {
+//
+//                if ()
+//
+//            }
+//        }
+    }
+
 };
 
 #endif //WEEK_8_RANGEINTERSECTION_H

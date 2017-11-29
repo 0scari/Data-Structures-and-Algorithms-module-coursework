@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="helpers.js"></script>
+    <script src="Graph1.js"></script>
+    <script src="Graph2.js"></script>
+
+    <script>
+
+        // TESTS
+
+        Graph2.setVertex(5)
+        Graph2.setVertex(4)
+        Graph2.setVertex(2)
+        Graph2.setVertex(3)
+        Graph2.setVertex(1, [{'weight':4, 'to':2}, {'weight':4, 'to':3}])
+        Graph2.setVertex(2, [{'weight':4, 'to':1}, {'weight':2, 'to':4}, {'weight':2, 'to':5}])
+        Graph2.setVertex(5, [{'weight':3, 'to':2}, {'weight':2, 'to':4}, {'weight':6, 'to':3}])
+        Graph2.setVertex(4, [{'weight':2, 'to':5}, {'weight':2, 'to':2}, {'weight':2, 'to':3}])
+        Graph2.setVertex(3, [{'weight':2, 'to':4}, {'weight':4, 'to':1}, {'weight':6, 'to':5}])
+
+
+
+
+
+        //        res = Graph2.findShortestHamiltonCycle();
+
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>

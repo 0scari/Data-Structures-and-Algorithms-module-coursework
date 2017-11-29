@@ -138,12 +138,12 @@ int* dMTest (array<int, 5> &arr)
 
 int main() {
 
-    vector < map <string, vector <unsigned int>> > res = StringMatch::matchStrings("ABCDEFGHIJ12345", "XXXBDACFXX0013");
+    vector < map <string, vector <unsigned int>> > res = StringMatch::matchStrings("1234ABC34", "2XXAB34");
 
 
 
 //    cout << ":( " << res[6]["strB"][0] ;
-//    printMatchArray(res);
+    printMatchArray(res);
 
 
     RangeIntersectionResolver::resolve(res);

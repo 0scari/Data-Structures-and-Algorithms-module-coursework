@@ -5,6 +5,7 @@
 #ifndef WEEK_8_HELPERS_H
 #define WEEK_8_HELPERS_H
 
+
 map <string, unsigned int> calcRange (map<string, vector<unsigned int>> matchedPair)
 {
     unsigned int min = matchedPair["strA"][0];
@@ -135,5 +136,18 @@ static map <string, unsigned int> calcTotalRange (map <string, unsigned int> ran
     return {{"min", min}, {"max", max}};
 }
 
+namespace helpers{
+bool rangesIntersect(map <string, vector <unsigned int>> pair1,
+                     map <string, vector <unsigned int>> pair2)
+{
+    map <string, unsigned int> range1 = calcRange(pair1);
+    map <string, unsigned int> range2 = calcRange(pair2);
 
+    if (range1["min"] >= range2["min"] and range1["min"] <= range2["max"])
+
+        return true;
+
+    return range1["max"] >= range2["min"] and range1["max"] <= range2["max"];
+}
+};
 #endif //WEEK_8_HELPERS_H

@@ -123,6 +123,33 @@ Week_8/fast:
 	$(MAKE) -f CMakeFiles/Week_8.dir/build.make CMakeFiles/Week_8.dir/build
 .PHONY : Week_8/fast
 
+Task2/Task2.o: Task2/Task2.cpp.o
+
+.PHONY : Task2/Task2.o
+
+# target to build an object file
+Task2/Task2.cpp.o:
+	$(MAKE) -f CMakeFiles/Week_8.dir/build.make CMakeFiles/Week_8.dir/Task2/Task2.cpp.o
+.PHONY : Task2/Task2.cpp.o
+
+Task2/Task2.i: Task2/Task2.cpp.i
+
+.PHONY : Task2/Task2.i
+
+# target to preprocess a source file
+Task2/Task2.cpp.i:
+	$(MAKE) -f CMakeFiles/Week_8.dir/build.make CMakeFiles/Week_8.dir/Task2/Task2.cpp.i
+.PHONY : Task2/Task2.cpp.i
+
+Task2/Task2.s: Task2/Task2.cpp.s
+
+.PHONY : Task2/Task2.s
+
+# target to generate assembly for a file
+Task2/Task2.cpp.s:
+	$(MAKE) -f CMakeFiles/Week_8.dir/build.make CMakeFiles/Week_8.dir/Task2/Task2.cpp.s
+.PHONY : Task2/Task2.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -159,6 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Week_8"
+	@echo "... Task2/Task2.o"
+	@echo "... Task2/Task2.i"
+	@echo "... Task2/Task2.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

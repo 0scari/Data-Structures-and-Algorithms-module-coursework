@@ -18,7 +18,7 @@ public:
                                     vector < map <string, vector <unsigned int>> > &matchedPairsContainer)
     {
 
-
+        // TODO implement ignoring of duplicate pairs targeting the same section in strB
 
         for (int i = 0; i < matchedPairsContainer.size() -1; ++i) {
 
@@ -27,7 +27,7 @@ public:
             for (int j = i + 1; j < matchedPairsContainer.size(); ++j) {
 
 
-                if (rangesIntersect(matchedPairsContainer[i], matchedPairsContainer[j])) {
+                if (helpers::rangesIntersect(matchedPairsContainer[i], matchedPairsContainer[j])) {
 
                     addToRangeIntersections(matchedPairsContainer[i], matchedPairsContainer[j]);
 
@@ -153,19 +153,6 @@ public:
         }
 
         return conversionCost;
-    }
-
-    static bool rangesIntersect(map <string, vector <unsigned int>> pair1,
-                                map <string, vector <unsigned int>> pair2)
-    {
-        map <string, unsigned int> range1 = calcRange(pair1);
-        map <string, unsigned int> range2 = calcRange(pair2);
-
-        if (range1["min"] >= range2["min"] and range1["min"] <= range2["max"])
-
-            return true;
-
-        return range1["max"] >= range2["min"] and range1["max"] <= range2["max"];
     }
 
     static bool rangesIntersect(map <string, unsigned int> range1,
